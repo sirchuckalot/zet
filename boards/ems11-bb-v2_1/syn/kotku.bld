@@ -1,0 +1,1018 @@
+Release 14.7 ngdbuild P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\ngdbuild.exe -intstyle
+ise -dd _ngo -nt timestamp -uc EMS11_BB21.ucf -p xc6slx45-fgg676-3 kotku.ngc
+kotku.ngd
+
+Reading NGO file
+"Z:/Documents/sirchuckalot/zet/boards/ems11-bb-v2_1/syn/kotku.ngc" ...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "EMS11_BB21.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+WARNING:ConstraintSystem:137 - Constraint <NET "clk_50_" TNM_NET = "clk_50_" |>
+   [EMS11_BB21.ucf(22)]: No appropriate instances for the TNM constraint are
+   driven by "clk_50_".
+
+WARNING:ConstraintSystem:56 - Constraint <TIMESPEC "TS_CLK50" = PERIOD "clk_50_"
+   20 ns HIGH 50 %;> [EMS11_BB21.ucf(23)]: Unable to find an active 'TNM' or
+   'TimeGrp' constraint named 'clk_50_'.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "LED1" LOC = "M9";>
+   [EMS11_BB21.ucf(32)]: NET "LED1" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "LED1" LOC = "M9";> [EMS11_BB21.ucf(32)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "LED2" LOC = "M8";>
+   [EMS11_BB21.ucf(33)]: NET "LED2" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "LED2" LOC = "M8";> [EMS11_BB21.ucf(33)]' could not be found and so the
+   Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "LED1" IOSTANDARD = LVTTL;>
+   [EMS11_BB21.ucf(34)]: NET "LED1" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "LED2" IOSTANDARD = LVTTL;>
+   [EMS11_BB21.ucf(35)]: NET "LED2" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DIAG_N" LOC = "P22";>
+   [EMS11_BB21.ucf(40)]: NET "DIAG_N" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DIAG_N" LOC = "P22";> [EMS11_BB21.ucf(40)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "RESET_N" LOC = "U22";>
+   [EMS11_BB21.ucf(41)]: NET "RESET_N" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "RESET_N" LOC = "U22";> [EMS11_BB21.ucf(41)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DIAG_N" IOSTANDARD = LVTTL;>
+   [EMS11_BB21.ucf(42)]: NET "DIAG_N" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "RESET_N" IOSTANDARD = LVTTL;>
+   [EMS11_BB21.ucf(43)]: NET "RESET_N" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "RXD1_FROM_FPGA" LOC = "L18";>
+   [EMS11_BB21.ucf(48)]: NET "RXD1_FROM_FPGA" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "RXD1_FROM_FPGA" LOC = "L18";> [EMS11_BB21.ucf(48)]' could not be found
+   and so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "N_CTS1_FROM_FPGA" LOC = "K19";>
+   [EMS11_BB21.ucf(49)]: NET "N_CTS1_FROM_FPGA" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "N_CTS1_FROM_FPGA" LOC = "K19";> [EMS11_BB21.ucf(49)]' could not be
+   found and so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "N_RTS1_TO_FPGA" LOC = "H24";>
+   [EMS11_BB21.ucf(50)]: NET "N_RTS1_TO_FPGA" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "N_RTS1_TO_FPGA" LOC = "H24";> [EMS11_BB21.ucf(50)]' could not be found
+   and so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "TXD1_TO_FPGA" LOC = "F24";>
+   [EMS11_BB21.ucf(51)]: NET "TXD1_TO_FPGA" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "TXD1_TO_FPGA" LOC = "F24";> [EMS11_BB21.ucf(51)]' could not be found
+   and so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "RXD1_FROM_FPGA" IOSTANDARD =
+   LVTTL;> [EMS11_BB21.ucf(53)]: NET "RXD1_FROM_FPGA" not found.  Please verify
+   that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "N_CTS1_FROM_FPGA" IOSTANDARD =
+   LVTTL;> [EMS11_BB21.ucf(54)]: NET "N_CTS1_FROM_FPGA" not found.  Please
+   verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "N_RTS1_TO_FPGA" IOSTANDARD =
+   LVTTL;> [EMS11_BB21.ucf(55)]: NET "N_RTS1_TO_FPGA" not found.  Please verify
+   that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "TXD1_TO_FPGA" IOSTANDARD = LVTTL;>
+   [EMS11_BB21.ucf(56)]: NET "TXD1_TO_FPGA" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "N_CTS2_FROM_FPGA" LOC = "A25";>
+   [EMS11_BB21.ucf(60)]: NET "N_CTS2_FROM_FPGA" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "N_CTS2_FROM_FPGA" LOC = "A25";> [EMS11_BB21.ucf(60)]' could not be
+   found and so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "N_CTS2_FROM_FPGA" IOSTANDARD =
+   LVTTL;> [EMS11_BB21.ucf(61)]: NET "N_CTS2_FROM_FPGA" not found.  Please
+   verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "FPGA_SD_CDET" LOC = "D24";>
+   [EMS11_BB21.ucf(70)]: NET "FPGA_SD_CDET" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "FPGA_SD_CDET" LOC = "D24";> [EMS11_BB21.ucf(70)]' could not be found
+   and so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "FPGA_SD_WPROT" LOC = "N18";>
+   [EMS11_BB21.ucf(71)]: NET "FPGA_SD_WPROT" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "FPGA_SD_WPROT" LOC = "N18";> [EMS11_BB21.ucf(71)]' could not be found
+   and so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "FPGA_SD_CMD" LOC = "B23";>
+   [EMS11_BB21.ucf(72)]: NET "FPGA_SD_CMD" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "FPGA_SD_CMD" LOC = "B23";> [EMS11_BB21.ucf(72)]' could not be found
+   and so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "FPGA_SD_D0" LOC = "B24";>
+   [EMS11_BB21.ucf(73)]: NET "FPGA_SD_D0" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "FPGA_SD_D0" LOC = "B24";> [EMS11_BB21.ucf(73)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "FPGA_SD_D1" LOC = "M18";>
+   [EMS11_BB21.ucf(74)]: NET "FPGA_SD_D1" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "FPGA_SD_D1" LOC = "M18";> [EMS11_BB21.ucf(74)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "FPGA_SD_D2" LOC = "A23";>
+   [EMS11_BB21.ucf(75)]: NET "FPGA_SD_D2" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "FPGA_SD_D2" LOC = "A23";> [EMS11_BB21.ucf(75)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "FPGA_SD_D3" LOC = "L17";>
+   [EMS11_BB21.ucf(76)]: NET "FPGA_SD_D3" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "FPGA_SD_D3" LOC = "L17";> [EMS11_BB21.ucf(76)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "FPGA_SD_SCLK" LOC = "N17";>
+   [EMS11_BB21.ucf(77)]: NET "FPGA_SD_SCLK" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "FPGA_SD_SCLK" LOC = "N17";> [EMS11_BB21.ucf(77)]' could not be found
+   and so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:58 - Constraint <NET "FPGA_SD_*" IOSTANDARD = LVTTL |>
+   [EMS11_BB21.ucf(79)]: NET "FPGA_SD_*" does not match any design objects.
+
+ERROR:ConstraintSystem:58 - Constraint <DRIVE = 12 |> [EMS11_BB21.ucf(79)]: NET
+   "FPGA_SD_*" does not match any design objects.
+
+ERROR:ConstraintSystem:58 - Constraint <SLEW = FAST;> [EMS11_BB21.ucf(79)]: NET
+   "FPGA_SD_*" does not match any design objects.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DR_CAS" LOC = "B12";>
+   [EMS11_BB21.ucf(84)]: NET "DR_CAS" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DR_CAS" LOC = "B12";> [EMS11_BB21.ucf(84)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DR_CS" LOC = "A16";>
+   [EMS11_BB21.ucf(85)]: NET "DR_CS" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DR_CS" LOC = "A16";> [EMS11_BB21.ucf(85)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DR_RAS" LOC = "A14";>
+   [EMS11_BB21.ucf(86)]: NET "DR_RAS" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DR_RAS" LOC = "A14";> [EMS11_BB21.ucf(86)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DR_WE" LOC = "A11";>
+   [EMS11_BB21.ucf(87)]: NET "DR_WE" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DR_WE" LOC = "A11";> [EMS11_BB21.ucf(87)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DR_CKE" LOC = "C14";>
+   [EMS11_BB21.ucf(88)]: NET "DR_CKE" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DR_CKE" LOC = "C14";> [EMS11_BB21.ucf(88)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DR_CLK_O" LOC = "C15";>
+   [EMS11_BB21.ucf(89)]: NET "DR_CLK_O" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DR_CLK_O" LOC = "C15";> [EMS11_BB21.ucf(89)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DR_CLK_I" LOC = "A15";>
+   [EMS11_BB21.ucf(90)]: NET "DR_CLK_I" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DR_CLK_I" LOC = "A15";> [EMS11_BB21.ucf(90)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DR_A<0>" LOC = "A19";>
+   [EMS11_BB21.ucf(92)]: NET "DR_A<0>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DR_A<0>" LOC = "A19";> [EMS11_BB21.ucf(92)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DR_A<1>" LOC = "B20";>
+   [EMS11_BB21.ucf(93)]: NET "DR_A<1>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DR_A<1>" LOC = "B20";> [EMS11_BB21.ucf(93)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DR_A<2>" LOC = "A20";>
+   [EMS11_BB21.ucf(94)]: NET "DR_A<2>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DR_A<2>" LOC = "A20";> [EMS11_BB21.ucf(94)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DR_A<3>" LOC = "C21";>
+   [EMS11_BB21.ucf(95)]: NET "DR_A<3>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DR_A<3>" LOC = "C21";> [EMS11_BB21.ucf(95)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DR_A<4>" LOC = "A22";>
+   [EMS11_BB21.ucf(96)]: NET "DR_A<4>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DR_A<4>" LOC = "A22";> [EMS11_BB21.ucf(96)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DR_A<5>" LOC = "A21";>
+   [EMS11_BB21.ucf(97)]: NET "DR_A<5>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DR_A<5>" LOC = "A21";> [EMS11_BB21.ucf(97)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DR_A<6>" LOC = "C20";>
+   [EMS11_BB21.ucf(98)]: NET "DR_A<6>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DR_A<6>" LOC = "C20";> [EMS11_BB21.ucf(98)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DR_A<7>" LOC = "C19";>
+   [EMS11_BB21.ucf(99)]: NET "DR_A<7>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DR_A<7>" LOC = "C19";> [EMS11_BB21.ucf(99)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DR_A<8>" LOC = "B18";>
+   [EMS11_BB21.ucf(100)]: NET "DR_A<8>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DR_A<8>" LOC = "B18";> [EMS11_BB21.ucf(100)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DR_A<9>" LOC = "D18";>
+   [EMS11_BB21.ucf(101)]: NET "DR_A<9>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DR_A<9>" LOC = "D18";> [EMS11_BB21.ucf(101)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DR_A<10>" LOC = "C18";>
+   [EMS11_BB21.ucf(102)]: NET "DR_A<10>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DR_A<10>" LOC = "C18";> [EMS11_BB21.ucf(102)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DR_A<11>" LOC = "C17";>
+   [EMS11_BB21.ucf(103)]: NET "DR_A<11>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DR_A<11>" LOC = "C17";> [EMS11_BB21.ucf(103)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DR_A<12>" LOC = "B16";>
+   [EMS11_BB21.ucf(104)]: NET "DR_A<12>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DR_A<12>" LOC = "B16";> [EMS11_BB21.ucf(104)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DR_BA<0>" LOC = "A17";>
+   [EMS11_BB21.ucf(106)]: NET "DR_BA<0>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DR_BA<0>" LOC = "A17";> [EMS11_BB21.ucf(106)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DR_BA<1>" LOC = "A18";>
+   [EMS11_BB21.ucf(107)]: NET "DR_BA<1>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DR_BA<1>" LOC = "A18";> [EMS11_BB21.ucf(107)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DR_D<0>" LOC = "A3";>
+   [EMS11_BB21.ucf(109)]: NET "DR_D<0>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DR_D<0>" LOC = "A3";> [EMS11_BB21.ucf(109)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DR_D<1>" LOC = "B4";>
+   [EMS11_BB21.ucf(110)]: NET "DR_D<1>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DR_D<1>" LOC = "B4";> [EMS11_BB21.ucf(110)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DR_D<2>" LOC = "A4";>
+   [EMS11_BB21.ucf(111)]: NET "DR_D<2>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DR_D<2>" LOC = "A4";> [EMS11_BB21.ucf(111)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DR_D<3>" LOC = "A5";>
+   [EMS11_BB21.ucf(112)]: NET "DR_D<3>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DR_D<3>" LOC = "A5";> [EMS11_BB21.ucf(112)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DR_D<4>" LOC = "A6";>
+   [EMS11_BB21.ucf(113)]: NET "DR_D<4>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DR_D<4>" LOC = "A6";> [EMS11_BB21.ucf(113)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DR_D<5>" LOC = "A7";>
+   [EMS11_BB21.ucf(114)]: NET "DR_D<5>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DR_D<5>" LOC = "A7";> [EMS11_BB21.ucf(114)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DR_D<6>" LOC = "A8";>
+   [EMS11_BB21.ucf(115)]: NET "DR_D<6>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DR_D<6>" LOC = "A8";> [EMS11_BB21.ucf(115)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DR_D<7>" LOC = "A9";>
+   [EMS11_BB21.ucf(116)]: NET "DR_D<7>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DR_D<7>" LOC = "A9";> [EMS11_BB21.ucf(116)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DR_D<8>" LOC = "C13";>
+   [EMS11_BB21.ucf(117)]: NET "DR_D<8>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DR_D<8>" LOC = "C13";> [EMS11_BB21.ucf(117)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DR_D<9>" LOC = "C11";>
+   [EMS11_BB21.ucf(118)]: NET "DR_D<9>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DR_D<9>" LOC = "C11";> [EMS11_BB21.ucf(118)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DR_D<10>" LOC = "B8";>
+   [EMS11_BB21.ucf(119)]: NET "DR_D<10>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DR_D<10>" LOC = "B8";> [EMS11_BB21.ucf(119)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DR_D<11>" LOC = "C7";>
+   [EMS11_BB21.ucf(120)]: NET "DR_D<11>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DR_D<11>" LOC = "C7";> [EMS11_BB21.ucf(120)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DR_D<12>" LOC = "D6";>
+   [EMS11_BB21.ucf(121)]: NET "DR_D<12>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DR_D<12>" LOC = "D6";> [EMS11_BB21.ucf(121)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DR_D<13>" LOC = "B6";>
+   [EMS11_BB21.ucf(122)]: NET "DR_D<13>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DR_D<13>" LOC = "B6";> [EMS11_BB21.ucf(122)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DR_D<14>" LOC = "C6";>
+   [EMS11_BB21.ucf(123)]: NET "DR_D<14>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DR_D<14>" LOC = "C6";> [EMS11_BB21.ucf(123)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DR_D<15>" LOC = "C5";>
+   [EMS11_BB21.ucf(124)]: NET "DR_D<15>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DR_D<15>" LOC = "C5";> [EMS11_BB21.ucf(124)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DR_DQMH" LOC = "B14";>
+   [EMS11_BB21.ucf(126)]: NET "DR_DQMH" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DR_DQMH" LOC = "B14";> [EMS11_BB21.ucf(126)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "DR_DQML" LOC = "C9";>
+   [EMS11_BB21.ucf(127)]: NET "DR_DQML" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "DR_DQML" LOC = "C9";> [EMS11_BB21.ucf(127)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:58 - Constraint <NET DR_* IOSTANDARD = LVTTL |>
+   [EMS11_BB21.ucf(129)]: NET "DR_*" does not match any design objects.
+
+ERROR:ConstraintSystem:58 - Constraint <DRIVE = 8 |> [EMS11_BB21.ucf(129)]: NET
+   "DR_*" does not match any design objects.
+
+ERROR:ConstraintSystem:58 - Constraint <SLEW = FAST;> [EMS11_BB21.ucf(129)]: NET
+   "DR_*" does not match any design objects.
+
+ERROR:ConstraintSystem:59 - Constraint <NET DR_CLK_O BUFG = CLK;>
+   [EMS11_BB21.ucf(130)]: NET "DR_CLK_O" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "M1_S<0>" LOC = "B25";>
+   [EMS11_BB21.ucf(208)]: NET "M1_S<0>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "M1_S<0>" LOC = "B25";> [EMS11_BB21.ucf(208)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "M1_S<1>" LOC = "L23";>
+   [EMS11_BB21.ucf(209)]: NET "M1_S<1>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "M1_S<1>" LOC = "L23";> [EMS11_BB21.ucf(209)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "M1_S<2>" LOC = "B26";>
+   [EMS11_BB21.ucf(210)]: NET "M1_S<2>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "M1_S<2>" LOC = "B26";> [EMS11_BB21.ucf(210)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "M1_S<3>" LOC = "M23";>
+   [EMS11_BB21.ucf(211)]: NET "M1_S<3>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "M1_S<3>" LOC = "M23";> [EMS11_BB21.ucf(211)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "M1_S<4>" LOC = "C25";>
+   [EMS11_BB21.ucf(212)]: NET "M1_S<4>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "M1_S<4>" LOC = "C25";> [EMS11_BB21.ucf(212)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "M1_S<5>" LOC = "N21";>
+   [EMS11_BB21.ucf(213)]: NET "M1_S<5>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "M1_S<5>" LOC = "N21";> [EMS11_BB21.ucf(213)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "M1_S<6>" LOC = "C26";>
+   [EMS11_BB21.ucf(214)]: NET "M1_S<6>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "M1_S<6>" LOC = "C26";> [EMS11_BB21.ucf(214)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "M1_S<7>" LOC = "N23";>
+   [EMS11_BB21.ucf(215)]: NET "M1_S<7>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "M1_S<7>" LOC = "N23";> [EMS11_BB21.ucf(215)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "M1_S<8>" LOC = "D26";>
+   [EMS11_BB21.ucf(216)]: NET "M1_S<8>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "M1_S<8>" LOC = "D26";> [EMS11_BB21.ucf(216)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "M1_S<9>" LOC = "N22";>
+   [EMS11_BB21.ucf(217)]: NET "M1_S<9>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "M1_S<9>" LOC = "N22";> [EMS11_BB21.ucf(217)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "M1_S<10>" LOC = "E25";>
+   [EMS11_BB21.ucf(218)]: NET "M1_S<10>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "M1_S<10>" LOC = "E25";> [EMS11_BB21.ucf(218)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "M1_S<11>" LOC = "P20";>
+   [EMS11_BB21.ucf(219)]: NET "M1_S<11>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "M1_S<11>" LOC = "P20";> [EMS11_BB21.ucf(219)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "M1_S<12>" LOC = "E26";>
+   [EMS11_BB21.ucf(220)]: NET "M1_S<12>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "M1_S<12>" LOC = "E26";> [EMS11_BB21.ucf(220)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "M1_S<13>" LOC = "P24";>
+   [EMS11_BB21.ucf(221)]: NET "M1_S<13>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "M1_S<13>" LOC = "P24";> [EMS11_BB21.ucf(221)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "M1_S<14>" LOC = "F26";>
+   [EMS11_BB21.ucf(222)]: NET "M1_S<14>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "M1_S<14>" LOC = "F26";> [EMS11_BB21.ucf(222)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "M1_S<15>" LOC = "R23";>
+   [EMS11_BB21.ucf(223)]: NET "M1_S<15>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "M1_S<15>" LOC = "R23";> [EMS11_BB21.ucf(223)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "M1_S<16>" LOC = "G25";>
+   [EMS11_BB21.ucf(224)]: NET "M1_S<16>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "M1_S<16>" LOC = "G25";> [EMS11_BB21.ucf(224)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "M1_S<17>" LOC = "R24";>
+   [EMS11_BB21.ucf(225)]: NET "M1_S<17>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "M1_S<17>" LOC = "R24";> [EMS11_BB21.ucf(225)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "M1_S<18>" LOC = "G26";>
+   [EMS11_BB21.ucf(226)]: NET "M1_S<18>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "M1_S<18>" LOC = "G26";> [EMS11_BB21.ucf(226)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "M1_S<19>" LOC = "P21";>
+   [EMS11_BB21.ucf(227)]: NET "M1_S<19>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "M1_S<19>" LOC = "P21";> [EMS11_BB21.ucf(227)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "M1_S<20>" LOC = "H26";>
+   [EMS11_BB21.ucf(228)]: NET "M1_S<20>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "M1_S<20>" LOC = "H26";> [EMS11_BB21.ucf(228)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "M1_S<21>" LOC = "T23";>
+   [EMS11_BB21.ucf(229)]: NET "M1_S<21>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "M1_S<21>" LOC = "T23";> [EMS11_BB21.ucf(229)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "M1_S<22>" LOC = "J25";>
+   [EMS11_BB21.ucf(230)]: NET "M1_S<22>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "M1_S<22>" LOC = "J25";> [EMS11_BB21.ucf(230)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "M1_S<23>" LOC = "U23";>
+   [EMS11_BB21.ucf(231)]: NET "M1_S<23>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "M1_S<23>" LOC = "U23";> [EMS11_BB21.ucf(231)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "M1_S<24>" LOC = "J26";>
+   [EMS11_BB21.ucf(232)]: NET "M1_S<24>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "M1_S<24>" LOC = "J26";> [EMS11_BB21.ucf(232)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "M1_S<25>" LOC = "V23";>
+   [EMS11_BB21.ucf(233)]: NET "M1_S<25>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "M1_S<25>" LOC = "V23";> [EMS11_BB21.ucf(233)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "M1_S<26>" LOC = "K26";>
+   [EMS11_BB21.ucf(234)]: NET "M1_S<26>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "M1_S<26>" LOC = "K26";> [EMS11_BB21.ucf(234)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "M1_S<27>" LOC = "AA24";>
+   [EMS11_BB21.ucf(235)]: NET "M1_S<27>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "M1_S<27>" LOC = "AA24";> [EMS11_BB21.ucf(235)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "M1_S<28>" LOC = "L25";>
+   [EMS11_BB21.ucf(236)]: NET "M1_S<28>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "M1_S<28>" LOC = "L25";> [EMS11_BB21.ucf(236)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "M1_S<29>" LOC = "AA23";>
+   [EMS11_BB21.ucf(237)]: NET "M1_S<29>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "M1_S<29>" LOC = "AA23";> [EMS11_BB21.ucf(237)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "M1_S<30>" LOC = "L26";>
+   [EMS11_BB21.ucf(238)]: NET "M1_S<30>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "M1_S<30>" LOC = "L26";> [EMS11_BB21.ucf(238)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "M1_S<31>" LOC = "L19";>
+   [EMS11_BB21.ucf(239)]: NET "M1_S<31>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "M1_S<31>" LOC = "L19";> [EMS11_BB21.ucf(239)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "M1_S<32>" LOC = "M26";>
+   [EMS11_BB21.ucf(240)]: NET "M1_S<32>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "M1_S<32>" LOC = "M26";> [EMS11_BB21.ucf(240)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "M1_S<33>" LOC = "L24";>
+   [EMS11_BB21.ucf(241)]: NET "M1_S<33>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "M1_S<33>" LOC = "L24";> [EMS11_BB21.ucf(241)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "M1_S<34>" LOC = "N25";>
+   [EMS11_BB21.ucf(242)]: NET "M1_S<34>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "M1_S<34>" LOC = "N25";> [EMS11_BB21.ucf(242)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "M1_S<35>" LOC = "M19";>
+   [EMS11_BB21.ucf(243)]: NET "M1_S<35>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "M1_S<35>" LOC = "M19";> [EMS11_BB21.ucf(243)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "M1_S<36>" LOC = "N26";>
+   [EMS11_BB21.ucf(244)]: NET "M1_S<36>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "M1_S<36>" LOC = "N26";> [EMS11_BB21.ucf(244)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "M1_S<37>" LOC = "M24";>
+   [EMS11_BB21.ucf(245)]: NET "M1_S<37>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "M1_S<37>" LOC = "M24";> [EMS11_BB21.ucf(245)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "M1_S<38>" LOC = "N24";>
+   [EMS11_BB21.ucf(246)]: NET "M1_S<38>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "M1_S<38>" LOC = "N24";> [EMS11_BB21.ucf(246)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "M1_S<39>" LOC = "M21";>
+   [EMS11_BB21.ucf(247)]: NET "M1_S<39>" not found.  Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "M1_S<39>" LOC = "M21";> [EMS11_BB21.ucf(247)]' could not be found and
+   so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:58 - Constraint <NET M1_S* IOSTANDARD = LVTTL |>
+   [EMS11_BB21.ucf(249)]: NET "M1_S*" does not match any design objects.
+
+ERROR:ConstraintSystem:58 - Constraint <DRIVE = 16 |> [EMS11_BB21.ucf(249)]: NET
+   "M1_S*" does not match any design objects.
+
+ERROR:ConstraintSystem:58 - Constraint <SLEW = FAST;> [EMS11_BB21.ucf(249)]: NET
+   "M1_S*" does not match any design objects.
+
+ERROR:ConstraintSystem:58 - Constraint <NET DR_D<*> NODELAY;>
+   [EMS11_BB21.ucf(400)]: NET "DR_D<*>" does not match any design objects.
+
+WARNING:ConstraintSystem:191 - The TNM 'clk_50_', does not directly or
+   indirectly drive any flip-flops, latches and/or RAMS and cannot be actively
+   used by the referencing Period constraint 'TS_CLK50'. If clock manager blocks
+   are directly or indirectly driven, a new TNM constraint will not be derived
+   even though the referencing constraint is a PERIOD constraint unless an
+   output of the clock manager drives flip-flops, latches or RAMs. This TNM is
+   used in the following user PERIOD specification:
+   <TIMESPEC "TS_CLK50" = PERIOD "clk_50_" 20 ns HIGH 50 %;>
+   [EMS11_BB21.ucf(23)]
+
+WARNING:ConstraintSystem:197 - The following specification is invalid because
+   the referenced TNM constraint was removed:
+   <TIMESPEC "TS_CLK50" = PERIOD "clk_50_" 20 ns HIGH 50 %;>
+   [EMS11_BB21.ucf(23)]
+
+Done...
+
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:   117
+  Number of warnings: 101
+
+Total memory usage is 100536 kilobytes
+
+Total REAL time to NGDBUILD completion:  14 sec
+Total CPU time to NGDBUILD completion:   4 sec
+
+One or more errors were found during NGDBUILD.  No NGD file will be written.
+
+Writing NGDBUILD log file "kotku.bld"...

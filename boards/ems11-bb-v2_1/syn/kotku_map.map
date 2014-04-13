@@ -1,0 +1,192 @@
+Release 14.7 Map P.20131013 (lin)
+Xilinx Map Application Log File for Design 'kotku'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc6slx45-fgg676-3 -w -logic_opt off -ol
+high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off
+-pr off -lc off -power off -o kotku_map.ncd kotku.ngd kotku.pcf 
+Target Device  : xc6slx45
+Target Package : fgg676
+Target Speed   : -3
+Mapper Version : spartan6 -- $Revision: 1.55 $
+Mapped Date    : Fri Apr  4 23:50:04 2014
+
+Mapping design into LUTs...
+WARNING:MapLib:701 - Signal sdram_data_<15> connected to top level port
+   sdram_data_<15> has been removed.
+WARNING:MapLib:701 - Signal sdram_data_<14> connected to top level port
+   sdram_data_<14> has been removed.
+WARNING:MapLib:701 - Signal sdram_data_<13> connected to top level port
+   sdram_data_<13> has been removed.
+WARNING:MapLib:701 - Signal sdram_data_<12> connected to top level port
+   sdram_data_<12> has been removed.
+WARNING:MapLib:701 - Signal sdram_data_<11> connected to top level port
+   sdram_data_<11> has been removed.
+WARNING:MapLib:701 - Signal sdram_data_<10> connected to top level port
+   sdram_data_<10> has been removed.
+WARNING:MapLib:701 - Signal sdram_data_<9> connected to top level port
+   sdram_data_<9> has been removed.
+WARNING:MapLib:701 - Signal sdram_data_<8> connected to top level port
+   sdram_data_<8> has been removed.
+WARNING:MapLib:701 - Signal sdram_data_<7> connected to top level port
+   sdram_data_<7> has been removed.
+WARNING:MapLib:701 - Signal sdram_data_<6> connected to top level port
+   sdram_data_<6> has been removed.
+WARNING:MapLib:701 - Signal sdram_data_<5> connected to top level port
+   sdram_data_<5> has been removed.
+WARNING:MapLib:701 - Signal sdram_data_<4> connected to top level port
+   sdram_data_<4> has been removed.
+WARNING:MapLib:701 - Signal sdram_data_<3> connected to top level port
+   sdram_data_<3> has been removed.
+WARNING:MapLib:701 - Signal sdram_data_<2> connected to top level port
+   sdram_data_<2> has been removed.
+WARNING:MapLib:701 - Signal sdram_data_<1> connected to top level port
+   sdram_data_<1> has been removed.
+WARNING:MapLib:701 - Signal sdram_data_<0> connected to top level port
+   sdram_data_<0> has been removed.
+WARNING:MapLib:701 - Signal ps2_kdat_ connected to top level port ps2_kdat_ has
+   been removed.
+WARNING:MapLib:701 - Signal ps2_mclk_ connected to top level port ps2_mclk_ has
+   been removed.
+WARNING:MapLib:701 - Signal ps2_mdat_ connected to top level port ps2_mdat_ has
+   been removed.
+WARNING:MapLib:701 - Signal i2c_sdat_ connected to top level port i2c_sdat_ has
+   been removed.
+Running directed packing...
+Running delay-based LUT packing...
+Updating timing models...
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+Running timing-driven placement...
+Total REAL time at the beginning of Placer: 11 secs 
+Total CPU  time at the beginning of Placer: 9 secs 
+
+Phase 1.1  Initial Placement Analysis
+Phase 1.1  Initial Placement Analysis (Checksum:1c61) REAL time: 13 secs 
+
+Phase 2.7  Design Feasibility Check
+Phase 2.7  Design Feasibility Check (Checksum:1c61) REAL time: 13 secs 
+
+Phase 3.31  Local Placement Optimization
+Phase 3.31  Local Placement Optimization (Checksum:1c61) REAL time: 13 secs 
+
+Phase 4.2  Initial Placement for Architecture Specific Features
+....
+...........
+Phase 4.2  Initial Placement for Architecture Specific Features (Checksum:1c61) REAL time: 44 secs 
+
+Phase 5.36  Local Placement Optimization
+Phase 5.36  Local Placement Optimization (Checksum:1c61) REAL time: 44 secs 
+
+Phase 6.30  Global Clock Region Assignment
+Phase 6.30  Global Clock Region Assignment (Checksum:1c61) REAL time: 44 secs 
+
+Phase 7.3  Local Placement Optimization
+....
+...........
+Phase 7.3  Local Placement Optimization (Checksum:f0acb702) REAL time: 1 mins 14 secs 
+
+Phase 8.5  Local Placement Optimization
+Phase 8.5  Local Placement Optimization (Checksum:f0acb702) REAL time: 1 mins 14 secs 
+
+Phase 9.8  Global Placement
+....
+Phase 9.8  Global Placement (Checksum:bcd1422d) REAL time: 1 mins 14 secs 
+
+Phase 10.5  Local Placement Optimization
+Phase 10.5  Local Placement Optimization (Checksum:bcd1422d) REAL time: 1 mins 14 secs 
+
+Phase 11.18  Placement Optimization
+Phase 11.18  Placement Optimization (Checksum:dabc024d) REAL time: 1 mins 21 secs 
+
+Phase 12.5  Local Placement Optimization
+Phase 12.5  Local Placement Optimization (Checksum:dabc024d) REAL time: 1 mins 21 secs 
+
+Phase 13.34  Placement Validation
+Phase 13.34  Placement Validation (Checksum:dabc024d) REAL time: 1 mins 21 secs 
+
+Total REAL time to Placer completion: 1 mins 21 secs 
+Total CPU  time to Placer completion: 1 mins 19 secs 
+Running post-placement packing...
+Writing output files...
+WARNING:PhysDesignRules:367 - The signal <vga/lcd/data_fifo/Mram_mem25_RAMA_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/lcd/data_fifo/Mram_mem25_RAMC_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/lcd/data_fifo/Mram_mem25_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+
+Design Summary
+--------------
+
+Design Summary:
+Number of errors:      0
+Number of warnings:   23
+Slice Logic Utilization:
+  Number of Slice Registers:                     0 out of  54,576    0%
+  Number of Slice LUTs:                          5 out of  27,288    1%
+    Number used as logic:                        1 out of  27,288    1%
+      Number using O6 output only:               1
+      Number using O5 output only:               0
+      Number using O5 and O6:                    0
+      Number used as ROM:                        0
+    Number used as Memory:                       4 out of   6,408    1%
+      Number used as Dual Port RAM:              0
+      Number used as Single Port RAM:            4
+        Number using O6 output only:             4
+        Number using O5 output only:             0
+        Number using O5 and O6:                  0
+      Number used as Shift Register:             0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                     2 out of   6,822    1%
+  Number of MUXCYs used:                         0 out of  13,644    0%
+  Number of LUT Flip Flop pairs used:            5
+    Number with an unused Flip Flop:             5 out of       5  100%
+    Number with an unused LUT:                   0 out of       5    0%
+    Number of fully used LUT-FF pairs:           0 out of       5    0%
+    Number of unique control sets:               1
+    Number of slice register sites lost
+      to control set restrictions:               4 out of  54,576    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                       111 out of     358   31%
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         0 out of     116    0%
+  Number of RAMB8BWERs:                          0 out of     232    0%
+  Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                       0 out of      16    0%
+  Number of DCM/DCM_CLKGENs:                     0 out of       8    0%
+  Number of ILOGIC2/ISERDES2s:                   0 out of     376    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     376    0%
+  Number of OLOGIC2/OSERDES2s:                   0 out of     376    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     256    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            0 out of      58    0%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            0 out of       4    0%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+Average Fanout of Non-Clock Nets:                0.40
+
+Peak Memory Usage:  291 MB
+Total REAL time to MAP completion:  1 mins 22 secs 
+Total CPU time to MAP completion:   1 mins 20 secs 
+
+Mapping completed.
+See MAP report file "kotku_map.mrp" for details.

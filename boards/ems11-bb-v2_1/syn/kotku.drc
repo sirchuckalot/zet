@@ -1,0 +1,15 @@
+Release 14.7 Drc P.20131013 (lin)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Fri Apr  4 23:59:54 2014
+
+drc -z kotku.ncd kotku.pcf
+
+WARNING:PhysDesignRules:367 - The signal <vga/lcd/data_fifo/Mram_mem25_RAMA_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/lcd/data_fifo/Mram_mem25_RAMC_O>
+   is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <vga/lcd/data_fifo/Mram_mem25_RAMD_O>
+   is incomplete. The signal does not drive any load pins in the design.
+DRC detected 0 errors and 3 warnings.  Please see the previously displayed
+individual error or warning messages for more details.
