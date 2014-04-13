@@ -1074,41 +1074,223 @@ dummy_iret_handler:     iret            ;; IRET Instruction for Dummy Interrupt 
 ;;--------------------------------------------------------------------------
 ;; First we have to prepare DRAM for use:
 ;;--------------------------------------------------------------------------
-SDRAM_POST:             xor     ax, ax          ; Clear AX register
-                        cli                     ; Disable interupt for startup
+SDRAM_POST:             xor     ax, ax             ; Clear AX register
+                        cli                        ; Disable interupt for startup
 
-                        mov     dx, 0f200h      ; CSR_HPDMC_SYSTEM = HPDMC_SYSTEM_BYPASS|HPDMC_SYSTEM_RESET|HPDMC_SYSTEM_CKE;
-                        mov     ax, 7           ; Bring CKE high
-                        out     dx, ax          ; Initialize the SDRAM controller
-                        mov     dx, 0f202h      ; Precharge All
-                        mov     ax, 0400bh      ; CSR_HPDMC_BYPASS = 0x400B;
-                        out     dx, ax          ; Output the word of data to the SDRAM Controller
-                        mov     ax, 0000dh      ; CSR_HPDMC_BYPASS = 0xD;
-                        out     dx, ax          ; Auto refresh
-                        mov     ax, 0000dh      ; CSR_HPDMC_BYPASS = 0xD;
-                        out     dx, ax          ; Auto refresh
-                        mov     ax, 023fh       ; CSR_HPDMC_BYPASS = 0x23F;
-                        out     dx, ax          ; Load Mode Register, Enable DLL
-                        mov     cx, 50          ; Wait about 200 cycles
-a_delay:                loop    a_delay         ; Loop until 50 goes to zero
-                        mov     dx, 0f200h      ; CSR_HPDMC_SYSTEM = HPDMC_SYSTEM_CKE;
-                        mov     ax, 4           ; Leave Bypass mode and bring up hardware controller
-                        out     dx, ax          ; Output the word of data to the SDRAM Controller
+                        mov     dx, 0f200h         ; CSR_HPDMC_SYSTEM = HPDMC_SYSTEM_BYPASS|HPDMC_SYSTEM_RESET|HPDMC_SYSTEM_CKE;
+                        mov     ax, 7              ; Bring CKE high
+                        out     dx, ax             ; Initialize the SDRAM controller
+                        mov     dx, 0f202h         ; Precharge All
+                        mov     ax, 0400bh         ; CSR_HPDMC_BYPASS = 0x400B;
+                        out     dx, ax             ; Output the word of data to the SDRAM Controller
+                        mov     ax, 0000dh         ; CSR_HPDMC_BYPASS = 0xD;
+                        out     dx, ax             ; Auto refresh
+                        mov     ax, 0000dh         ; CSR_HPDMC_BYPASS = 0xD;
+                        out     dx, ax             ; Auto refresh
+                        mov     ax, 023fh          ; CSR_HPDMC_BYPASS = 0x23F;
+                        out     dx, ax             ; Load Mode Register, Enable DLL
+                        mov     cx, 50             ; Wait about 200 cycles
+a_delay:                loop    a_delay            ; Loop until 50 goes to zero
+                        mov     dx, 0f200h         ; CSR_HPDMC_SYSTEM = HPDMC_SYSTEM_CKE;
+                        mov     ax, 4              ; Leave Bypass mode and bring up hardware controller
+                        out     dx, ax             ; Output the word of data to the SDRAM Controller
 
-                        mov     ax, 0fffeh      ; We are done with the controller, we can use the memory now
-                        mov     sp, ax          ; set the stack pointer to fffe (top)
-                        xor     ax, ax          ; clear ax register
-                        mov     ds, ax          ; set data segment to 0
-                        mov     ss, ax          ; set stack segment to 0
+                        mov     ax, 0fffeh         ; We are done with the controller, we can use the memory now
+                        mov     sp, ax             ; set the stack pointer to fffe (top)
+                        xor     ax, ax             ; clear ax register
+                        mov     ds, ax             ; set data segment to 0
+                        mov     ss, ax             ; set stack segment to 0
+
+;;--------------------------------------------------------------------------
+;; - Second we need to initialize sd controller for use: 
+;;--------------------------------------------------------------------------
+init_sd_controller:     mov     al, 0ffh           ; Initialize the SD card controller
+                        mov     dx, 0100h          ; Location of SD controller 
+                        mov     cx, 10             ; Number of times to repeat
+  
+init_sd_loop80:         out     dx, al             ; 80 cycles of initialization
+                        loop    init_sd_loop80     ; Loop 80 times
+                        mov     ax, 040h           ; CS = 0, CMD0: reset the SD card
+                        out     dx, ax             ; Reset the card 
+                        xor     al, al             ; Clear al
+                        out     dx, al             ; 32-bit zero value
+                        out     dx, al
+                        out     dx, al
+                        out     dx, al
+                        mov     al, 095h           ; Fixed value
+                        out     dx, al             ; load it
+                        mov     al, 0ffh         
+                        out     dx, al             ; wait
+                        in      al, dx             ; status
+                        mov     cl, al
+                        mov     ax, 0ffffh
+                        out     dx, ax             ; CS = 1
+                        cmp     cl, 1
+                        jne     init_sd_controller ; Retry if error detected
+
+init_sd_cmd1:           mov     ax, 041h           ; CS = 0, CMD1: activate the init sequence
+                        out     dx, ax
+                        xor     al, al
+                        out     dx, al             ; 32-bit zero value
+                        out     dx, al
+                        out     dx, al
+                        out     dx, al
+                        mov     al, 0ffh
+                        out     dx, al             ; CRC (not used)
+                        out     dx, al             ; wait
+                        in      al, dx             ; status
+                        mov     cl, al
+                        mov     ax, 0ffffh
+                        out     dx, ax             ; CS = 1
+                        test    cl, 0ffh
+                        jnz     init_sd_cmd1
+                        
+                        mov     ax, 050h           ; CS = 0, CMD16: set block length
+                        out     dx, ax
+                        xor     al, al
+                        out     dx, al             ; 32-bit value
+                        out     dx, al
+                        mov     al, 2              ; 512 bytes
+                        out     dx, al
+                        xor     al, al
+                        out     dx, al
+                        mov     al, 0ffh
+                        out     dx, al             ; CRC (not used)
+                        out     dx, al             ; wait
+                        in      al, dx             ; status
+                        mov     cl, al
+                        mov     ax, 0ffffh
+                        out     dx, ax             ; CS = 1
+                        test    cl, 0ffh
+                        jnz     init_sd_controller ; Retry init sd controller
+
+;;--------------------------------------------------------------------------
+;; - Now we can load rom bios into sdram from flash port or sd card: 
+;;--------------------------------------------------------------------------
+
+VGABIOSSEGMENT          equ     0xC000                  ; VGA BIOS Segment
+VGABIOSLENGTH           equ     0x0020                  ; Length (Original 0x4000) of VGA Bios in Words
+SDCARDVGABIOSHI         equ     0x0000                  ; High end of sector address
+SDCARDVGABIOSLO         equ     0x0001                  ; after Master Boot Record
+
+ROMBIOSSEGMENT          equ     0xF000                  ; ROM BIOS Segment
+ROMBIOSLENGTH           equ     0x0040                  ; Copy (Original 0x7F80) up to this ROM in Words
+SDCARDROMBIOSHI         equ     0x0000                  ; hi end of sector address
+SDCARDROMBIOSLO         equ     0x0041                  ; Sector right after vga bios
+
+
+;; Detect where to load bios rom image from
+
+;;--------------------------------------------------------------------------
+;; - We choose to load Shadow BIOS from sd card starting at sector 1: 
+;;--------------------------------------------------------------------------
+
+SD_BIOS_BEGIN           equ     0x0200                  ;; SD Card BIOS address in bytes
+
+
+;;--------------------------------------------------------------------------
+sdbioscopy:             mov     ax, VGABIOSSEGMENT      ;; Load with the segment of the vga bios rom area
+                        mov     es, ax                  ;; BIOS area segment
+                        xor     di, di                  ;; Bios starts at offset address 0
+                        mov     cx, SDCARDVGABIOSHI     ;; High sector address on sd card
+                        mov     bx, SDCARDVGABIOSLO     ;; Low sector address on sd card
+                        mov     ax, VGABIOSLENGTH       ;; VGA Bios is <32K long
+                        
+                        call sdbiosloop                 ;; Read all vga bios sectors
+                                                
+;;--------------------------------------------------------------------------
+                        mov     ax, ROMBIOSSEGMENT      ;; Load with the segment of the vga bios rom area
+                        mov     es, ax                  ;; BIOS area segment
+                        xor     di, di                  ;; Bios starts at offset address 0
+                        mov     cx, SDCARDROMBIOSHI     ;; High sector address on sd card
+                        mov     bx, SDCARDROMBIOSLO     ;; Low sector address on sd card
+                        mov     ax, ROMBIOSLENGTH        ;; VGA Bios is <32K long
+                        
+                        call sdbiosloop                 ;; Read all vga bios sectors
+
+                        jmp     far ptr post            ;; Continue with regular POST
+
+;;--------------------------------------------------------------------------
+sdbiosloop:             push    ax                      ;; Preserve all registers used in sd bios loop
+                        push    bx
+                        push    cx
+                        push    dx
+                        push    di
+                        push    es
+                        call    sdrdblk                 ;; Read one sector
+                        pop     es                      ;; Restore all registers used in main loop
+                        pop     di
+                        pop     dx
+                        pop     cx
+                        pop     bx
+                        pop     ax
+                        
+                        cmp     al, 0                   ;; Are we there yet?
+                        je      sdbiosloop_done         ;; We have read all sectors
+                        
+                        dec     al                      ;; Subtract sector count until we reach zero
+                        add     bx, 0x0001              ;; Next sector address to read(Yes, we are ignoring hi sector address)
+                        add     di, 0x,0200             ;; Next 512 bytes to read
+                        
+                        jmp sdbiosloop                  ;; let's do it again until all sectors have been read
+                        
+sdbiosloop_done:        ret                             ;; We have finished reading all sectors
+
+;;--------------------------------------------------------------------------
+sdrdblk:                cmp   di, 0xfe00                ;; adjust if there will be an overrun
+                        jbe   sdrdblk_no_adjust
+
+sdrdblk_adjust:         sub   di, 0x0200                ;; sub 512 bytes from offset
+                        mov   ax, es
+                        add   ax, 0x0020                ;; add 512 to segment
+                        mov   es, ax
+
+sdrdblk_no_adjust:      mov   dx, 0x0100                ;; SD card IO Port 
+                        mov   ax, 0x51                  ;; CS = 0, command CMD17
+                        out   dx, ax
+                        mov   al, ch                    ;; addr[31:24]
+                        out   dx, al
+                        mov   al, cl                    ;; addr[23:16]
+                        out   dx, al
+                        mov   al, bh                    ;; addr[15:8]
+                        out   dx, al
+                        mov   al, bl                    ;; addr[7:0]
+                        out   dx, al
+                        mov   al, 0x0ff                 ;; CRC (not used)
+                        out   dx, al
+                        out   dx, al                    ;; wait
+
+sdrdblk_read_res_cmd17: in    al, dx                    ;; card response
+                        cmp   al, 0
+                        jne   sdrdblk_read_res_cmd17
+
+sdrdblk_read_tok_cmd17: in    al, dx                    ;; read data token: 0xfe
+                        cmp   al, 0x0fe
+                        jne   sdrdblk_read_tok_cmd17
+                        mov   cx, 0x100
+
+sdrdblk_read_bytes:     in    al, dx                    ;; low byte
+                        mov   bl, al
+                        in    al, dx                    ;; high byte
+                        mov   bh, al
+                        mov   word ptr es:[di], bx      ;; eseg
+                        add   di, 2
+                        loop  sdrdblk_read_bytes
+
+                        mov   ax, 0xffff                ;; we are done, retrieve checksum
+                        out   dx, al                    ;; Checksum, 1st byte
+                        out   dx, al                    ;; Checksum, 2nd byte
+                        out   dx, al                    ;; wait
+                        out   dx, al                    ;; wait
+                        out   dx, ax                    ;; CS = 1 (disable SD)
+
+sdrdblk_done:           ret                             ;; Return back to caller
+;;--------------------------------------------------------------------------
 
 ;;--------------------------------------------------------------------------
 ;; Copy Shadow BIOS from Flash into SDRAM after SDRAM has been initialized
 ;;---------------------------------------------------------------------------
 FLASH_PORT              equ     0x0238                  ;; Flash RAM port
-VGABIOSSEGMENT          equ     0xC000                  ;; VGA BIOS Segment
-VGABIOSLENGTH           equ     0x4000                  ;; Length of VGA Bios in Words
-ROMBIOSSEGMENT          equ     0xF000                  ;; ROM BIOS Segment
-ROMBIOSLENGTH           equ     0x7F80                  ;; Copy up to this ROM in Words
 
 ;;--------------------------------------------------------------------------
 shadowcopy:             mov     ax, VGABIOSSEGMENT      ;; Load with the segment of the vga bios rom area
