@@ -22,16 +22,16 @@
 ;; ROM BIOS compatability entry points:
 ;;--------------------------------------------------------------------------
 ;; $0000 ; Start of ROM Utilities
-;; $e05b ; POST Entry Point
-;; $e6f2 ; INT 19h Boot Load Service Entry Point
-;; $efc7 ; Diskette parameter table
-;; $f045 ; INT 10 Functions 0-Fh Entry Point
-;; $f065 ; INT 10h Video Support Service Entry Point
-;; $f0a4 ; MDA/CGA Video Parameter Table (INT 1Dh)
-;; $f859 ; INT15 services interupt
-;; $fef3 ; Vector table
-;; $ff23 ; Ignored interupt vector
-;; $ff53 ; Dummy interupt 
+;; $df5b ; POST Entry Point
+;; $e5f2 ; INT 19h Boot Load Service Entry Point
+;; $eec7 ; Diskette parameter table
+;; $ef45 ; INT 10 Functions 0-Fh Entry Point
+;; $ef65 ; INT 10h Video Support Service Entry Point
+;; $efa4 ; MDA/CGA Video Parameter Table (INT 1Dh)
+;; $f759 ; INT15 services interupt
+;; $fdf3 ; Vector table
+;; $fe23 ; Ignored interupt vector
+;; $fe53 ; Dummy interupt 
 ;; $fff0 ; Power-up Entry Point
 ;; $fff5 ; ASCII Date ROM was built - 8 characters in MM/DD/YY
 ;; $fffe ; System Model ID
@@ -119,13 +119,13 @@ ENDM
 ;;--------------------------------------------------------------------------
 ;; This value is subtracted from all the values that have to be placed to an
 ;; absolute location. The reason is so we can assemble a module that the linker
-;; will start linking at F000:E000 offset. If we do not, then the linker will
-;; fill F000:0000 to F000:DFFF with zeros and we will not be able to linke the
-;; C module in. This trick makes the assembler thing we are starting at F000:0000 
-;; then we set the linker script in the make file with an ofset of E000 in this
+;; will start linking at F000:DF00 offset. If we do not, then the linker will
+;; fill F000:0000 to F000:DEFF with zeros and we will not be able to link the
+;; C module in. This trick makes the assembler think we are starting at F000:0000 
+;; then we set the linker script in the make file with an offset of DF00 in this
 ;; _BIOSSEG segment only. If you followed that then congratulations.
 ;;--------------------------------------------------------------------------
-startofrom              equ     0e000h
+startofrom              equ     0df00h
 
 ;;--------------------------------------------------------------------------
 ;;--------------------------------------------------------------------------
@@ -152,7 +152,7 @@ bios_name_string:       db      "zetbios 1.1"   ;; version string, not used by c
 ;; - calls int19 which boots up the OS
 ;;---------------------------------------------------------------------------
 ;;---------------------------------------------------------------------------
-                        org     (0e05bh - startofrom)
+                        org     (0df5bh - startofrom)
 
 post:                   xor     ax, ax          ; clear ax register
                         mov     es, ax          ; zero out BIOS data area (40:00..40:ff)
@@ -521,7 +521,7 @@ rom_scan_increment:     push    cx
 ;;   - because the iret will pop the flags, we copy the needed flags to the 
 ;;     flags reg on the stack then return from interupt
 ;;--------------------------------------------------------------------------
-                        org     (0e3feh - startofrom)   ;; INT 13h Fixed Disk Services Entry Point
+                        org     (0e2feh - startofrom)   ;; INT 13h Fixed Disk Services Entry Point
 int13_handler:          push    ax                      ;; This will save them all and pass them to
                         push    cx                  ;; the C program
                         push    dx                  ;;
@@ -559,7 +559,7 @@ int13_out:                                                  ;; diskette jumps to
 ;; - INT19h - INT 19h Boot Load Service Entry Point
 ;;--------------------------------------------------------------------------
 ;;--------------------------------------------------------------------------
-                        org     (0e6e0h - startofrom) 
+                        org     (0e5e0h - startofrom) 
 int19_relocated:        push    bp                  ;; int19 was beginning to be really complex, so now it
                         mov     bp, sp              ;; just calls a C function that does the work
 
@@ -570,7 +570,7 @@ int19_relocated:        push    bp                  ;; int19 was beginning to be
 int19_next_boot:        call    _int19_function     ;; Call the C code for the next boot device
                         int     018h                ;; Boot failed: invoke the boot recovery function
 
-                        org     (0e6f2h - startofrom) 
+                        org     (0e5f2h - startofrom) 
 int19_handler:          jmp     int19_relocated                        
 
 ;;--------------------------------------------------------------------------
@@ -582,7 +582,7 @@ SYS_MODEL_ID            equ     0xFC
 SYS_SUBMODEL_ID         equ     0x00
 BIOS_REVISION           equ     1
 ;--------------------------------------------------------------------------
-                        org     (0e6f5h - startofrom) 
+                        org     (0e5f5h - startofrom) 
                         db      0x08                  ; Table size (bytes) -Lo
                         db      0x00                  ; Table size (bytes) -Hi
                         db      SYS_MODEL_ID
@@ -651,7 +651,7 @@ BIOS_REVISION           equ     1
 ;; INT14h - IBM entry point for Serial com. RS232 services
 ;;--------------------------------------------------------------------------
 ;;--------------------------------------------------------------------------
-                        org     (0e729h - startofrom) 
+                        org     (0e629h - startofrom) 
 int14_handler:        sti                         ; Serial com. RS232 services
                         push    ds                  ; save on stack
                         push    ax                  ; place ax on stack
@@ -687,7 +687,7 @@ baud_rates:             dw      0417h               ;  110 baud clock divisor
 ;; input.
 ;;--------------------------------------------------------------------------
 ;;--------------------------------------------------------------------------
-                        org     (0e82eh - startofrom)
+                        org     (0e72eh - startofrom)
 int16_handler:          sti                             ;; Enable interupts
                         push    ds                      ;; Save all registers that
                         push    dx                      ;; are not supposed to change
@@ -819,7 +819,7 @@ int74_done:             pop     ds                      ;; restore DS
 ;; C helper function int09_function()
 ;;--------------------------------------------------------------------------
 ;;--------------------------------------------------------------------------
-                        org     (0e987h - startofrom)
+                        org     (0e887h - startofrom)
 int09_handler:          cli                         ;; Clear interupt enable flag
                         push    ax                  ;; Save the AX register      
                         in      al, 060h            ;; read key from keyboard controller
@@ -877,7 +877,7 @@ int09_done:             pop     di                  ;; Retore all the saved regi
 ;; the int13 caller if AH=08.
 ;;---------------------------------------------------------------------------
 ;;--------------------------------------------------------------------------
-                        org     (0efc7h - startofrom)  ; IBM entry for disk param
+                        org     (0eec7h - startofrom)  ; IBM entry for disk param
 int1E_table:            db      0xAF                   ; Disk parameter table
                         db      0x02       ;; head load time 0000001, DMA used 
                         db      0x25
@@ -902,7 +902,7 @@ int1E_table:            db      0xAF                   ; Disk parameter table
 ;; based rudimentary screen function. 
 ;;--------------------------------------------------------------------------
 ;;---------------------------------------------------------------------------
-                        org     (0f065h - startofrom)    
+                        org     (0ef65h - startofrom)    
 int10_handler:                                          ; dont do anything, since 
                         iret                            ; the VGA BIOS handles int10h requests
 
@@ -911,7 +911,7 @@ int10_handler:                                          ; dont do anything, sinc
 ;; INT12h - ; INT 12h Memory Size Service Entry Point
 ;;--------------------------------------------------------------------------
 ;;--------------------------------------------------------------------------
-                        org     (0f841h - startofrom)   ; ??? different for Pentium (machine check)?
+                        org     (0f741h - startofrom)   ; ??? different for Pentium (machine check)?
 int12_handler:          push    ds
                         mov     ax, 0040h               ;; BDA segment address
                         mov     ds, ax                  ;; set data segment register
@@ -943,7 +943,7 @@ int12_handler:          push    ds
 ;; we should return 0000_0010 0100_0101 = 0205h
 ;;--------------------------------------------------------------------------
 ;;--------------------------------------------------------------------------
-                        org     (0f84dh - startofrom)
+                        org     (0f74dh - startofrom)
 int11_handler:          push    ds                      ;; save data segment register
                         mov     ax, 0040h               ;; BDA segment address
                         mov     ds, ax
@@ -956,7 +956,7 @@ int11_handler:          push    ds                      ;; save data segment reg
 ;;  INT15h - System Services Entry Point
 ;;--------------------------------------------------------------------------
 ;;--------------------------------------------------------------------------
-                        org     (0f859h - startofrom)
+                        org     (0f759h - startofrom)
 int15_handler:          sti                             ;; Disable interrupts
                         push    ds                      ;; Save data segment
                         push    es                      ;; Save Extra segment
@@ -981,7 +981,7 @@ int15_handler32_ret:    pop     es                      ;; Restore
 ;; - INT1Ah - INT 1Ah Time-of-day Service Entry Point
 ;;--------------------------------------------------------------------------
 ;;--------------------------------------------------------------------------
-                        org     (0fe6eh - startofrom)    
+                        org     (0fd6eh - startofrom)    
 int1a_handler:          push    ds                      ;; Save all registers that
                         push    bx                      ;; on return
                         push    bp                      ;; Save Base Pointer
@@ -1012,7 +1012,7 @@ int1c_handler:                          ;; re-vectored by users later
 ;; - INT08 -  System Timer ISR Entry Point
 ;;--------------------------------------------------------------------------
 ;;--------------------------------------------------------------------------
-                        org     (0fea5h - startofrom)     
+                        org     (0fda5h - startofrom)     
 int08_handler:          sti
                         push    ax
                         push    bx
@@ -1059,7 +1059,7 @@ int08_store_ticks:      mov     WORD PTR ds:046ch, ax           ;; store new tic
 
 ;; BIOS Strings: These strings are not actually used for anything, they are
 ;; placed in the file so that the binary file can be identified later.
-                        org     (0ff00h - startofrom)
+                        org     (0fe00h - startofrom)
 
 BIOS_COPYRIGHT_STRING equ     "Zet Bios 1.1 (C) 2010 Zeus Gomez Marmolejo, Donna Polehn"
 MSG1:                   db      BIOS_COPYRIGHT_STRING
@@ -1067,7 +1067,7 @@ MSG1:                   db      BIOS_COPYRIGHT_STRING
 
 ;; IRET Instruction for Dummy Interrupt Handler -
 ;; Also INT1C - User Timer Tick and INT1B
-                        org     (0ff53h - startofrom)
+                        org     (0fe53h - startofrom)
 dummy_iret_handler:     iret            ;; IRET Instruction for Dummy Interrupt Handler
                         db      0
 

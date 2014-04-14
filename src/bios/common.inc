@@ -64,7 +64,7 @@ zetbios.rom: zetbios_vers$(O) entry$(O) biossums$(E)
         ORDER &
         clname DATA segment _DATA    segaddr=0xf000 offset=0x0000 &
         clname CODE segment _TEXT    segaddr=0xf000 offset=0x1000 &
-                    segment _BIOSSEG segaddr=0xf000 offset=0xe000 &
+                    segment _BIOSSEG segaddr=0xf000 offset=0xdf00 &
         FILE { zetbios_vers$(O) entry$(O) } &
         LIBRARY clibs.lib &
         disable 1014

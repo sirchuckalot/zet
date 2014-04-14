@@ -54,7 +54,7 @@ static void make_hex(char *infile, char *outfile)
       exit(EXIT_FAILURE);        // terminate program early
     }
 
-  fseek(fi, 0xFF00L, SEEK_SET);   // seek to the last 256 bytes
+  fseek(fi, 0xFE00L, SEEK_SET);   // seek to the last 256 bytes
 
   n = 0;
   do
