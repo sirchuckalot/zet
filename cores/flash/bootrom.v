@@ -37,13 +37,13 @@ module bootrom (
   );
 
   // Net declarations
-  reg  [15:0] rom[0:127];  // Instantiate the ROM
+  reg  [15:0] rom[0:255];  // Instantiate the 512 byte ROM
 
-  wire [ 6:0] rom_addr;
+  wire [ 7:0] rom_addr;
   wire        stb;
 
   // Combinatorial logic
-  assign rom_addr = wb_adr_i[7:1];
+  assign rom_addr = wb_adr_i[8:1];
   assign stb      = wb_stb_i & wb_cyc_i;
   assign wb_ack_o = stb;
   assign wb_dat_o = rom[rom_addr];
