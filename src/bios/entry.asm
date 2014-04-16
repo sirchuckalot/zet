@@ -1061,6 +1061,8 @@ int08_store_ticks:      mov     WORD PTR ds:046ch, ax           ;; store new tic
 ;; placed in the file so that the binary file can be identified later.
                         org     (0fe00h - startofrom)
 
+BOOT512:                jmp far ptr SDRAM_POST
+
 BIOS_COPYRIGHT_STRING equ     "Zet Bios 1.1 (C) 2010 Zeus Gomez Marmolejo, Donna Polehn"
 MSG1:                   db      BIOS_COPYRIGHT_STRING
                         db      0
@@ -1100,6 +1102,7 @@ a_delay:                loop    a_delay            ; Loop until 50 goes to zero
                         xor     ax, ax             ; clear ax register
                         mov     ds, ax             ; set data segment to 0
                         mov     ss, ax             ; set stack segment to 0
+                        jmp far ptr shadowcopy
 
 ;;--------------------------------------------------------------------------
 ;; - Second we need to initialize sd controller for use: 
@@ -1169,12 +1172,12 @@ init_sd_cmd1:           mov     ax, 041h           ; CS = 0, CMD1: activate the 
 ;;--------------------------------------------------------------------------
 
 VGABIOSSEGMENT          equ     0xC000                  ; VGA BIOS Segment
-VGABIOSLENGTH           equ     0x0020                  ; Length (Original 0x4000) of VGA Bios in Words
+VGABIOSLENGTH           equ     0x4000                  ; Length (Original 0x4000) of VGA Bios in Words
 SDCARDVGABIOSHI         equ     0x0000                  ; High end of sector address
 SDCARDVGABIOSLO         equ     0x0001                  ; after Master Boot Record
 
 ROMBIOSSEGMENT          equ     0xF000                  ; ROM BIOS Segment
-ROMBIOSLENGTH           equ     0x0040                  ; Copy (Original 0x7F80) up to this ROM in Words
+ROMBIOSLENGTH           equ     0x7F80                  ; Copy (Original 0x7F80) up to this ROM in Words
 SDCARDROMBIOSHI         equ     0x0000                  ; hi end of sector address
 SDCARDROMBIOSLO         equ     0x0041                  ; Sector right after vga bios
 
@@ -1337,7 +1340,7 @@ biosloop:               mov     ax, bx                  ;; Put bx into ax
 ;; that gets executed on start up. So we just immediately jump to the entry
 ;; Point for the Bios which is the POST (which stands for Power On Self Test).
                         org     (0fff0h - startofrom)   ;; Power-up Entry Point
-                        jmp     far ptr SDRAM_POST      ;; Boot up bios
+                        jmp     far ptr BOOT512      ;; Boot up bios
 
                         org     (0fff5h - startofrom)   ;; ASCII Date ROM was built - 8 characters in MM/DD/YY
 BIOS_BUILD_DATE         equ     "09/09/10\n"
