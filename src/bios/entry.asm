@@ -1061,9 +1061,7 @@ int08_store_ticks:      mov     WORD PTR ds:046ch, ax           ;; store new tic
 ;; placed in the file so that the binary file can be identified later.
                         org     (0fe00h - startofrom)
 
-BOOT512:                jmp far ptr SDRAM_POST
-
-BIOS_COPYRIGHT_STRING equ     "Zet Bios 1.1 (C) 2010 Zeus Gomez Marmolejo, Donna Polehn"
+BIOS_COPYRIGHT_STRING   equ     "Zet Bios 1.1 (C) 2010 Zeus Gomez Marmolejo, Donna Polehn"
 MSG1:                   db      BIOS_COPYRIGHT_STRING
                         db      0
 
@@ -1102,7 +1100,6 @@ a_delay:                loop    a_delay            ; Loop until 50 goes to zero
                         xor     ax, ax             ; clear ax register
                         mov     ds, ax             ; set data segment to 0
                         mov     ss, ax             ; set stack segment to 0
-                        jmp far ptr shadowcopy
 
 ;;--------------------------------------------------------------------------
 ;; - Second we need to initialize sd controller for use: 
@@ -1171,25 +1168,29 @@ init_sd_cmd1:           mov     ax, 041h           ; CS = 0, CMD1: activate the 
 ;; - Now we can load rom bios into sdram from flash port or sd card: 
 ;;--------------------------------------------------------------------------
 
+;; These are required parameters for loading VGA BIOS 
 VGABIOSSEGMENT          equ     0xC000                  ; VGA BIOS Segment
-VGABIOSLENGTH           equ     0x4000                  ; Length (Original 0x4000) of VGA Bios in Words
-SDCARDVGABIOSHI         equ     0x0000                  ; High end of sector address
-SDCARDVGABIOSLO         equ     0x0001                  ; after Master Boot Record
+VGABIOSLENGTH           equ     0x4000                  ; Length of VGA Bios in Words
 
+SDVGASECTORCOUNT        equ     0x0040                  ; Total sectors for 32KB / 512 byte rom
+SDCARDVGABIOSHI         equ     0x0000                  ; High end of sector address
+SDCARDVGABIOSLO         equ     0x0001                  ; starts right after Master Boot Record
+
+;; These are required parameters for loading ROM BIOS
 ROMBIOSSEGMENT          equ     0xF000                  ; ROM BIOS Segment
-ROMBIOSLENGTH           equ     0x7F80                  ; Copy (Original 0x7F80) up to this ROM in Words
+ROMBIOSLENGTH           equ     0x7F80                  ; Copy up to this ROM in Words
+
+SDROMSECTORCOUNT        equ     0x0080                  ; Total sectors for 64KB / 512 byte rom
 SDCARDROMBIOSHI         equ     0x0000                  ; hi end of sector address
-SDCARDROMBIOSLO         equ     0x0041                  ; Sector right after vga bios
+SDCARDROMBIOSLO         equ     0x0042                  ; Sector right after vga bios
 
 
 ;; Detect where to load bios rom image from
+;; by default we are only testing loading rom image from sd card
 
 ;;--------------------------------------------------------------------------
 ;; - We choose to load Shadow BIOS from sd card starting at sector 1: 
 ;;--------------------------------------------------------------------------
-
-SD_BIOS_BEGIN           equ     0x0200                  ;; SD Card BIOS address in bytes
-
 
 ;;--------------------------------------------------------------------------
 sdbioscopy:             mov     ax, VGABIOSSEGMENT      ;; Load with the segment of the vga bios rom area
@@ -1197,7 +1198,7 @@ sdbioscopy:             mov     ax, VGABIOSSEGMENT      ;; Load with the segment
                         xor     di, di                  ;; Bios starts at offset address 0
                         mov     cx, SDCARDVGABIOSHI     ;; High sector address on sd card
                         mov     bx, SDCARDVGABIOSLO     ;; Low sector address on sd card
-                        mov     ax, VGABIOSLENGTH       ;; VGA Bios is <32K long
+                        mov     ax, SDVGASECTORCOUNT    ;; VGA Bios is <32K long
                         
                         call sdbiosloop                 ;; Read all vga bios sectors
                                                 
@@ -1207,9 +1208,9 @@ sdbioscopy:             mov     ax, VGABIOSSEGMENT      ;; Load with the segment
                         xor     di, di                  ;; Bios starts at offset address 0
                         mov     cx, SDCARDROMBIOSHI     ;; High sector address on sd card
                         mov     bx, SDCARDROMBIOSLO     ;; Low sector address on sd card
-                        mov     ax, ROMBIOSLENGTH        ;; VGA Bios is <32K long
+                        mov     ax, SDROMSECTORCOUNT    ;; ROM Bios is <64K long
                         
-                        call sdbiosloop                 ;; Read all vga bios sectors
+                        call sdbiosloop                 ;; Read all rom bios sectors
 
                         jmp     far ptr post            ;; Continue with regular POST
 
@@ -1229,11 +1230,11 @@ sdbiosloop:             push    ax                      ;; Preserve all register
                         pop     ax
                         
                         cmp     al, 0                   ;; Are we there yet?
-                        je      sdbiosloop_done         ;; We have read all sectors
+                        je      sdbiosloop_done         ;; Jump only if we have read all sectors
                         
                         dec     al                      ;; Subtract sector count until we reach zero
                         add     bx, 0x0001              ;; Next sector address to read(Yes, we are ignoring hi sector address)
-                        add     di, 0x,0200             ;; Next 512 bytes to read
+                        add     di, 0x0200              ;; Next 512 bytes to read
                         
                         jmp sdbiosloop                  ;; let's do it again until all sectors have been read
                         
@@ -1340,7 +1341,7 @@ biosloop:               mov     ax, bx                  ;; Put bx into ax
 ;; that gets executed on start up. So we just immediately jump to the entry
 ;; Point for the Bios which is the POST (which stands for Power On Self Test).
                         org     (0fff0h - startofrom)   ;; Power-up Entry Point
-                        jmp     far ptr BOOT512      ;; Boot up bios
+                        jmp     far ptr SDRAM_POST      ;; Boot up bios
 
                         org     (0fff5h - startofrom)   ;; ASCII Date ROM was built - 8 characters in MM/DD/YY
 BIOS_BUILD_DATE         equ     "09/09/10\n"
