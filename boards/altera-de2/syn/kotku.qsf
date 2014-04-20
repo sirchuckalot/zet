@@ -42,97 +42,6 @@
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 9.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "11:09:38  MARCH 18, 2009"
 set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
-set_global_assignment -name VERILOG_FILE ../rtl/pll.v
-set_global_assignment -name SDC_FILE kotku.sdc
-set_global_assignment -name VERILOG_FILE ../../../cores/sram/csr_sram.v
-set_global_assignment -name VERILOG_FILE ../../../cores/vga/rtl/vga_write_iface.v
-set_global_assignment -name VERILOG_FILE ../../../cores/vga/rtl/vga_read_iface.v
-set_global_assignment -name VERILOG_FILE ../../../cores/vga/rtl/vga_mem_arbitrer.v
-set_global_assignment -name VERILOG_FILE ../../../cores/vga/rtl/vga_cpu_mem_iface.v
-set_global_assignment -name VERILOG_FILE ../../../cores/vga/rtl/vga_config_iface.v
-set_global_assignment -name VERILOG_FILE ../../../cores/vga/rtl/vga_char_rom.v
-set_global_assignment -name VERILOG_FILE ../../../cores/vga/rtl/vga_c4_iface.v
-set_global_assignment -name VERILOG_FILE ../../../cores/vga/rtl/fml/vga_text_mode_fml.v
-set_global_assignment -name VERILOG_FILE ../../../cores/vga/rtl/fml/vga_planar_fml.v
-set_global_assignment -name VERILOG_FILE ../../../cores/vga/rtl/fml/vga_linear_fml.v
-set_global_assignment -name VERILOG_FILE ../../../cores/vga/rtl/fml/vga_sequencer_fml.v
-set_global_assignment -name VERILOG_FILE ../../../cores/vga/rtl/fml/vga_palette_regs_fml.v
-set_global_assignment -name VERILOG_FILE ../../../cores/vga/rtl/fml/vga_pal_dac_fml.v
-set_global_assignment -name VERILOG_FILE ../../../cores/vga/rtl/fml/vga_lcd_fml.v
-set_global_assignment -name VERILOG_FILE ../../../cores/vga/rtl/fml/vga_fml.v
-set_global_assignment -name VERILOG_FILE ../../../cores/vga/rtl/fml/vga_fifo.v
-set_global_assignment -name VERILOG_FILE ../../../cores/vga/rtl/fml/vga_dac_regs_fml.v
-set_global_assignment -name VERILOG_FILE ../../../cores/vga/rtl/fml/vga_crtc_fml.v
-set_global_assignment -name VERILOG_FILE ../../../cores/hpdmc_sdr16/rtl/hpdmc_sdrio.v
-set_global_assignment -name VERILOG_FILE ../../../cores/hpdmc_sdr16/rtl/hpdmc_mgmt.v
-set_global_assignment -name VERILOG_FILE ../../../cores/hpdmc_sdr16/rtl/hpdmc_datactl.v
-set_global_assignment -name VERILOG_FILE ../../../cores/hpdmc_sdr16/rtl/hpdmc_ctlif.v
-set_global_assignment -name VERILOG_FILE ../../../cores/hpdmc_sdr16/rtl/hpdmc_busif.v
-set_global_assignment -name VERILOG_FILE ../../../cores/hpdmc_sdr16/rtl/hpdmc_banktimer.v
-set_global_assignment -name VERILOG_FILE ../../../cores/hpdmc_sdr16/rtl/hpdmc.v
-set_global_assignment -name VERILOG_FILE ../../../cores/fmlarb/rtl/fmlarb.v
-set_global_assignment -name VERILOG_FILE ../../../cores/fmlbrg/rtl/fmlbrg_datamem.v
-set_global_assignment -name VERILOG_FILE ../../../cores/fmlbrg/rtl/fmlbrg_tagmem.v
-set_global_assignment -name VERILOG_FILE ../../../cores/fmlbrg/rtl/fmlbrg.v
-set_global_assignment -name VERILOG_FILE ../../../cores/csrbrg/rtl/csrbrg.v
-set_global_assignment -name VERILOG_FILE ../../../cores/wb_abrg/wb_abrgr.v
-set_global_assignment -name VERILOG_FILE ../../../cores/timer/rtl/timer_counter.v
-set_global_assignment -name VERILOG_FILE ../../../cores/timer/rtl/timer.v
-set_global_assignment -name VERILOG_FILE ../../../cores/pic/rtl/simple_pic.v
-set_global_assignment -name VERILOG_FILE ../../../cores/speaker/wm8731/speaker.v
-set_global_assignment -name VERILOG_FILE ../../../cores/speaker/wm8731/speaker_i2c_av_config.v
-set_global_assignment -name VERILOG_FILE ../../../cores/speaker/wm8731/speaker_i2c_controller.v
-set_global_assignment -name VERILOG_FILE ../../../cores/speaker/wm8731/speaker_iface.v
-set_global_assignment -name VERILOG_FILE ../../../cores/ps2/rtl/ps2.v
-set_global_assignment -name VERILOG_FILE ../../../cores/ps2/rtl/ps2_keyb.v
-set_global_assignment -name VERILOG_FILE ../../../cores/ps2/rtl/ps2_keyb_xtcodes.v
-set_global_assignment -name VERILOG_FILE ../../../cores/ps2/rtl/ps2_mouse.v
-set_global_assignment -name VERILOG_FILE ../../../cores/ps2/rtl/ps2_mouse_cmdout.v
-set_global_assignment -name VERILOG_FILE ../../../cores/ps2/rtl/ps2_mouse_datain.v
-set_global_assignment -name VERILOG_FILE ../../../cores/ps2/rtl/ps2_mouse_nofifo.v
-set_global_assignment -name VERILOG_FILE ../../../cores/serial/rtl/serial_atx.v
-set_global_assignment -name VERILOG_FILE ../../../cores/serial/rtl/serial_arx.v
-set_global_assignment -name VERILOG_FILE ../../../cores/serial/rtl/serial.v
-set_global_assignment -name VERILOG_FILE ../../../cores/wb_switch/wb_switch.v
-set_global_assignment -name VERILOG_FILE ../../../cores/flash/flash8.v
-set_global_assignment -name VERILOG_FILE ../../../cores/wb_abrg/wb_abrg.v
-set_global_assignment -name VERILOG_FILE ../../../cores/timer/rtl/clk_gen.v
-set_global_assignment -name VERILOG_FILE ../../../cores/flash/bootrom.v
-set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_arlog.v
-set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_shrot.v
-set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_core.v
-set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/altera/zet_signmul17.v
-set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_wb_master.v
-set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_rxr16.v
-set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_rxr8.v
-set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_regfile.v
-set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_othop.v
-set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_opcode_deco.v
-set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_nstate.v
-set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_next_or_not.v
-set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_mux8_16.v
-set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_mux8_1.v
-set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_muldiv.v
-set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_micro_rom.v
-set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_micro_data.v
-set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_memory_regs.v
-set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_jmp_cond.v
-set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_fulladd16.v
-set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_fetch.v
-set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_exec.v
-set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_div_uu.v
-set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_div_su.v
-set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_decode.v
-set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_conv.v
-set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_bitlog.v
-set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_alu.v
-set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_addsub.v
-set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet.v
-set_global_assignment -name VERILOG_FILE ../../../cores/gpio/rtl/sw_leds.v
-set_global_assignment -name VERILOG_FILE ../../../cores/sdspi/rtl/sdspi.v
-set_global_assignment -name VERILOG_FILE ../rtl/kotku.v
-set_global_assignment -name VERILOG_FILE ../../../cores/gpio/rtl/hex_display.v
-set_global_assignment -name VERILOG_FILE ../../../cores/gpio/rtl/seg_7.v
 
 # Pin & Location Assignments
 # ==========================
@@ -276,6 +185,34 @@ set_location_assignment PIN_Y26 -to hex3_[3]
 set_location_assignment PIN_Y25 -to hex3_[4]
 set_location_assignment PIN_U22 -to hex3_[5]
 set_location_assignment PIN_W24 -to hex3_[6]
+set_location_assignment PIN_U9 -to hex4_[0]
+set_location_assignment PIN_U1 -to hex4_[1]
+set_location_assignment PIN_U2 -to hex4_[2]
+set_location_assignment PIN_T4 -to hex4_[3]
+set_location_assignment PIN_R7 -to hex4_[4]
+set_location_assignment PIN_R6 -to hex4_[5]
+set_location_assignment PIN_T3 -to hex4_[6]
+set_location_assignment PIN_T2 -to hex5_[0]
+set_location_assignment PIN_P6 -to hex5_[1]
+set_location_assignment PIN_P7 -to hex5_[2]
+set_location_assignment PIN_T9 -to hex5_[3]
+set_location_assignment PIN_R5 -to hex5_[4]
+set_location_assignment PIN_R4 -to hex5_[5]
+set_location_assignment PIN_R3 -to hex5_[6]
+set_location_assignment PIN_R2 -to hex6_[0]
+set_location_assignment PIN_P4 -to hex6_[1]
+set_location_assignment PIN_P3 -to hex6_[2]
+set_location_assignment PIN_M2 -to hex6_[3]
+set_location_assignment PIN_M3 -to hex6_[4]
+set_location_assignment PIN_M5 -to hex6_[5]
+set_location_assignment PIN_M4 -to hex6_[6]
+set_location_assignment PIN_L3 -to hex7_[0]
+set_location_assignment PIN_L2 -to hex7_[1]
+set_location_assignment PIN_L9 -to hex7_[2]
+set_location_assignment PIN_L6 -to hex7_[3]
+set_location_assignment PIN_L7 -to hex7_[4]
+set_location_assignment PIN_P9 -to hex7_[5]
+set_location_assignment PIN_N9 -to hex7_[6]
 set_location_assignment PIN_G26 -to key_
 set_location_assignment PIN_B25 -to uart_txd_
 set_location_assignment PIN_D26 -to ps2_kclk_
@@ -360,8 +297,8 @@ set_global_assignment -name OUTPUT_IO_TIMING_ENDPOINT "NEAR END"
 
 	# EDA Netlist Writer Assignments
 	# ==============================
-	set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
-	set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
 
 # end EDA_TOOL_SETTINGS(eda_simulation)
 # -------------------------------------
@@ -371,7 +308,7 @@ set_global_assignment -name OUTPUT_IO_TIMING_ENDPOINT "NEAR END"
 
 	# Analysis & Synthesis Assignments
 	# ================================
-	set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
+set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
 
 # end EDA_TOOL_SETTINGS(eda_blast_fpga)
 # -------------------------------------
@@ -381,7 +318,7 @@ set_global_assignment -name OUTPUT_IO_TIMING_ENDPOINT "NEAR END"
 
 	# Classic Timing Assignments
 	# ==========================
-	set_global_assignment -name FMAX_REQUIREMENT "50 MHz" -section_id clk_50_
+set_global_assignment -name FMAX_REQUIREMENT "50 MHz" -section_id clk_50_
 
 # end CLOCK(clk_50_)
 # ------------------
@@ -391,211 +328,239 @@ set_global_assignment -name OUTPUT_IO_TIMING_ENDPOINT "NEAR END"
 
 	# Pin & Location Assignments
 	# ==========================
-	set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to sdram_addr_[0]
-	set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to sdram_addr_[1]
-	set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to sdram_addr_[2]
-	set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to sdram_addr_[3]
-	set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to sdram_addr_[4]
-	set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to sdram_addr_[5]
-	set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to sdram_addr_[6]
-	set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to sdram_addr_[7]
-	set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to sdram_addr_[8]
-	set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to sdram_addr_[9]
-	set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to sdram_addr_[10]
-	set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to sdram_addr_[11]
-	set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to tft_lcd_r_[0]
-	set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to tft_lcd_r_[1]
-	set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to tft_lcd_r_[2]
-	set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to tft_lcd_r_[3]
-	set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to tft_lcd_g_[0]
-	set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to tft_lcd_g_[1]
-	set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to tft_lcd_g_[2]
-	set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to tft_lcd_g_[3]
-	set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to tft_lcd_b_[0]
-	set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to tft_lcd_b_[1]
-	set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to tft_lcd_b_[2]
-	set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to tft_lcd_b_[3]
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to sdram_addr_[0]
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to sdram_addr_[1]
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to sdram_addr_[2]
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to sdram_addr_[3]
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to sdram_addr_[4]
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to sdram_addr_[5]
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to sdram_addr_[6]
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to sdram_addr_[7]
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to sdram_addr_[8]
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to sdram_addr_[9]
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to sdram_addr_[10]
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to sdram_addr_[11]
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to tft_lcd_r_[0]
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to tft_lcd_r_[1]
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to tft_lcd_r_[2]
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to tft_lcd_r_[3]
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to tft_lcd_g_[0]
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to tft_lcd_g_[1]
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to tft_lcd_g_[2]
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to tft_lcd_g_[3]
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to tft_lcd_b_[0]
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to tft_lcd_b_[1]
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to tft_lcd_b_[2]
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to tft_lcd_b_[3]
 
 	# Fitter Assignments
 	# ==================
-	set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to hex*
-	set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to led*
-	set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to flash*
-	set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to sdram*
-	set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to tft*
-	set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to uart*
-	set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to i2c*
-	set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to aud*
-	set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to ps2*
-	set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to sd_*
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_addr_[21]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_addr_[20]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_addr_[19]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_addr_[18]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_addr_[17]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_addr_[16]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_addr_[15]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_addr_[14]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_addr_[13]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_addr_[12]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_addr_[11]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_addr_[10]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_addr_[9]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_addr_[8]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_addr_[7]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_addr_[6]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_addr_[5]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_addr_[4]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_addr_[3]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_addr_[2]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_addr_[1]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_addr_[0]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_data_[7]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_data_[6]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_data_[5]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_data_[4]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_data_[3]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_data_[2]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_data_[1]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_data_[0]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_rst_n_
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_we_n_
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_oe_n_
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to ledg_[7]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to ledg_[6]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to ledg_[5]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to ledg_[4]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to ledg_[3]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to ledg_[2]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to ledg_[1]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to ledg_[0]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to ledr_[7]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to ledr_[6]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to ledr_[5]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to ledr_[4]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to ledr_[3]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to ledr_[2]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to ledr_[1]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to ledr_[0]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sw_[7]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sw_[6]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sw_[5]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sw_[4]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sw_[3]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sw_[2]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sw_[1]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sw_[0]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to ledr_[9]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to ledr_[8]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_addr_[11]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_addr_[10]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_addr_[9]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_addr_[8]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_addr_[7]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_addr_[6]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_addr_[5]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_addr_[4]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_addr_[3]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_addr_[2]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_addr_[1]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_addr_[0]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_data_[0]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_data_[1]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_data_[2]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_data_[3]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_data_[4]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_data_[5]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_data_[6]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_data_[7]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_data_[8]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_data_[9]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_data_[10]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_data_[11]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_data_[12]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_data_[13]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_data_[14]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_data_[15]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_ba_[0]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_ba_[1]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_dqm_[0]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_dqm_[1]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_ras_n_
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_cas_n_
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_cs_n_
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_clk_
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_ce_
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_we_n_
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to clk_50_
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to tft_lcd_b_[3]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to tft_lcd_b_[2]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to tft_lcd_b_[1]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to tft_lcd_b_[0]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to tft_lcd_g_[3]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to tft_lcd_g_[2]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to tft_lcd_g_[1]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to tft_lcd_g_[0]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to tft_lcd_hsync_
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to tft_lcd_r_[3]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to tft_lcd_r_[2]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to tft_lcd_r_[1]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to tft_lcd_r_[0]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to tft_lcd_vsync_
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex0_[6]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex0_[5]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex0_[4]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex0_[3]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex0_[2]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex0_[1]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex0_[0]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex1_[6]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex1_[5]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex1_[4]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex1_[3]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex1_[2]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex1_[1]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex1_[0]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex2_[6]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex2_[5]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex2_[4]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex2_[3]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex2_[2]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex2_[1]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex2_[0]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex3_[0]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex3_[1]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex3_[2]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex3_[3]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex3_[4]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex3_[5]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex3_[6]
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to key_
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to uart_txd_
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to ps2_kclk_
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to ps2_kdat_
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to ps2_mclk_
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to ps2_mdat_
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_ce_n_
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sd_miso_
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sd_mosi_
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sd_sclk_
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sd_ss_
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to aud_bclk_
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to aud_dacdat_
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to aud_daclrck_
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to aud_xck_
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to i2c_sclk_
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to i2c_sdat_
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to tft_lcd_clk_
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to tft_lcd_blank_
-	set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to tft_lcd_sync_
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to hex*
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to led*
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to flash*
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to sdram*
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to tft*
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to uart*
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to i2c*
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to aud*
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to ps2*
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MINIMUM CURRENT" -to sd_*
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_addr_[21]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_addr_[20]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_addr_[19]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_addr_[18]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_addr_[17]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_addr_[16]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_addr_[15]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_addr_[14]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_addr_[13]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_addr_[12]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_addr_[11]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_addr_[10]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_addr_[9]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_addr_[8]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_addr_[7]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_addr_[6]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_addr_[5]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_addr_[4]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_addr_[3]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_addr_[2]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_addr_[1]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_addr_[0]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_data_[7]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_data_[6]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_data_[5]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_data_[4]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_data_[3]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_data_[2]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_data_[1]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_data_[0]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_rst_n_
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_we_n_
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_oe_n_
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to ledg_[7]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to ledg_[6]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to ledg_[5]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to ledg_[4]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to ledg_[3]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to ledg_[2]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to ledg_[1]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to ledg_[0]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to ledr_[7]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to ledr_[6]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to ledr_[5]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to ledr_[4]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to ledr_[3]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to ledr_[2]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to ledr_[1]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to ledr_[0]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sw_[7]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sw_[6]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sw_[5]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sw_[4]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sw_[3]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sw_[2]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sw_[1]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sw_[0]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to ledr_[9]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to ledr_[8]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_addr_[11]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_addr_[10]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_addr_[9]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_addr_[8]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_addr_[7]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_addr_[6]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_addr_[5]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_addr_[4]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_addr_[3]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_addr_[2]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_addr_[1]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_addr_[0]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_data_[0]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_data_[1]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_data_[2]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_data_[3]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_data_[4]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_data_[5]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_data_[6]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_data_[7]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_data_[8]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_data_[9]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_data_[10]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_data_[11]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_data_[12]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_data_[13]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_data_[14]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_data_[15]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_ba_[0]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_ba_[1]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_dqm_[0]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_dqm_[1]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_ras_n_
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_cas_n_
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_cs_n_
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_clk_
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_ce_
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sdram_we_n_
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to clk_50_
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to tft_lcd_b_[3]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to tft_lcd_b_[2]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to tft_lcd_b_[1]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to tft_lcd_b_[0]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to tft_lcd_g_[3]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to tft_lcd_g_[2]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to tft_lcd_g_[1]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to tft_lcd_g_[0]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to tft_lcd_hsync_
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to tft_lcd_r_[3]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to tft_lcd_r_[2]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to tft_lcd_r_[1]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to tft_lcd_r_[0]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to tft_lcd_vsync_
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex0_[6]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex0_[5]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex0_[4]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex0_[3]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex0_[2]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex0_[1]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex0_[0]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex1_[6]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex1_[5]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex1_[4]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex1_[3]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex1_[2]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex1_[1]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex1_[0]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex2_[6]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex2_[5]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex2_[4]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex2_[3]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex2_[2]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex2_[1]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex2_[0]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex3_[0]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex3_[1]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex3_[2]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex3_[3]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex3_[4]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex3_[5]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex3_[6]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex4_[0]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex4_[1]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex4_[2]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex4_[3]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex4_[4]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex4_[5]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex4_[6]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex5_[0]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex5_[1]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex5_[2]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex5_[3]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex5_[4]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex5_[5]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex5_[6]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex6_[0]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex6_[1]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex6_[2]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex6_[3]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex6_[4]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex6_[5]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex6_[6]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex7_[0]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex7_[1]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex7_[2]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex7_[3]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex7_[4]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex7_[5]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to hex7_[6]
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to key_
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to uart_txd_
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to ps2_kclk_
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to ps2_kdat_
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to ps2_mclk_
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to ps2_mdat_
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to flash_ce_n_
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sd_miso_
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sd_mosi_
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sd_sclk_
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to sd_ss_
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to aud_bclk_
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to aud_dacdat_
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to aud_daclrck_
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to aud_xck_
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to i2c_sclk_
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to i2c_sdat_
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to tft_lcd_clk_
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to tft_lcd_blank_
+set_instance_assignment -name OUTPUT_PIN_LOAD 0 -to tft_lcd_sync_
 
 	# start LOGICLOCK_REGION(Root Region)
 	# -----------------------------------
 
 		# LogicLock Region Assignments
 		# ============================
-		set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
-		set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
 
 	# end LOGICLOCK_REGION(Root Region)
 	# ---------------------------------
@@ -605,13 +570,105 @@ set_global_assignment -name OUTPUT_IO_TIMING_ENDPOINT "NEAR END"
 
 		# Incremental Compilation Assignments
 		# ===================================
-		set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-		set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-		set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT -section_id Top
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT -section_id Top
 
 	# end DESIGN_PARTITION(Top)
 	# -------------------------
 
 # end ENTITY(kotku)
 # -----------------
+set_global_assignment -name VERILOG_FILE ../rtl/pll.v
+set_global_assignment -name SDC_FILE kotku.sdc
+set_global_assignment -name VERILOG_FILE ../../../cores/sram/csr_sram.v
+set_global_assignment -name VERILOG_FILE ../../../cores/vga/rtl/vga_write_iface.v
+set_global_assignment -name VERILOG_FILE ../../../cores/vga/rtl/vga_read_iface.v
+set_global_assignment -name VERILOG_FILE ../../../cores/vga/rtl/vga_mem_arbitrer.v
+set_global_assignment -name VERILOG_FILE ../../../cores/vga/rtl/vga_cpu_mem_iface.v
+set_global_assignment -name VERILOG_FILE ../../../cores/vga/rtl/vga_config_iface.v
+set_global_assignment -name VERILOG_FILE ../../../cores/vga/rtl/vga_char_rom.v
+set_global_assignment -name VERILOG_FILE ../../../cores/vga/rtl/vga_c4_iface.v
+set_global_assignment -name VERILOG_FILE ../../../cores/vga/rtl/fml/vga_text_mode_fml.v
+set_global_assignment -name VERILOG_FILE ../../../cores/vga/rtl/fml/vga_planar_fml.v
+set_global_assignment -name VERILOG_FILE ../../../cores/vga/rtl/fml/vga_linear_fml.v
+set_global_assignment -name VERILOG_FILE ../../../cores/vga/rtl/fml/vga_sequencer_fml.v
+set_global_assignment -name VERILOG_FILE ../../../cores/vga/rtl/fml/vga_palette_regs_fml.v
+set_global_assignment -name VERILOG_FILE ../../../cores/vga/rtl/fml/vga_pal_dac_fml.v
+set_global_assignment -name VERILOG_FILE ../../../cores/vga/rtl/fml/vga_lcd_fml.v
+set_global_assignment -name VERILOG_FILE ../../../cores/vga/rtl/fml/vga_fml.v
+set_global_assignment -name VERILOG_FILE ../../../cores/vga/rtl/fml/vga_fifo.v
+set_global_assignment -name VERILOG_FILE ../../../cores/vga/rtl/fml/vga_dac_regs_fml.v
+set_global_assignment -name VERILOG_FILE ../../../cores/vga/rtl/fml/vga_crtc_fml.v
+set_global_assignment -name VERILOG_FILE ../../../cores/hpdmc_sdr16/rtl/hpdmc_sdrio.v
+set_global_assignment -name VERILOG_FILE ../../../cores/hpdmc_sdr16/rtl/hpdmc_mgmt.v
+set_global_assignment -name VERILOG_FILE ../../../cores/hpdmc_sdr16/rtl/hpdmc_datactl.v
+set_global_assignment -name VERILOG_FILE ../../../cores/hpdmc_sdr16/rtl/hpdmc_ctlif.v
+set_global_assignment -name VERILOG_FILE ../../../cores/hpdmc_sdr16/rtl/hpdmc_busif.v
+set_global_assignment -name VERILOG_FILE ../../../cores/hpdmc_sdr16/rtl/hpdmc_banktimer.v
+set_global_assignment -name VERILOG_FILE ../../../cores/hpdmc_sdr16/rtl/hpdmc.v
+set_global_assignment -name VERILOG_FILE ../../../cores/fmlarb/rtl/fmlarb.v
+set_global_assignment -name VERILOG_FILE ../../../cores/fmlbrg/rtl/fmlbrg_datamem.v
+set_global_assignment -name VERILOG_FILE ../../../cores/fmlbrg/rtl/fmlbrg_tagmem.v
+set_global_assignment -name VERILOG_FILE ../../../cores/fmlbrg/rtl/fmlbrg.v
+set_global_assignment -name VERILOG_FILE ../../../cores/csrbrg/rtl/csrbrg.v
+set_global_assignment -name VERILOG_FILE ../../../cores/wb_abrg/wb_abrgr.v
+set_global_assignment -name VERILOG_FILE ../../../cores/timer/rtl/timer_counter.v
+set_global_assignment -name VERILOG_FILE ../../../cores/timer/rtl/timer.v
+set_global_assignment -name VERILOG_FILE ../../../cores/pic/rtl/simple_pic.v
+set_global_assignment -name VERILOG_FILE ../../../cores/speaker/wm8731/speaker.v
+set_global_assignment -name VERILOG_FILE ../../../cores/speaker/wm8731/speaker_i2c_av_config.v
+set_global_assignment -name VERILOG_FILE ../../../cores/speaker/wm8731/speaker_i2c_controller.v
+set_global_assignment -name VERILOG_FILE ../../../cores/speaker/wm8731/speaker_iface.v
+set_global_assignment -name VERILOG_FILE ../../../cores/ps2/rtl/ps2.v
+set_global_assignment -name VERILOG_FILE ../../../cores/ps2/rtl/ps2_keyb.v
+set_global_assignment -name VERILOG_FILE ../../../cores/ps2/rtl/ps2_keyb_xtcodes.v
+set_global_assignment -name VERILOG_FILE ../../../cores/ps2/rtl/ps2_mouse.v
+set_global_assignment -name VERILOG_FILE ../../../cores/ps2/rtl/ps2_mouse_cmdout.v
+set_global_assignment -name VERILOG_FILE ../../../cores/ps2/rtl/ps2_mouse_datain.v
+set_global_assignment -name VERILOG_FILE ../../../cores/ps2/rtl/ps2_mouse_nofifo.v
+set_global_assignment -name VERILOG_FILE ../../../cores/serial/rtl/serial_atx.v
+set_global_assignment -name VERILOG_FILE ../../../cores/serial/rtl/serial_arx.v
+set_global_assignment -name VERILOG_FILE ../../../cores/serial/rtl/serial.v
+set_global_assignment -name VERILOG_FILE ../../../cores/wb_switch/wb_switch.v
+set_global_assignment -name VERILOG_FILE ../../../cores/flash/flash8.v
+set_global_assignment -name VERILOG_FILE ../../../cores/wb_abrg/wb_abrg.v
+set_global_assignment -name VERILOG_FILE ../../../cores/timer/rtl/clk_gen.v
+set_global_assignment -name VERILOG_FILE ../../../cores/flash/bootrom.v
+set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_arlog.v
+set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_shrot.v
+set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_core.v
+set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/altera/zet_signmul17.v
+set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_wb_master.v
+set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_rxr16.v
+set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_rxr8.v
+set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_regfile.v
+set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_othop.v
+set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_opcode_deco.v
+set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_nstate.v
+set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_next_or_not.v
+set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_mux8_16.v
+set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_mux8_1.v
+set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_muldiv.v
+set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_micro_rom.v
+set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_micro_data.v
+set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_memory_regs.v
+set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_jmp_cond.v
+set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_fulladd16.v
+set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_fetch.v
+set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_exec.v
+set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_div_uu.v
+set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_div_su.v
+set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_decode.v
+set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_conv.v
+set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_bitlog.v
+set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_alu.v
+set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet_addsub.v
+set_global_assignment -name VERILOG_FILE ../../../cores/zet/rtl/zet.v
+set_global_assignment -name VERILOG_FILE ../../../cores/gpio/rtl/sw_leds.v
+set_global_assignment -name VERILOG_FILE ../../../cores/sdspi/rtl/sdspi.v
+set_global_assignment -name VERILOG_FILE ../rtl/kotku.v
+set_global_assignment -name VERILOG_FILE ../../../cores/gpio/rtl/hex_display.v
+set_global_assignment -name VERILOG_FILE ../../../cores/gpio/rtl/seg_7.v
+set_global_assignment -name VERILOG_FILE ../../../cores/gpio/rtl/post.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

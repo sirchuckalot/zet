@@ -28,6 +28,11 @@ module kotku (
     output [6:0] hex1_,
     output [6:0] hex2_,
     output [6:0] hex3_,
+    output [6:0] hex4_,
+    output [6:0] hex5_,
+
+    output [6:0] hex6_,   // bios post code ?
+    output [6:0] hex7_,
     output [9:0] ledr_,
     output [7:0] ledg_,
 
@@ -216,6 +221,19 @@ module kotku (
   wire        gpio_stb_i;
   wire        gpio_ack_o;
 
+  // wires to postcode port
+  wire        post_stb_i;
+  wire        post_cyc_i;
+  wire        post_tga_i;
+  wire [19:1] post_adr_i;
+  wire        post_we_i;
+  wire [ 1:0] post_sel_i;
+  wire [15:0] post_dat_i;
+  wire [15:0] post_dat_o;
+  wire        post_ack_o;
+
+  wire [ 7:0] postcode;
+
   // wires to SDRAM controller
   wire [19:1] fmlbrg_adr_s;
   wire [15:0] fmlbrg_dat_w_s;
@@ -302,8 +320,6 @@ module kotku (
   wire [15:0]   vga_lcd_fml_di;
 
   // wires to default stb/ack
-  wire        def_cyc_i;
-  wire        def_stb_i;
   wire [15:0] sw_dat_o;
   wire        sdram_clk;
   wire        vga_clk;
@@ -317,7 +333,7 @@ module kotku (
   wire        nmi;
   wire        nmia;
 
-  wire [19:0] pc;
+  wire [19:0] cpu_pc;
   reg  [16:0] rst_debounce;
 
   wire        timer_clk;
@@ -860,6 +876,22 @@ module kotku (
     .wb_ack_o (sd_ack_o)
   );
 
+  post post (
+    .wb_clk_i (clk),
+    .wb_rst_i (rst),
+
+    .wb_stb_i (post_stb_i),
+    .wb_cyc_i (post_cyc_i),
+    .wb_adr_i (post_adr_i),
+    .wb_we_i  (post_we_i),
+    .wb_sel_i (post_sel_i),
+    .wb_dat_i (post_dat_i),
+    .wb_dat_o (post_dat_o),
+    .wb_ack_o (post_ack_o),
+
+    .postcode (postcode)
+  ); 
+
   // Switches and leds
   sw_leds sw_leds (
     .wb_clk_i (clk),
@@ -884,17 +916,21 @@ module kotku (
   );
 
   hex_display hex16 (
-    .num (pc[19:4]),
+    .num ({postcode, 4'b0, cpu_pc[19:0]}),
     .en  (1'b1),
 
     .hex0 (hex0_),
     .hex1 (hex1_),
     .hex2 (hex2_),
-    .hex3 (hex3_)
+    .hex3 (hex3_),
+    .hex4 (hex4_),
+    .hex5 (hex5_),
+    .hex6 (hex6_),
+    .hex7 (hex7_)
   );
 
   zet zet (
-    .pc (pc),
+    .pc (cpu_pc),
 
     // Wishbone master interface
     .wb_clk_i (clk),
@@ -953,7 +989,22 @@ module kotku (
     .sA_addr_1 (20'b1_0000_1111_0011_0000_000), // io 0xf300 - 0xf3ff
     .sA_mask_1 (20'b1_0000_1111_1111_0000_000), // SDRAM Control
     .sA_addr_2 (20'b0_0000_0000_0000_0000_000), // mem 0x00000 - 0xfffff
-    .sA_mask_2 (20'b1_0000_0000_0000_0000_000)  // Base RAM
+    .sA_mask_2 (20'b1_0000_0000_0000_0000_000), // Base RAM
+    
+    .sB_addr_1 (20'h1_00000), //
+    .sB_mask_1 (20'h1_FFFFF), // not used
+
+    .sC_addr_1 (20'h1_00000), //
+    .sC_mask_1 (20'h1_FFFFF), // not used
+
+    .sD_addr_1 (20'b1_0000_0000_0000_1000_000), // io 0x0080
+    .sD_mask_1 (20'b1_0000_1111_1111_1111_110), // postcode register
+
+    .sE_addr_1 (20'h1_00000), //
+    .sE_mask_1 (20'h1_FFFFF), // not used
+
+    .sF_addr_1 (20'h1_00000), //
+    .sF_mask_1 (20'h1_FFFFF)  // not used
 
     ) wbs (
 
@@ -1058,14 +1109,14 @@ module kotku (
     .s8_ack_i (fl_ack_o),
 
     // Slave 9 interface - not connected
-    .s9_dat_i (),
+    .s9_dat_i (16'h0000),
     .s9_dat_o (),
-    .s9_adr_o (),
+    .s9_adr_o (),   // tga_s, adr_s
     .s9_sel_o (),
     .s9_we_o  (),
-    .s9_cyc_o (sb_cyc_i),
-    .s9_stb_o (sb_stb_i),
-    .s9_ack_i (sb_cyc_i && sb_stb_i),
+    .s9_cyc_o (),
+    .s9_stb_o (),
+    .s9_ack_i (1'b0),
 
     // Slave A interface - sdram
     .sA_dat_i (fmlbrg_dat_r_s),
@@ -1077,15 +1128,56 @@ module kotku (
     .sA_stb_o (fmlbrg_stb_s),
     .sA_ack_i (fmlbrg_ack_s),
 
-    // Slave B interface - default
-    .sB_dat_i (16'h0000),
+    // Slave B interface - not connected
+        .sB_dat_i (16'h0000),
     .sB_dat_o (),
-    .sB_adr_o (),
+    .sB_adr_o (),   // tga_s, adr_s
     .sB_sel_o (),
     .sB_we_o  (),
-    .sB_cyc_o (def_cyc_i),
-    .sB_stb_o (def_stb_i),
-    .sB_ack_i (def_cyc_i & def_stb_i)
+    .sB_cyc_o (),
+    .sB_stb_o (),
+    .sB_ack_i (1'b0),
+
+    // Slave C interface - not connected
+    .sC_dat_i (16'h0000),
+    .sC_dat_o (),
+    .sC_adr_o (),   // tga_s, adr_s
+    .sC_sel_o (),
+    .sC_we_o  (),
+    .sC_cyc_o (),
+    .sC_stb_o (),
+    .sC_ack_i (1'b0),
+
+    // Slave D interface - not connected
+    .sD_dat_i (post_dat_o),
+    .sD_dat_o (post_dat_i),
+    .sD_adr_o ({post_tga_i, post_adr_i}),   // tga_s, adr_s
+    .sD_sel_o (post_sel_i),
+    .sD_we_o  (post_we_i),
+    .sD_cyc_o (post_cyc_i),
+    .sD_stb_o (post_stb_i),
+    .sD_ack_i (post_ack_o),
+
+    // Slave E interface - not connected
+    .sE_dat_i (16'h0000),
+    .sE_dat_o (),
+    .sE_adr_o (),   // tga_s, adr_s
+    .sE_sel_o (),
+    .sE_we_o  (),
+    .sE_cyc_o (),
+    .sE_stb_o (),
+    .sE_ack_i (1'b0),
+
+    // Slave F interface - not connected
+    .sF_dat_i (16'h0000),
+    .sF_dat_o (),
+    .sF_adr_o (),   // tga_s, adr_s
+    .sF_sel_o (),
+    .sF_we_o  (),
+    .sF_cyc_o (),
+    .sF_stb_o (),
+    .sF_ack_i (1'b0)
+
   );
 
   // Continuous assignments
@@ -1101,6 +1193,6 @@ module kotku (
   // Required de2 adv7123 vga dac clock
   assign	tft_lcd_clk_ = vga_clk;
 
-  assign ledg_[3:0] = pc[3:0];
+  assign ledg_[3:0] = cpu_pc[3:0];
 
 endmodule
