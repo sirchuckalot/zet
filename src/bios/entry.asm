@@ -51,6 +51,8 @@ IPL_BOOTFIRST_OFFSET    equ     0084h    ; u16: user selected device
 IPL_TABLE_ENTRIES       equ     8        ; num Table entries
 IPL_TYPE_BEV            equ     080h     ;
 
+IO_POST                 equ   080h
+
 ;;--------------------------------------------------------------------------
 ;; ROM Utilities Externals
 ;;--------------------------------------------------------------------------
@@ -88,6 +90,11 @@ IPL_TYPE_BEV            equ     080h     ;
 ;; INT 75 - IRQ13 - MATH COPROCESSOR EXCEPTION (AT and up)
 ;; INT 76 - IRQ14 - HARD DISK CONTROLLER (AT and later)
 ;; INT 77 - IRQ15 - RESERVED (AT,PS); POWER CONSERVATION (Compaq)
+;;--------------------------------------------------------------------------
+POSTCODE MACRO parm1
+            mov   al, parm1
+            out   IO_POST, al
+ENDM
 ;;--------------------------------------------------------------------------
 SET_INT_VECTOR MACRO parm1, parm2, parm3
                         mov     ax, parm3
@@ -1076,6 +1083,8 @@ dummy_iret_handler:     iret            ;; IRET Instruction for Dummy Interrupt 
 ;;--------------------------------------------------------------------------
 SDRAM_POST:             xor     ax, ax             ; Clear AX register
                         cli                        ; Disable interupt for startup
+                        
+                        POSTCODE 000h              ; PostCode = 00
 
                         mov     dx, 0f200h         ; CSR_HPDMC_SYSTEM = HPDMC_SYSTEM_BYPASS|HPDMC_SYSTEM_RESET|HPDMC_SYSTEM_CKE;
                         mov     ax, 7              ; Bring CKE high
@@ -1104,7 +1113,8 @@ a_delay:                loop    a_delay            ; Loop until 50 goes to zero
 ;;--------------------------------------------------------------------------
 ;; - Second we need to initialize sd controller for use: 
 ;;--------------------------------------------------------------------------
-init_sd_controller:     mov     al, 0ffh           ; Initialize the SD card controller
+init_sd_controller:     POSTCODE 001h              ; PostCode = 01     
+                        mov     al, 0ffh           ; Initialize the SD card controller
                         mov     dx, 0100h          ; Location of SD controller 
                         mov     cx, 10             ; Number of times to repeat
   
@@ -1128,6 +1138,8 @@ init_sd_loop80:         out     dx, al             ; 80 cycles of initialization
                         cmp     cl, 1
                         jne     init_sd_controller ; Retry if error detected
 
+                        POSTCODE 002h              ; PostCode = 02
+
 init_sd_cmd1:           mov     ax, 041h           ; CS = 0, CMD1: activate the init sequence
                         out     dx, ax
                         xor     al, al
@@ -1144,6 +1156,8 @@ init_sd_cmd1:           mov     ax, 041h           ; CS = 0, CMD1: activate the 
                         out     dx, ax             ; CS = 1
                         test    cl, 0ffh
                         jnz     init_sd_cmd1
+                        
+                        POSTCODE 003h              ; PostCode = 03
                         
                         mov     ax, 050h           ; CS = 0, CMD16: set block length
                         out     dx, ax
@@ -1172,17 +1186,17 @@ init_sd_cmd1:           mov     ax, 041h           ; CS = 0, CMD1: activate the 
 VGABIOSSEGMENT          equ     0xC000                  ; VGA BIOS Segment
 VGABIOSLENGTH           equ     0x4000                  ; Length of VGA Bios in Words
 
-SDVGASECTORCOUNT        equ     0x0040                  ; Total sectors for 32KB / 512 byte rom
+SDVGASECTORCOUNT        equ     0x003F                  ; Total sectors for 32KB / 512 byte rom
 SDCARDVGABIOSHI         equ     0x0000                  ; High end of sector address
-SDCARDVGABIOSLO         equ     0x0001                  ; starts right after Master Boot Record
+SDCARDVGABIOSLO         equ     0x0000                  ; starts right after Master Boot Record
 
 ;; These are required parameters for loading ROM BIOS
 ROMBIOSSEGMENT          equ     0xF000                  ; ROM BIOS Segment
 ROMBIOSLENGTH           equ     0x7F80                  ; Copy up to this ROM in Words
 
-SDROMSECTORCOUNT        equ     0x0080                  ; Total sectors for 64KB / 512 byte rom
+SDROMSECTORCOUNT        equ     0x007F                  ; Total sectors for 64KB / 512 byte rom
 SDCARDROMBIOSHI         equ     0x0000                  ; hi end of sector address
-SDCARDROMBIOSLO         equ     0x0042                  ; Sector right after vga bios
+SDCARDROMBIOSLO         equ     0x0040                  ; Sector right after vga bios
 
 
 ;; Detect where to load bios rom image from
@@ -1193,6 +1207,7 @@ SDCARDROMBIOSLO         equ     0x0042                  ; Sector right after vga
 ;;--------------------------------------------------------------------------
 
 ;;--------------------------------------------------------------------------
+                        POSTCODE 004h              ; PostCode = 04
 sdbioscopy:             mov     ax, VGABIOSSEGMENT      ;; Load with the segment of the vga bios rom area
                         mov     es, ax                  ;; BIOS area segment
                         xor     di, di                  ;; Bios starts at offset address 0
@@ -1203,6 +1218,7 @@ sdbioscopy:             mov     ax, VGABIOSSEGMENT      ;; Load with the segment
                         call sdbiosloop                 ;; Read all vga bios sectors
                                                 
 ;;--------------------------------------------------------------------------
+                        POSTCODE 005h              ; PostCode = 05
                         mov     ax, ROMBIOSSEGMENT      ;; Load with the segment of the vga bios rom area
                         mov     es, ax                  ;; BIOS area segment
                         xor     di, di                  ;; Bios starts at offset address 0
@@ -1229,8 +1245,16 @@ sdbiosloop:             push    ax                      ;; Preserve all register
                         pop     bx
                         pop     ax
                         
+                        push    ax
+                        POSTCODE 006h              ; PostCode = 06
+                        pop     ax
+                        
                         cmp     al, 0                   ;; Are we there yet?
                         je      sdbiosloop_done         ;; Jump only if we have read all sectors
+                        
+                        push    ax
+                        POSTCODE 007h              ; PostCode = 07
+                        pop     ax
                         
                         dec     al                      ;; Subtract sector count until we reach zero
                         add     bx, 0x0001              ;; Next sector address to read(Yes, we are ignoring hi sector address)
