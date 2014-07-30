@@ -918,9 +918,9 @@ module kotku (
   );
 
   wb_switch #(
-    .s0_addr_1 (20'b0_1111_1111_1111_0000_000), // bios boot mem 0xfff00 - 0xfffff
-    .s0_mask_1 (20'b1_1111_1111_1111_0000_000), // bios boot ROM Memory
-
+    .s0_addr_1 (20'b0_1111_1111_1110_0000_000), // bios boot mem 0xffe00 - 0xfffff
+    .s0_mask_1 (20'b1_1111_1111_1110_0000_000), // bios boot ROM Memory
+	 
     .s1_addr_1 (20'b0_1010_0000_0000_0000_000), // mem 0xa0000 - 0xbffff
     .s1_mask_1 (20'b1_1110_0000_0000_0000_000), // VGA
 
