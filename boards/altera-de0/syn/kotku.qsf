@@ -63,7 +63,7 @@ set_global_assignment -name VERILOG_FILE ../../../cores/vga/rtl/fml/vga_dac_regs
 set_global_assignment -name VERILOG_FILE ../../../cores/vga/rtl/fml/vga_crtc_fml.v
 set_global_assignment -name VERILOG_FILE ../../../cores/wb_switch/wb_switch.v
 set_global_assignment -name VERILOG_FILE ../../../cores/flash/bootrom.v
-set_global_assignment -name VERILOG_FILE ../../../cores/flash/flash16.v
+set_global_assignment -name VERILOG_FILE ../../../cores/flash/flash16_dack.v
 set_global_assignment -name VERILOG_FILE ../../../cores/speaker/bare/speaker.v
 set_global_assignment -name VERILOG_FILE ../../../cores/serial/rtl/serial_atx.v
 set_global_assignment -name VERILOG_FILE ../../../cores/serial/rtl/serial_arx.v

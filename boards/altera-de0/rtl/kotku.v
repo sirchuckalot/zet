@@ -387,7 +387,9 @@ module kotku (
     .wb_ack_o (rom_ack_o)
   );
 
-  flash16 flash16 (
+  flash16_dack #(
+	 .delayed (4)
+	 ) flash16 (
     // Wishbone slave interface
     .wb_clk_i (clk),            // Main Clock
     .wb_rst_i (rst),            // Reset Line
