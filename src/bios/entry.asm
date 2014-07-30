@@ -1084,7 +1084,7 @@ dummy_iret_handler:     iret            ;; IRET Instruction for Dummy Interrupt 
 SDRAM_POST:             xor     ax, ax             ; Clear AX register
                         cli                        ; Disable interupt for startup
                         
-                        POSTCODE 000h              ; PostCode = 00
+;;                        POSTCODE 000h              ; PostCode = 00
 
                         mov     dx, 0f200h         ; CSR_HPDMC_SYSTEM = HPDMC_SYSTEM_BYPASS|HPDMC_SYSTEM_RESET|HPDMC_SYSTEM_CKE;
                         mov     ax, 7              ; Bring CKE high
@@ -1109,6 +1109,9 @@ a_delay:                loop    a_delay            ; Loop until 50 goes to zero
                         xor     ax, ax             ; clear ax register
                         mov     ds, ax             ; set data segment to 0
                         mov     ss, ax             ; set stack segment to 0
+								
+								;; Once the sd bios copy feature has been fully debugged we can remove this jump line
+								jmp     far ptr shadowcopy ; Jumping because we are not ready for sd bios copy feature
 
 ;;--------------------------------------------------------------------------
 ;; - Second we need to initialize sd controller for use: 
