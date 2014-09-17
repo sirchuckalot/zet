@@ -1,0 +1,83 @@
+Open Watcom Linker Version 1.9
+Portions Copyright (c) 1985-2002 Sybase, Inc. All Rights Reserved.
+Created on:       14/09/12 17:00:52
+Warning! W1008: cannot open clibs.lib : No such file or directory
+Warning! W1008: cannot open math87s.lib : No such file or directory
+Warning! W1008: cannot open emu87.lib : No such file or directory
+Executable Image: main.exe
+creating a Windows NT character-mode executable
+Error! E2028: printf_ is an undefined reference
+Error! E2028: ___iob is an undefined reference
+Error! E2028: fputc_ is an undefined reference
+Error! E2028: _cstart_ is an undefined reference
+Error! E2028: _small_code_ is an undefined reference
+Error! E2028: __U4M is an undefined reference
+Error! E2028: __U4D is an undefined reference
+
+
+                        +------------+
+                        |   Groups   |
+                        +------------+
+
+Group                           Address              Size
+=====                           =======              ====
+
+DGROUP                          00402000             00000083
+
+
+
+                        +--------------+
+                        |   Segments   |
+                        +--------------+
+
+Segment                Class          Group          Address         Size
+=======                =====          =====          =======         ====
+
+_TEXT                  CODE           AUTO           00401000        00000b34
+CONST                  DATA           DGROUP         00402000        00000080
+CONST2                 DATA           DGROUP         00402080        00000000
+_DATA                  DATA           DGROUP         00402080        00000000
+_BSS                   BSS            DGROUP         00402080        00000003
+
+
+                        +----------------+
+                        |   Memory Map   |
+                        +----------------+
+
+* = unreferenced symbol
++ = symbol only referenced locally
+
+Address        Symbol
+=======        ======
+
+Module: main.obj(E:\GitHub\sirchuckalot\zet\src\zgeneric\main.c)
+00401000+      _die
+00401014*      main_
+Module: pff.obj(E:\GitHub\sirchuckalot\zet\src\zgeneric\pff.c)
+0040148a       _pf_mount
+0040168a       _pf_open
+00401712       _pf_read
+Module: mmcbbp.obj(E:\GitHub\sirchuckalot\zet\src\zgeneric\mmcbbp.c)
+00401932       _disk_initialize
+00401a8e       _disk_readp
+Warning! W1023: no starting address found, using 00401000
+
+
+                        +---------------------------+
+                        |   Unresolved References   |
+                        +---------------------------+
+
+Undefined Symbol                Referenced by
+================                =============
+
+printf_                         main.obj(E:\GitHub\sirchuckalot\zet\src\zgeneric\main.c)
+___iob                          main.obj(E:\GitHub\sirchuckalot\zet\src\zgeneric\main.c)
+fputc_                          main.obj(E:\GitHub\sirchuckalot\zet\src\zgeneric\main.c)
+__U4M                           pff.obj(E:\GitHub\sirchuckalot\zet\src\zgeneric\pff.c)
+__U4D                           pff.obj(E:\GitHub\sirchuckalot\zet\src\zgeneric\pff.c)
+
+
+                        +--------------------+
+                        |   Libraries Used   |
+                        +--------------------+
+

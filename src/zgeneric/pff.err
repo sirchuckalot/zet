@@ -1,0 +1,14 @@
+pff.c(422): Warning! W201: Unreachable code
+pff.c(423): Warning! W135: Shift amount too large
+pff.c(449): Warning! W201: Unreachable code
+pff.c(618): Warning! W201: Unreachable code
+pff.c(698): Warning! W112: Pointer truncated
+pff.c(698): Note! I2003: source conversion type is 'char const *__far *'
+pff.c(698): Note! I2004: target conversion type is 'char const **'
+pff.c(698): Note! I2002: 'create_name' defined in: pff.c(580)
+pff.c(802): Warning! W201: Unreachable code
+pff.c(806): Warning! W201: Unreachable code
+pff.c(811): Warning! W201: Unreachable code
+pff.c(843): Warning! W112: Pointer truncated
+pff.c(843): Note! I2003: source conversion type is 'DIR __far *'
+pff.c(843): Note! I2004: target conversion type is 'DIR *'

@@ -1,0 +1,11 @@
+main.c(34): Warning! W112: Pointer truncated
+main.c(34): Note! I2003: source conversion type is 'FATFS __far *'
+main.c(34): Note! I2004: target conversion type is 'FATFS *'
+main.c(34): Note! I2002: 'pf_mount' defined in: pff.h(100)
+main.c(43): Warning! W112: Pointer truncated
+main.c(43): Note! I2003: source conversion type is 'unsigned int __far *'
+main.c(43): Note! I2004: target conversion type is 'unsigned int *'
+main.c(43): Note! I2002: 'pf_read' defined in: pff.h(102)
+main.c(25): Warning! W202: Symbol 'dir' has been defined, but not referenced
+main.c(26): Warning! W202: Symbol 'fno' has been defined, but not referenced
+main.c(27): Warning! W202: Symbol 'bw' has been defined, but not referenced
