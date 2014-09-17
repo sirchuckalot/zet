@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=/home/cpicker/Documents/sirchuckalot/zet/boards/ems11-bb-v2_1/syn/kotku.ncd
-OUTFILE=/home/cpicker/Documents/sirchuckalot/zet/boards/ems11-bb-v2_1/syn/kotku.bit
-FAMILY=Spartan6
-PART=xc6slx45-3fgg676
-WORKINGDIR=/home/cpicker/Documents/sirchuckalot/zet/boards/ems11-bb-v2_1/syn
-LICENSE=WebPack
-USER_INFO=210790785_0_0_075
