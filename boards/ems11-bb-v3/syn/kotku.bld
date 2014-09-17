@@ -1,0 +1,41 @@
+Release 14.7 ngdbuild P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\ngdbuild.exe -intstyle
+ise -dd _ngo -sd ../rtl/pll -nt timestamp -uc EMS11_BB30_sdram.ucf -uc
+EMS11_TM30_V0.0.ucf -uc EMS11_BB30_base.ucf -uc EMS11_BB30_ssram.ucf -p
+xc6slx45-fgg676-2 kotku.ngc kotku.ngd
+
+Reading NGO file "E:/GitHub/sirchuckalot/zet/boards/ems11-bb-v3/syn/kotku.ngc"
+...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "EMS11_BB30_sdram.ucf" ...
+Annotating constraints to design from ucf file "EMS11_TM30_V0.0.ucf" ...
+Annotating constraints to design from ucf file "EMS11_BB30_base.ucf" ...
+Annotating constraints to design from ucf file "EMS11_BB30_ssram.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+Done...
+
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Total memory usage is 116468 kilobytes
+
+Writing NGD file "kotku.ngd" ...
+Total REAL time to NGDBUILD completion:  7 sec
+Total CPU time to NGDBUILD completion:   5 sec
+
+Writing NGDBUILD log file "kotku.bld"...

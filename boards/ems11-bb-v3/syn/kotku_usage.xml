@@ -1,0 +1,2256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<DeviceUsageSummary rev="13">
+<DesignStatistics TimeStamp="Tue Sep 16 19:42:33 2014"><group name="NetStatistics">
+<item name="NumNets_Active" rev="13">
+<attrib name="value" value="6962"/></item>
+<item name="NumNets_Gnd" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="NumNets_Vcc" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="NumNodesOfType_Active_BOUNCEACROSS" rev="13">
+<attrib name="value" value="195"/></item>
+<item name="NumNodesOfType_Active_BOUNCEIN" rev="13">
+<attrib name="value" value="1078"/></item>
+<item name="NumNodesOfType_Active_BUFGOUT" rev="13">
+<attrib name="value" value="4"/></item>
+<item name="NumNodesOfType_Active_BUFHINP2OUT" rev="13">
+<attrib name="value" value="24"/></item>
+<item name="NumNodesOfType_Active_BUFIOINP" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="NumNodesOfType_Active_CLKPIN" rev="13">
+<attrib name="value" value="1018"/></item>
+<item name="NumNodesOfType_Active_CLKPINFEED" rev="13">
+<attrib name="value" value="48"/></item>
+<item name="NumNodesOfType_Active_CNTRLPIN" rev="13">
+<attrib name="value" value="931"/></item>
+<item name="NumNodesOfType_Active_DOUBLE" rev="13">
+<attrib name="value" value="14337"/></item>
+<item name="NumNodesOfType_Active_GENERIC" rev="13">
+<attrib name="value" value="144"/></item>
+<item name="NumNodesOfType_Active_GLOBAL" rev="13">
+<attrib name="value" value="353"/></item>
+<item name="NumNodesOfType_Active_INPUT" rev="13">
+<attrib name="value" value="545"/></item>
+<item name="NumNodesOfType_Active_IOBIN2OUT" rev="13">
+<attrib name="value" value="114"/></item>
+<item name="NumNodesOfType_Active_IOBOUTPUT" rev="13">
+<attrib name="value" value="114"/></item>
+<item name="NumNodesOfType_Active_LUTINPUT" rev="13">
+<attrib name="value" value="25757"/></item>
+<item name="NumNodesOfType_Active_OUTBOUND" rev="13">
+<attrib name="value" value="6816"/></item>
+<item name="NumNodesOfType_Active_OUTPUT" rev="13">
+<attrib name="value" value="7145"/></item>
+<item name="NumNodesOfType_Active_PADINPUT" rev="13">
+<attrib name="value" value="88"/></item>
+<item name="NumNodesOfType_Active_PADOUTPUT" rev="13">
+<attrib name="value" value="26"/></item>
+<item name="NumNodesOfType_Active_PINBOUNCE" rev="13">
+<attrib name="value" value="5056"/></item>
+<item name="NumNodesOfType_Active_PINFEED" rev="13">
+<attrib name="value" value="27500"/></item>
+<item name="NumNodesOfType_Active_PINFEED2" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="NumNodesOfType_Active_QUAD" rev="13">
+<attrib name="value" value="10269"/></item>
+<item name="NumNodesOfType_Active_REGINPUT" rev="13">
+<attrib name="value" value="2020"/></item>
+<item name="NumNodesOfType_Active_SINGLE" rev="13">
+<attrib name="value" value="15928"/></item>
+<item name="NumNodesOfType_Gnd_BOUNCEIN" rev="13">
+<attrib name="value" value="152"/></item>
+<item name="NumNodesOfType_Gnd_CLKPIN" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="NumNodesOfType_Gnd_CNTRLPIN" rev="13">
+<attrib name="value" value="7"/></item>
+<item name="NumNodesOfType_Gnd_DOUBLE" rev="13">
+<attrib name="value" value="35"/></item>
+<item name="NumNodesOfType_Gnd_GENERIC" rev="13">
+<attrib name="value" value="3"/></item>
+<item name="NumNodesOfType_Gnd_HGNDOUT" rev="13">
+<attrib name="value" value="85"/></item>
+<item name="NumNodesOfType_Gnd_INPUT" rev="13">
+<attrib name="value" value="207"/></item>
+<item name="NumNodesOfType_Gnd_IOBIN2OUT" rev="13">
+<attrib name="value" value="3"/></item>
+<item name="NumNodesOfType_Gnd_IOBOUTPUT" rev="13">
+<attrib name="value" value="3"/></item>
+<item name="NumNodesOfType_Gnd_LUTINPUT" rev="13">
+<attrib name="value" value="361"/></item>
+<item name="NumNodesOfType_Gnd_OUTBOUND" rev="13">
+<attrib name="value" value="63"/></item>
+<item name="NumNodesOfType_Gnd_OUTPUT" rev="13">
+<attrib name="value" value="77"/></item>
+<item name="NumNodesOfType_Gnd_PADINPUT" rev="13">
+<attrib name="value" value="3"/></item>
+<item name="NumNodesOfType_Gnd_PINBOUNCE" rev="13">
+<attrib name="value" value="151"/></item>
+<item name="NumNodesOfType_Gnd_PINFEED" rev="13">
+<attrib name="value" value="552"/></item>
+<item name="NumNodesOfType_Gnd_REGINPUT" rev="13">
+<attrib name="value" value="48"/></item>
+<item name="NumNodesOfType_Gnd_SINGLE" rev="13">
+<attrib name="value" value="62"/></item>
+<item name="NumNodesOfType_Vcc_CLKPIN" rev="13">
+<attrib name="value" value="4"/></item>
+<item name="NumNodesOfType_Vcc_CNTRLPIN" rev="13">
+<attrib name="value" value="29"/></item>
+<item name="NumNodesOfType_Vcc_HVCCOUT" rev="13">
+<attrib name="value" value="536"/></item>
+<item name="NumNodesOfType_Vcc_INPUT" rev="13">
+<attrib name="value" value="15"/></item>
+<item name="NumNodesOfType_Vcc_KVCCOUT" rev="13">
+<attrib name="value" value="45"/></item>
+<item name="NumNodesOfType_Vcc_LUTINPUT" rev="13">
+<attrib name="value" value="1384"/></item>
+<item name="NumNodesOfType_Vcc_PINBOUNCE" rev="13">
+<attrib name="value" value="49"/></item>
+<item name="NumNodesOfType_Vcc_PINFEED" rev="13">
+<attrib name="value" value="1403"/></item>
+<item name="NumNodesOfType_Vcc_REGINPUT" rev="13">
+<attrib name="value" value="20"/></item>
+</group>
+<group name="MiscellaneousStatistics">
+<item name="AGG_BONDED_IO" rev="12">
+<attrib name="value" value="82"/></item>
+<item name="AGG_IO" rev="12">
+<attrib name="value" value="82"/></item>
+<item name="AGG_LOCED_IO" rev="12">
+<attrib name="value" value="82"/></item>
+<item name="AGG_SLICE" rev="12">
+<attrib name="value" value="2032"/></item>
+<item name="NUM_BONDED_IOB" rev="12">
+<attrib name="value" value="82"/></item>
+<item name="NUM_BSFULL" rev="12">
+<attrib name="value" value="2217"/></item>
+<item name="NUM_BSLUTONLY" rev="12">
+<attrib name="value" value="3397"/></item>
+<item name="NUM_BSREGONLY" rev="12">
+<attrib name="value" value="487"/></item>
+<item name="NUM_BSUSED" rev="12">
+<attrib name="value" value="6101"/></item>
+<item name="NUM_BUFG" rev="12">
+<attrib name="value" value="4"/></item>
+<item name="NUM_BUFIO2" rev="12">
+<attrib name="value" value="1"/></item>
+<item name="NUM_BUFIO2FB" rev="12">
+<attrib name="value" value="1"/></item>
+<item name="NUM_DCM" rev="12">
+<attrib name="value" value="1"/></item>
+<item name="NUM_DPRAM_O5ANDO6" rev="12">
+<attrib name="value" value="19"/></item>
+<item name="NUM_DPRAM_O5ONLY" rev="12">
+<attrib name="value" value="5"/></item>
+<item name="NUM_DPRAM_O6ONLY" rev="12">
+<attrib name="value" value="96"/></item>
+<item name="NUM_DSP48A1" rev="12">
+<attrib name="value" value="1"/></item>
+<item name="NUM_LOCED_IOB" rev="12">
+<attrib name="value" value="82"/></item>
+<item name="NUM_LOGIC_O5ANDO6" rev="12">
+<attrib name="value" value="1040"/></item>
+<item name="NUM_LOGIC_O5ONLY" rev="12">
+<attrib name="value" value="93"/></item>
+<item name="NUM_LOGIC_O6ONLY" rev="12">
+<attrib name="value" value="4103"/></item>
+<item name="NUM_LUT_RT_DRIVES_CARRY4" rev="12">
+<attrib name="value" value="12"/></item>
+<item name="NUM_LUT_RT_DRIVES_FLOP" rev="12">
+<attrib name="value" value="162"/></item>
+<item name="NUM_LUT_RT_DRIVES_OTHERS" rev="12">
+<attrib name="value" value="1"/></item>
+<item name="NUM_LUT_RT_EXO5" rev="12">
+<attrib name="value" value="162"/></item>
+<item name="NUM_LUT_RT_EXO6" rev="12">
+<attrib name="value" value="11"/></item>
+<item name="NUM_LUT_RT_O5" rev="12">
+<attrib name="value" value="14"/></item>
+<item name="NUM_LUT_RT_O5ANDO6" rev="12">
+<attrib name="value" value="2"/></item>
+<item name="NUM_LUT_RT_O6" rev="12">
+<attrib name="value" value="93"/></item>
+<item name="NUM_RAMB16BWER" rev="12">
+<attrib name="value" value="2"/></item>
+<item name="NUM_RAMB8BWER" rev="12">
+<attrib name="value" value="6"/></item>
+<item name="NUM_SLICEL" rev="12">
+<attrib name="value" value="547"/></item>
+<item name="NUM_SLICEM" rev="12">
+<attrib name="value" value="61"/></item>
+<item name="NUM_SLICEX" rev="12">
+<attrib name="value" value="1424"/></item>
+<item name="NUM_SLICE_CARRY4" rev="12">
+<attrib name="value" value="329"/></item>
+<item name="NUM_SLICE_CONTROLSET" rev="12">
+<attrib name="value" value="202"/></item>
+<item name="NUM_SLICE_CYINIT" rev="12">
+<attrib name="value" value="6885"/></item>
+<item name="NUM_SLICE_F7MUX" rev="12">
+<attrib name="value" value="347"/></item>
+<item name="NUM_SLICE_F8MUX" rev="12">
+<attrib name="value" value="127"/></item>
+<item name="NUM_SLICE_FF" rev="12">
+<attrib name="value" value="3124"/></item>
+<item name="NUM_SLICE_LATCH" rev="12">
+<attrib name="value" value="24"/></item>
+<item name="NUM_SLICE_LATCHLOGIC" rev="12">
+<attrib name="value" value="14"/></item>
+<item name="NUM_SLICE_UNUSEDCTRL" rev="12">
+<attrib name="value" value="1011"/></item>
+<item name="NUM_SRL_O5ANDO6" rev="12">
+<attrib name="value" value="59"/></item>
+<item name="NUM_SRL_O6ONLY" rev="12">
+<attrib name="value" value="24"/></item>
+<item name="NUM_UNUSABLE_FF_BELS" rev="12">
+<attrib name="value" value="827"/></item>
+</group>
+<group name="SiteStatistics">
+<item name="BUFG-BUFGMUX" rev="13">
+<attrib name="value" value="4"/></item>
+<item name="IOB-IOBM" rev="13">
+<attrib name="value" value="39"/></item>
+<item name="IOB-IOBS" rev="13">
+<attrib name="value" value="43"/></item>
+<item name="SLICEL-SLICEM" rev="13">
+<attrib name="value" value="262"/></item>
+<item name="SLICEX-SLICEL" rev="13">
+<attrib name="value" value="291"/></item>
+<item name="SLICEX-SLICEM" rev="13">
+<attrib name="value" value="270"/></item>
+</group>
+</DesignStatistics>
+<DeviceUsage TimeStamp="Tue Sep 16 19:42:33 2014"><group name="SiteSummary">
+<item name="BUFG" rev="13">
+<attrib name="total" value="1000000"/><attrib name="used" value="4"/></item>
+<item name="BUFG_BUFG" rev="13">
+<attrib name="total" value="1000000"/><attrib name="used" value="4"/></item>
+<item name="BUFIO2" rev="13">
+<attrib name="total" value="1000000"/><attrib name="used" value="1"/></item>
+<item name="BUFIO2FB" rev="13">
+<attrib name="total" value="1000000"/><attrib name="used" value="1"/></item>
+<item name="BUFIO2FB_BUFIO2FB" rev="13">
+<attrib name="total" value="1000000"/><attrib name="used" value="1"/></item>
+<item name="BUFIO2_BUFIO2" rev="13">
+<attrib name="total" value="1000000"/><attrib name="used" value="1"/></item>
+<item name="CARRY4" rev="13">
+<attrib name="total" value="1000000"/><attrib name="used" value="329"/></item>
+<item name="DCM" rev="13">
+<attrib name="total" value="1000000"/><attrib name="used" value="1"/></item>
+<item name="DCM_DCM" rev="13">
+<attrib name="total" value="1000000"/><attrib name="used" value="1"/></item>
+<item name="DSP48A1" rev="13">
+<attrib name="total" value="1000000"/><attrib name="used" value="1"/></item>
+<item name="DSP48A1_DSP48A1" rev="13">
+<attrib name="total" value="1000000"/><attrib name="used" value="1"/></item>
+<item name="FF_SR" rev="13">
+<attrib name="total" value="1000000"/><attrib name="used" value="494"/></item>
+<item name="HARD0" rev="13">
+<attrib name="total" value="1000000"/><attrib name="used" value="19"/></item>
+<item name="HARD1" rev="13">
+<attrib name="total" value="1000000"/><attrib name="used" value="25"/></item>
+<item name="IOB" rev="13">
+<attrib name="total" value="1000000"/><attrib name="used" value="82"/></item>
+<item name="IOB_IMUX" rev="13">
+<attrib name="total" value="1000000"/><attrib name="used" value="27"/></item>
+<item name="IOB_INBUF" rev="13">
+<attrib name="total" value="1000000"/><attrib name="used" value="27"/></item>
+<item name="IOB_OUTBUF" rev="13">
+<attrib name="total" value="1000000"/><attrib name="used" value="73"/></item>
+<item name="LUT5" rev="13">
+<attrib name="total" value="1000000"/><attrib name="used" value="1310"/></item>
+<item name="LUT6" rev="13">
+<attrib name="total" value="1000000"/><attrib name="used" value="5242"/></item>
+<item name="LUT_OR_MEM5" rev="13">
+<attrib name="total" value="1000000"/><attrib name="used" value="84"/></item>
+<item name="LUT_OR_MEM6" rev="13">
+<attrib name="total" value="1000000"/><attrib name="used" value="205"/></item>
+<item name="PAD" rev="13">
+<attrib name="total" value="1000000"/><attrib name="used" value="82"/></item>
+<item name="RAMB16BWER" rev="13">
+<attrib name="total" value="1000000"/><attrib name="used" value="2"/></item>
+<item name="RAMB16BWER_RAMB16BWER" rev="13">
+<attrib name="total" value="1000000"/><attrib name="used" value="2"/></item>
+<item name="RAMB8BWER" rev="13">
+<attrib name="total" value="1000000"/><attrib name="used" value="6"/></item>
+<item name="RAMB8BWER_RAMB8BWER" rev="13">
+<attrib name="total" value="1000000"/><attrib name="used" value="6"/></item>
+<item name="REG_SR" rev="13">
+<attrib name="total" value="1000000"/><attrib name="used" value="2668"/></item>
+<item name="SELMUX2_1" rev="13">
+<attrib name="total" value="1000000"/><attrib name="used" value="474"/></item>
+<item name="SLICEL" rev="13">
+<attrib name="total" value="1000000"/><attrib name="used" value="547"/></item>
+<item name="SLICEM" rev="13">
+<attrib name="total" value="1000000"/><attrib name="used" value="61"/></item>
+<item name="SLICEX" rev="13">
+<attrib name="total" value="1000000"/><attrib name="used" value="1424"/></item>
+</group>
+</DeviceUsage>
+<ReportConfigData TimeStamp="Tue Sep 16 19:42:33 2014"><group name="DSP48A1">
+<item name="CEA" rev="13">
+<attrib name="CEA_INV" value="0"/><attrib name="CEA" value="1"/></item>
+<item name="CEB" rev="13">
+<attrib name="CEB_INV" value="0"/><attrib name="CEB" value="1"/></item>
+<item name="CEC" rev="13">
+<attrib name="CEC" value="1"/><attrib name="CEC_INV" value="0"/></item>
+<item name="CECARRYIN" rev="13">
+<attrib name="CECARRYIN" value="1"/><attrib name="CECARRYIN_INV" value="0"/></item>
+<item name="CED" rev="13">
+<attrib name="CED_INV" value="0"/><attrib name="CED" value="1"/></item>
+<item name="CEM" rev="13">
+<attrib name="CEM_INV" value="0"/><attrib name="CEM" value="1"/></item>
+<item name="CEOPMODE" rev="13">
+<attrib name="CEOPMODE_INV" value="0"/><attrib name="CEOPMODE" value="1"/></item>
+<item name="CEP" rev="13">
+<attrib name="CEP" value="1"/><attrib name="CEP_INV" value="0"/></item>
+<item name="CLK" rev="13">
+<attrib name="CLK" value="1"/><attrib name="CLK_INV" value="0"/></item>
+<item name="RSTA" rev="13">
+<attrib name="RSTA" value="1"/><attrib name="RSTA_INV" value="0"/></item>
+<item name="RSTB" rev="13">
+<attrib name="RSTB" value="1"/><attrib name="RSTB_INV" value="0"/></item>
+<item name="RSTC" rev="13">
+<attrib name="RSTC_INV" value="0"/><attrib name="RSTC" value="1"/></item>
+<item name="RSTCARRYIN" rev="13">
+<attrib name="RSTCARRYIN_INV" value="0"/><attrib name="RSTCARRYIN" value="1"/></item>
+<item name="RSTD" rev="13">
+<attrib name="RSTD_INV" value="0"/><attrib name="RSTD" value="1"/></item>
+<item name="RSTM" rev="13">
+<attrib name="RSTM" value="1"/><attrib name="RSTM_INV" value="0"/></item>
+<item name="RSTOPMODE" rev="13">
+<attrib name="RSTOPMODE_INV" value="0"/><attrib name="RSTOPMODE" value="1"/></item>
+<item name="RSTP" rev="13">
+<attrib name="RSTP_INV" value="0"/><attrib name="RSTP" value="1"/></item>
+</group>
+<group name="REG_SR">
+<item name="CK" rev="13">
+<attrib name="CK" value="2629"/><attrib name="CK_INV" value="39"/></item>
+<item name="LATCH_OR_FF" rev="13">
+<attrib name="FF" value="2630"/><attrib name="LATCH" value="24"/><attrib name="AND2L" value="14"/></item>
+<item name="SRINIT" rev="13">
+<attrib name="SRINIT0" value="2592"/><attrib name="SRINIT1" value="76"/></item>
+<item name="SYNC_ATTR" rev="13">
+<attrib name="ASYNC" value="1539"/><attrib name="SYNC" value="1129"/></item>
+</group>
+<group name="LUT_OR_MEM5">
+<item name="CLK" rev="13">
+<attrib name="CLK" value="83"/><attrib name="CLK_INV" value="0"/></item>
+<item name="LUT_OR_MEM" rev="13">
+<attrib name="LUT" value="1"/><attrib name="RAM" value="83"/></item>
+<item name="RAMMODE" rev="13">
+<attrib name="SRL16" value="59"/><attrib name="DPRAM32" value="24"/></item>
+</group>
+<group name="LUT_OR_MEM6">
+<item name="CLK" rev="13">
+<attrib name="CLK" value="198"/><attrib name="CLK_INV" value="0"/></item>
+<item name="LUT_OR_MEM" rev="13">
+<attrib name="LUT" value="7"/><attrib name="RAM" value="198"/></item>
+<item name="RAMMODE" rev="13">
+<attrib name="SRL16" value="80"/><attrib name="SRL32" value="3"/><attrib name="DPRAM32" value="19"/><attrib name="DPRAM64" value="96"/></item>
+</group>
+<group name="SLICEL">
+<item name="CLK" rev="13">
+<attrib name="CLK" value="203"/><attrib name="CLK_INV" value="4"/></item>
+</group>
+<group name="SLICEM">
+<item name="CLK" rev="13">
+<attrib name="CLK" value="61"/><attrib name="CLK_INV" value="0"/></item>
+</group>
+<group name="DSP48A1_DSP48A1">
+<item name="A0REG" rev="13">
+<attrib name="0" value="1"/></item>
+<item name="A1REG" rev="13">
+<attrib name="0" value="1"/></item>
+<item name="B0REG" rev="13">
+<attrib name="0" value="1"/></item>
+<item name="B1REG" rev="13">
+<attrib name="0" value="1"/></item>
+<item name="B_INPUT" rev="13">
+<attrib name="DIRECT" value="1"/></item>
+<item name="CARRYINREG" rev="13">
+<attrib name="0" value="1"/></item>
+<item name="CARRYINSEL" rev="13">
+<attrib name="OPMODE5" value="1"/></item>
+<item name="CARRYOUTREG" rev="13">
+<attrib name="0" value="1"/></item>
+<item name="CEA" rev="13">
+<attrib name="CEA_INV" value="0"/><attrib name="CEA" value="1"/></item>
+<item name="CEB" rev="13">
+<attrib name="CEB_INV" value="0"/><attrib name="CEB" value="1"/></item>
+<item name="CEC" rev="13">
+<attrib name="CEC" value="1"/><attrib name="CEC_INV" value="0"/></item>
+<item name="CECARRYIN" rev="13">
+<attrib name="CECARRYIN" value="1"/><attrib name="CECARRYIN_INV" value="0"/></item>
+<item name="CED" rev="13">
+<attrib name="CED_INV" value="0"/><attrib name="CED" value="1"/></item>
+<item name="CEM" rev="13">
+<attrib name="CEM_INV" value="0"/><attrib name="CEM" value="1"/></item>
+<item name="CEOPMODE" rev="13">
+<attrib name="CEOPMODE_INV" value="0"/><attrib name="CEOPMODE" value="1"/></item>
+<item name="CEP" rev="13">
+<attrib name="CEP" value="1"/><attrib name="CEP_INV" value="0"/></item>
+<item name="CLK" rev="13">
+<attrib name="CLK" value="1"/><attrib name="CLK_INV" value="0"/></item>
+<item name="CREG" rev="13">
+<attrib name="0" value="1"/></item>
+<item name="DREG" rev="13">
+<attrib name="0" value="1"/></item>
+<item name="MREG" rev="13">
+<attrib name="1" value="1"/></item>
+<item name="OPMODEREG" rev="13">
+<attrib name="0" value="1"/></item>
+<item name="PREG" rev="13">
+<attrib name="0" value="1"/></item>
+<item name="RSTA" rev="13">
+<attrib name="RSTA" value="1"/><attrib name="RSTA_INV" value="0"/></item>
+<item name="RSTB" rev="13">
+<attrib name="RSTB" value="1"/><attrib name="RSTB_INV" value="0"/></item>
+<item name="RSTC" rev="13">
+<attrib name="RSTC_INV" value="0"/><attrib name="RSTC" value="1"/></item>
+<item name="RSTCARRYIN" rev="13">
+<attrib name="RSTCARRYIN_INV" value="0"/><attrib name="RSTCARRYIN" value="1"/></item>
+<item name="RSTD" rev="13">
+<attrib name="RSTD_INV" value="0"/><attrib name="RSTD" value="1"/></item>
+<item name="RSTM" rev="13">
+<attrib name="RSTM" value="1"/><attrib name="RSTM_INV" value="0"/></item>
+<item name="RSTOPMODE" rev="13">
+<attrib name="RSTOPMODE_INV" value="0"/><attrib name="RSTOPMODE" value="1"/></item>
+<item name="RSTP" rev="13">
+<attrib name="RSTP_INV" value="0"/><attrib name="RSTP" value="1"/></item>
+<item name="RSTTYPE" rev="13">
+<attrib name="SYNC" value="1"/></item>
+</group>
+<group name="IOB_OUTBUF">
+<item name="DRIVEATTRBOX" rev="13">
+<attrib name="2" value="1"/><attrib name="8" value="69"/><attrib name="12" value="3"/></item>
+<item name="SLEW" rev="13">
+<attrib name="SLOW" value="5"/><attrib name="FAST" value="68"/></item>
+<item name="SUSPEND" rev="13">
+<attrib name="3STATE" value="73"/></item>
+</group>
+<group name="SLICEX">
+<item name="CLK" rev="13">
+<attrib name="CLK" value="746"/><attrib name="CLK_INV" value="7"/></item>
+</group>
+<group name="BUFIO2FB_BUFIO2FB">
+<item name="DIVIDE_BYPASS" rev="13">
+<attrib name="TRUE" value="1"/></item>
+<item name="INVERT_INPUTS" rev="13">
+<attrib name="FALSE" value="1"/></item>
+</group>
+<group name="BUFIO2_BUFIO2">
+<item name="DIVIDE" rev="13">
+<attrib name="1" value="1"/></item>
+<item name="DIVIDE_BYPASS" rev="13">
+<attrib name="TRUE" value="1"/></item>
+<item name="I_INVERT" rev="13">
+<attrib name="FALSE" value="1"/></item>
+</group>
+<group name="RAMB16BWER">
+<item name="CLKA" rev="13">
+<attrib name="CLKA_INV" value="0"/><attrib name="CLKA" value="2"/></item>
+<item name="ENA" rev="13">
+<attrib name="ENA_INV" value="0"/><attrib name="ENA" value="2"/></item>
+<item name="REGCEA" rev="13">
+<attrib name="REGCEA_INV" value="0"/><attrib name="REGCEA" value="2"/></item>
+<item name="RSTA" rev="13">
+<attrib name="RSTA" value="2"/><attrib name="RSTA_INV" value="0"/></item>
+<item name="WEA0" rev="13">
+<attrib name="WEA0" value="2"/><attrib name="WEA0_INV" value="0"/></item>
+<item name="WEA1" rev="13">
+<attrib name="WEA1" value="2"/><attrib name="WEA1_INV" value="0"/></item>
+<item name="WEA2" rev="13">
+<attrib name="WEA2" value="2"/><attrib name="WEA2_INV" value="0"/></item>
+<item name="WEA3" rev="13">
+<attrib name="WEA3_INV" value="0"/><attrib name="WEA3" value="2"/></item>
+</group>
+<group name="RAMB8BWER">
+<item name="CLKAWRCLK" rev="13">
+<attrib name="CLKAWRCLK" value="6"/><attrib name="CLKAWRCLK_INV" value="0"/></item>
+<item name="CLKBRDCLK" rev="13">
+<attrib name="CLKBRDCLK_INV" value="0"/><attrib name="CLKBRDCLK" value="5"/></item>
+<item name="ENAWREN" rev="13">
+<attrib name="ENAWREN" value="6"/><attrib name="ENAWREN_INV" value="0"/></item>
+<item name="ENBRDEN" rev="13">
+<attrib name="ENBRDEN_INV" value="0"/><attrib name="ENBRDEN" value="5"/></item>
+<item name="REGCEA" rev="13">
+<attrib name="REGCEA_INV" value="0"/><attrib name="REGCEA" value="6"/></item>
+<item name="REGCEBREGCE" rev="13">
+<attrib name="REGCEBREGCE_INV" value="0"/><attrib name="REGCEBREGCE" value="5"/></item>
+<item name="RSTA" rev="13">
+<attrib name="RSTA" value="6"/><attrib name="RSTA_INV" value="0"/></item>
+<item name="RSTBRST" rev="13">
+<attrib name="RSTBRST" value="5"/><attrib name="RSTBRST_INV" value="0"/></item>
+<item name="WEAWEL0" rev="13">
+<attrib name="WEAWEL0" value="6"/><attrib name="WEAWEL0_INV" value="0"/></item>
+<item name="WEAWEL1" rev="13">
+<attrib name="WEAWEL1_INV" value="0"/><attrib name="WEAWEL1" value="6"/></item>
+<item name="WEBWEU0" rev="13">
+<attrib name="WEBWEU0" value="5"/><attrib name="WEBWEU0_INV" value="0"/></item>
+<item name="WEBWEU1" rev="13">
+<attrib name="WEBWEU1" value="5"/><attrib name="WEBWEU1_INV" value="0"/></item>
+</group>
+<group name="RAMB16BWER_RAMB16BWER">
+<item name="CLKA" rev="13">
+<attrib name="CLKA_INV" value="0"/><attrib name="CLKA" value="2"/></item>
+<item name="DATA_WIDTH_A" rev="13">
+<attrib name="4" value="2"/></item>
+<item name="DATA_WIDTH_B" rev="13">
+<attrib name="0" value="2"/></item>
+<item name="DOA_REG" rev="13">
+<attrib name="0" value="2"/></item>
+<item name="DOB_REG" rev="13">
+<attrib name="0" value="2"/></item>
+<item name="ENA" rev="13">
+<attrib name="ENA_INV" value="0"/><attrib name="ENA" value="2"/></item>
+<item name="EN_RSTRAM_A" rev="13">
+<attrib name="TRUE" value="2"/></item>
+<item name="EN_RSTRAM_B" rev="13">
+<attrib name="TRUE" value="2"/></item>
+<item name="RAM_MODE" rev="13">
+<attrib name="TDP" value="2"/></item>
+<item name="REGCEA" rev="13">
+<attrib name="REGCEA_INV" value="0"/><attrib name="REGCEA" value="2"/></item>
+<item name="RSTA" rev="13">
+<attrib name="RSTA" value="2"/><attrib name="RSTA_INV" value="0"/></item>
+<item name="RSTTYPE" rev="13">
+<attrib name="SYNC" value="2"/></item>
+<item name="RST_PRIORITY_A" rev="13">
+<attrib name="CE" value="2"/></item>
+<item name="RST_PRIORITY_B" rev="13">
+<attrib name="CE" value="2"/></item>
+<item name="WEA0" rev="13">
+<attrib name="WEA0" value="2"/><attrib name="WEA0_INV" value="0"/></item>
+<item name="WEA1" rev="13">
+<attrib name="WEA1" value="2"/><attrib name="WEA1_INV" value="0"/></item>
+<item name="WEA2" rev="13">
+<attrib name="WEA2" value="2"/><attrib name="WEA2_INV" value="0"/></item>
+<item name="WEA3" rev="13">
+<attrib name="WEA3_INV" value="0"/><attrib name="WEA3" value="2"/></item>
+<item name="WRITE_MODE_A" rev="13">
+<attrib name="WRITE_FIRST" value="2"/></item>
+<item name="WRITE_MODE_B" rev="13">
+<attrib name="WRITE_FIRST" value="2"/></item>
+</group>
+<group name="RAMB8BWER_RAMB8BWER">
+<item name="CLKAWRCLK" rev="13">
+<attrib name="CLKAWRCLK" value="6"/><attrib name="CLKAWRCLK_INV" value="0"/></item>
+<item name="CLKBRDCLK" rev="13">
+<attrib name="CLKBRDCLK_INV" value="0"/><attrib name="CLKBRDCLK" value="5"/></item>
+<item name="DATA_WIDTH_A" rev="13">
+<attrib name="4" value="3"/><attrib name="9" value="2"/><attrib name="18" value="1"/></item>
+<item name="DATA_WIDTH_B" rev="13">
+<attrib name="0" value="1"/><attrib name="4" value="3"/><attrib name="9" value="2"/></item>
+<item name="DOA_REG" rev="13">
+<attrib name="0" value="6"/></item>
+<item name="DOB_REG" rev="13">
+<attrib name="0" value="6"/></item>
+<item name="ENAWREN" rev="13">
+<attrib name="ENAWREN" value="6"/><attrib name="ENAWREN_INV" value="0"/></item>
+<item name="ENBRDEN" rev="13">
+<attrib name="ENBRDEN_INV" value="0"/><attrib name="ENBRDEN" value="5"/></item>
+<item name="EN_RSTRAM_A" rev="13">
+<attrib name="TRUE" value="6"/></item>
+<item name="EN_RSTRAM_B" rev="13">
+<attrib name="TRUE" value="6"/></item>
+<item name="RAM_MODE" rev="13">
+<attrib name="TDP" value="6"/></item>
+<item name="REGCEA" rev="13">
+<attrib name="REGCEA_INV" value="0"/><attrib name="REGCEA" value="6"/></item>
+<item name="REGCEBREGCE" rev="13">
+<attrib name="REGCEBREGCE_INV" value="0"/><attrib name="REGCEBREGCE" value="5"/></item>
+<item name="RSTA" rev="13">
+<attrib name="RSTA" value="6"/><attrib name="RSTA_INV" value="0"/></item>
+<item name="RSTBRST" rev="13">
+<attrib name="RSTBRST" value="5"/><attrib name="RSTBRST_INV" value="0"/></item>
+<item name="RSTTYPE" rev="13">
+<attrib name="SYNC" value="6"/></item>
+<item name="RST_PRIORITY_A" rev="13">
+<attrib name="CE" value="6"/></item>
+<item name="RST_PRIORITY_B" rev="13">
+<attrib name="CE" value="6"/></item>
+<item name="WEAWEL0" rev="13">
+<attrib name="WEAWEL0" value="6"/><attrib name="WEAWEL0_INV" value="0"/></item>
+<item name="WEAWEL1" rev="13">
+<attrib name="WEAWEL1_INV" value="0"/><attrib name="WEAWEL1" value="6"/></item>
+<item name="WEBWEU0" rev="13">
+<attrib name="WEBWEU0" value="5"/><attrib name="WEBWEU0_INV" value="0"/></item>
+<item name="WEBWEU1" rev="13">
+<attrib name="WEBWEU1" value="5"/><attrib name="WEBWEU1_INV" value="0"/></item>
+<item name="WRITE_MODE_A" rev="13">
+<attrib name="WRITE_FIRST" value="3"/><attrib name="READ_FIRST" value="3"/></item>
+<item name="WRITE_MODE_B" rev="13">
+<attrib name="WRITE_FIRST" value="6"/></item>
+</group>
+<group name="DCM_DCM">
+<item name="CLKDV_DIVIDE" rev="13">
+<attrib name="2.0" value="1"/></item>
+<item name="CLKIN_DIVIDE_BY_2" rev="13">
+<attrib name="FALSE" value="1"/></item>
+<item name="CLKOUT_PHASE_SHIFT" rev="13">
+<attrib name="NONE" value="1"/></item>
+<item name="CLK_FEEDBACK" rev="13">
+<attrib name="2X" value="1"/></item>
+<item name="DESKEW_ADJUST" rev="13">
+<attrib name="5" value="1"/></item>
+<item name="DFS_FREQUENCY_MODE" rev="13">
+<attrib name="LOW" value="1"/></item>
+<item name="DLL_FREQUENCY_MODE" rev="13">
+<attrib name="LOW" value="1"/></item>
+<item name="DSS_MODE" rev="13">
+<attrib name="NONE" value="1"/></item>
+<item name="DUTY_CYCLE_CORRECTION" rev="13">
+<attrib name="TRUE" value="1"/></item>
+<item name="PSCLK" rev="13">
+<attrib name="PSCLK_INV" value="0"/><attrib name="PSCLK" value="1"/></item>
+<item name="PSEN" rev="13">
+<attrib name="PSEN_INV" value="0"/><attrib name="PSEN" value="1"/></item>
+<item name="PSINCDEC" rev="13">
+<attrib name="PSINCDEC_INV" value="0"/><attrib name="PSINCDEC" value="1"/></item>
+<item name="RST" rev="13">
+<attrib name="RST" value="1"/><attrib name="RST_INV" value="0"/></item>
+<item name="STARTUP_WAIT" rev="13">
+<attrib name="FALSE" value="1"/></item>
+<item name="VERY_HIGH_FREQUENCY" rev="13">
+<attrib name="FALSE" value="1"/></item>
+</group>
+<group name="FF_SR">
+<item name="CK" rev="13">
+<attrib name="CK" value="494"/><attrib name="CK_INV" value="0"/></item>
+<item name="SRINIT" rev="13">
+<attrib name="SRINIT0" value="491"/><attrib name="SRINIT1" value="3"/></item>
+<item name="SYNC_ATTR" rev="13">
+<attrib name="ASYNC" value="386"/><attrib name="SYNC" value="108"/></item>
+</group>
+<group name="DCM">
+<item name="PSCLK" rev="13">
+<attrib name="PSCLK_INV" value="0"/><attrib name="PSCLK" value="1"/></item>
+<item name="PSEN" rev="13">
+<attrib name="PSEN_INV" value="0"/><attrib name="PSEN" value="1"/></item>
+<item name="PSINCDEC" rev="13">
+<attrib name="PSINCDEC_INV" value="0"/><attrib name="PSINCDEC" value="1"/></item>
+<item name="RST" rev="13">
+<attrib name="RST" value="1"/><attrib name="RST_INV" value="0"/></item>
+</group>
+</ReportConfigData>
+<ReportPinData TimeStamp="Tue Sep 16 19:42:33 2014"><group name="BUFIO2">
+<item name="DIVCLK" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="I" rev="13">
+<attrib name="value" value="1"/></item>
+</group>
+<group name="DSP48A1">
+<item name="A0" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="A1" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="A10" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="A11" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="A12" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="A13" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="A14" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="A15" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="A16" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="A17" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="A2" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="A3" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="A4" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="A5" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="A6" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="A7" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="A8" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="A9" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="B0" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="B1" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="B10" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="B11" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="B12" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="B13" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="B14" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="B15" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="B16" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="B17" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="B2" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="B3" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="B4" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="B5" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="B6" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="B7" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="B8" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="B9" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C0" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C1" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C10" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C11" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C12" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C13" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C14" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C15" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C16" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C17" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C18" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C19" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C2" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C20" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C21" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C22" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C23" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C24" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C25" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C26" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C27" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C28" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C29" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C3" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C30" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C31" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C32" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C33" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C34" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C35" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C36" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C37" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C38" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C39" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C4" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C40" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C41" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C42" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C43" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C44" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C45" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C46" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C47" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C5" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C6" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C7" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C8" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C9" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="CEA" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="CEB" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="CEC" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="CECARRYIN" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="CED" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="CEM" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="CEOPMODE" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="CEP" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="CLK" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="D0" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="D1" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="D10" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="D11" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="D12" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="D13" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="D14" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="D15" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="D16" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="D17" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="D2" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="D3" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="D4" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="D5" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="D6" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="D7" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="D8" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="D9" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M0" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M1" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M10" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M11" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M12" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M13" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M14" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M15" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M16" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M17" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M18" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M19" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M2" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M20" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M21" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M22" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M23" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M24" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M25" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M26" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M27" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M28" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M29" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M3" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M30" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M31" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M4" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M5" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M6" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M7" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M8" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M9" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="OPMODE0" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="OPMODE1" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="OPMODE2" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="OPMODE3" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="OPMODE4" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="OPMODE5" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="OPMODE6" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="OPMODE7" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="RSTA" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="RSTB" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="RSTC" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="RSTCARRYIN" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="RSTD" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="RSTM" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="RSTOPMODE" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="RSTP" rev="13">
+<attrib name="value" value="1"/></item>
+</group>
+<group name="REG_SR">
+<item name="CE" rev="13">
+<attrib name="value" value="1102"/></item>
+<item name="CK" rev="13">
+<attrib name="value" value="2668"/></item>
+<item name="D" rev="13">
+<attrib name="value" value="2668"/></item>
+<item name="Q" rev="13">
+<attrib name="value" value="2668"/></item>
+<item name="SR" rev="13">
+<attrib name="value" value="1189"/></item>
+</group>
+<group name="LUT_OR_MEM5">
+<item name="A1" rev="13">
+<attrib name="value" value="84"/></item>
+<item name="A2" rev="13">
+<attrib name="value" value="84"/></item>
+<item name="A3" rev="13">
+<attrib name="value" value="83"/></item>
+<item name="A4" rev="13">
+<attrib name="value" value="84"/></item>
+<item name="A5" rev="13">
+<attrib name="value" value="84"/></item>
+<item name="CLK" rev="13">
+<attrib name="value" value="83"/></item>
+<item name="DI1" rev="13">
+<attrib name="value" value="83"/></item>
+<item name="O5" rev="13">
+<attrib name="value" value="84"/></item>
+<item name="WA1" rev="13">
+<attrib name="value" value="24"/></item>
+<item name="WA2" rev="13">
+<attrib name="value" value="24"/></item>
+<item name="WA3" rev="13">
+<attrib name="value" value="24"/></item>
+<item name="WA4" rev="13">
+<attrib name="value" value="24"/></item>
+<item name="WA5" rev="13">
+<attrib name="value" value="24"/></item>
+<item name="WE" rev="13">
+<attrib name="value" value="83"/></item>
+</group>
+<group name="LUT_OR_MEM6">
+<item name="A1" rev="13">
+<attrib name="value" value="202"/></item>
+<item name="A2" rev="13">
+<attrib name="value" value="203"/></item>
+<item name="A3" rev="13">
+<attrib name="value" value="204"/></item>
+<item name="A4" rev="13">
+<attrib name="value" value="204"/></item>
+<item name="A5" rev="13">
+<attrib name="value" value="204"/></item>
+<item name="A6" rev="13">
+<attrib name="value" value="205"/></item>
+<item name="CLK" rev="13">
+<attrib name="value" value="198"/></item>
+<item name="DI1" rev="13">
+<attrib name="value" value="99"/></item>
+<item name="DI2" rev="13">
+<attrib name="value" value="99"/></item>
+<item name="O6" rev="13">
+<attrib name="value" value="187"/></item>
+<item name="WA1" rev="13">
+<attrib name="value" value="115"/></item>
+<item name="WA2" rev="13">
+<attrib name="value" value="115"/></item>
+<item name="WA3" rev="13">
+<attrib name="value" value="115"/></item>
+<item name="WA4" rev="13">
+<attrib name="value" value="115"/></item>
+<item name="WA5" rev="13">
+<attrib name="value" value="115"/></item>
+<item name="WA6" rev="13">
+<attrib name="value" value="115"/></item>
+<item name="WE" rev="13">
+<attrib name="value" value="198"/></item>
+</group>
+<group name="SLICEL">
+<item name="A" rev="13">
+<attrib name="value" value="55"/></item>
+<item name="A1" rev="13">
+<attrib name="value" value="215"/></item>
+<item name="A2" rev="13">
+<attrib name="value" value="246"/></item>
+<item name="A3" rev="13">
+<attrib name="value" value="271"/></item>
+<item name="A4" rev="13">
+<attrib name="value" value="381"/></item>
+<item name="A5" rev="13">
+<attrib name="value" value="472"/></item>
+<item name="A6" rev="13">
+<attrib name="value" value="507"/></item>
+<item name="AMUX" rev="13">
+<attrib name="value" value="109"/></item>
+<item name="AQ" rev="13">
+<attrib name="value" value="174"/></item>
+<item name="AX" rev="13">
+<attrib name="value" value="308"/></item>
+<item name="B" rev="13">
+<attrib name="value" value="58"/></item>
+<item name="B1" rev="13">
+<attrib name="value" value="211"/></item>
+<item name="B2" rev="13">
+<attrib name="value" value="248"/></item>
+<item name="B3" rev="13">
+<attrib name="value" value="267"/></item>
+<item name="B4" rev="13">
+<attrib name="value" value="372"/></item>
+<item name="B5" rev="13">
+<attrib name="value" value="460"/></item>
+<item name="B6" rev="13">
+<attrib name="value" value="490"/></item>
+<item name="BMUX" rev="13">
+<attrib name="value" value="229"/></item>
+<item name="BQ" rev="13">
+<attrib name="value" value="171"/></item>
+<item name="BX" rev="13">
+<attrib name="value" value="292"/></item>
+<item name="C" rev="13">
+<attrib name="value" value="9"/></item>
+<item name="C1" rev="13">
+<attrib name="value" value="243"/></item>
+<item name="C2" rev="13">
+<attrib name="value" value="290"/></item>
+<item name="C3" rev="13">
+<attrib name="value" value="304"/></item>
+<item name="C4" rev="13">
+<attrib name="value" value="400"/></item>
+<item name="C5" rev="13">
+<attrib name="value" value="493"/></item>
+<item name="C6" rev="13">
+<attrib name="value" value="521"/></item>
+<item name="CE" rev="13">
+<attrib name="value" value="54"/></item>
+<item name="CIN" rev="13">
+<attrib name="value" value="259"/></item>
+<item name="CLK" rev="13">
+<attrib name="value" value="207"/></item>
+<item name="CMUX" rev="13">
+<attrib name="value" value="167"/></item>
+<item name="COUT" rev="13">
+<attrib name="value" value="259"/></item>
+<item name="CQ" rev="13">
+<attrib name="value" value="185"/></item>
+<item name="CX" rev="13">
+<attrib name="value" value="366"/></item>
+<item name="D" rev="13">
+<attrib name="value" value="36"/></item>
+<item name="D1" rev="13">
+<attrib name="value" value="246"/></item>
+<item name="D2" rev="13">
+<attrib name="value" value="282"/></item>
+<item name="D3" rev="13">
+<attrib name="value" value="298"/></item>
+<item name="D4" rev="13">
+<attrib name="value" value="393"/></item>
+<item name="D5" rev="13">
+<attrib name="value" value="470"/></item>
+<item name="D6" rev="13">
+<attrib name="value" value="500"/></item>
+<item name="DMUX" rev="13">
+<attrib name="value" value="86"/></item>
+<item name="DQ" rev="13">
+<attrib name="value" value="155"/></item>
+<item name="DX" rev="13">
+<attrib name="value" value="146"/></item>
+<item name="SR" rev="13">
+<attrib name="value" value="71"/></item>
+</group>
+<group name="SLICEM">
+<item name="A" rev="13">
+<attrib name="value" value="21"/></item>
+<item name="A1" rev="13">
+<attrib name="value" value="49"/></item>
+<item name="A2" rev="13">
+<attrib name="value" value="49"/></item>
+<item name="A3" rev="13">
+<attrib name="value" value="49"/></item>
+<item name="A4" rev="13">
+<attrib name="value" value="49"/></item>
+<item name="A5" rev="13">
+<attrib name="value" value="49"/></item>
+<item name="A6" rev="13">
+<attrib name="value" value="48"/></item>
+<item name="AI" rev="13">
+<attrib name="value" value="25"/></item>
+<item name="AMUX" rev="13">
+<attrib name="value" value="22"/></item>
+<item name="AQ" rev="13">
+<attrib name="value" value="32"/></item>
+<item name="AX" rev="13">
+<attrib name="value" value="41"/></item>
+<item name="B" rev="13">
+<attrib name="value" value="34"/></item>
+<item name="B1" rev="13">
+<attrib name="value" value="56"/></item>
+<item name="B2" rev="13">
+<attrib name="value" value="56"/></item>
+<item name="B3" rev="13">
+<attrib name="value" value="56"/></item>
+<item name="B4" rev="13">
+<attrib name="value" value="56"/></item>
+<item name="B5" rev="13">
+<attrib name="value" value="56"/></item>
+<item name="B6" rev="13">
+<attrib name="value" value="56"/></item>
+<item name="BI" rev="13">
+<attrib name="value" value="25"/></item>
+<item name="BMUX" rev="13">
+<attrib name="value" value="21"/></item>
+<item name="BQ" rev="13">
+<attrib name="value" value="27"/></item>
+<item name="BX" rev="13">
+<attrib name="value" value="37"/></item>
+<item name="C" rev="13">
+<attrib name="value" value="19"/></item>
+<item name="C1" rev="13">
+<attrib name="value" value="46"/></item>
+<item name="C2" rev="13">
+<attrib name="value" value="46"/></item>
+<item name="C3" rev="13">
+<attrib name="value" value="46"/></item>
+<item name="C4" rev="13">
+<attrib name="value" value="46"/></item>
+<item name="C5" rev="13">
+<attrib name="value" value="46"/></item>
+<item name="C6" rev="13">
+<attrib name="value" value="43"/></item>
+<item name="CE" rev="13">
+<attrib name="value" value="61"/></item>
+<item name="CI" rev="13">
+<attrib name="value" value="23"/></item>
+<item name="CLK" rev="13">
+<attrib name="value" value="61"/></item>
+<item name="CMUX" rev="13">
+<attrib name="value" value="22"/></item>
+<item name="CQ" rev="13">
+<attrib name="value" value="26"/></item>
+<item name="CX" rev="13">
+<attrib name="value" value="39"/></item>
+<item name="D" rev="13">
+<attrib name="value" value="18"/></item>
+<item name="D1" rev="13">
+<attrib name="value" value="57"/></item>
+<item name="D2" rev="13">
+<attrib name="value" value="58"/></item>
+<item name="D3" rev="13">
+<attrib name="value" value="58"/></item>
+<item name="D4" rev="13">
+<attrib name="value" value="58"/></item>
+<item name="D5" rev="13">
+<attrib name="value" value="58"/></item>
+<item name="D6" rev="13">
+<attrib name="value" value="58"/></item>
+<item name="DI" rev="13">
+<attrib name="value" value="26"/></item>
+<item name="DMUX" rev="13">
+<attrib name="value" value="20"/></item>
+<item name="DQ" rev="13">
+<attrib name="value" value="22"/></item>
+<item name="DX" rev="13">
+<attrib name="value" value="50"/></item>
+</group>
+<group name="DSP48A1_DSP48A1">
+<item name="A0" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="A1" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="A10" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="A11" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="A12" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="A13" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="A14" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="A15" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="A16" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="A17" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="A2" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="A3" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="A4" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="A5" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="A6" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="A7" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="A8" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="A9" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="B0" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="B1" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="B10" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="B11" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="B12" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="B13" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="B14" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="B15" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="B16" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="B17" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="B2" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="B3" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="B4" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="B5" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="B6" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="B7" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="B8" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="B9" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C0" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C1" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C10" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C11" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C12" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C13" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C14" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C15" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C16" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C17" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C18" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C19" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C2" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C20" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C21" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C22" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C23" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C24" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C25" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C26" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C27" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C28" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C29" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C3" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C30" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C31" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C32" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C33" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C34" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C35" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C36" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C37" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C38" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C39" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C4" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C40" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C41" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C42" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C43" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C44" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C45" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C46" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C47" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C5" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C6" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C7" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C8" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="C9" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="CEA" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="CEB" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="CEC" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="CECARRYIN" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="CED" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="CEM" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="CEOPMODE" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="CEP" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="CLK" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="D0" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="D1" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="D10" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="D11" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="D12" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="D13" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="D14" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="D15" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="D16" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="D17" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="D2" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="D3" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="D4" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="D5" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="D6" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="D7" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="D8" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="D9" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M0" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M1" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M10" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M11" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M12" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M13" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M14" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M15" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M16" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M17" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M18" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M19" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M2" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M20" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M21" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M22" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M23" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M24" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M25" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M26" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M27" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M28" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M29" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M3" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M30" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M31" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M4" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M5" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M6" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M7" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M8" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="M9" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="OPMODE0" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="OPMODE1" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="OPMODE2" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="OPMODE3" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="OPMODE4" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="OPMODE5" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="OPMODE6" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="OPMODE7" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="RSTA" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="RSTB" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="RSTC" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="RSTCARRYIN" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="RSTD" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="RSTM" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="RSTOPMODE" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="RSTP" rev="13">
+<attrib name="value" value="1"/></item>
+</group>
+<group name="IOB_OUTBUF">
+<item name="IN" rev="13">
+<attrib name="value" value="73"/></item>
+<item name="OUT" rev="13">
+<attrib name="value" value="73"/></item>
+<item name="TRI" rev="13">
+<attrib name="value" value="18"/></item>
+</group>
+<group name="SLICEX">
+<item name="A" rev="13">
+<attrib name="value" value="686"/></item>
+<item name="A1" rev="13">
+<attrib name="value" value="622"/></item>
+<item name="A2" rev="13">
+<attrib name="value" value="830"/></item>
+<item name="A3" rev="13">
+<attrib name="value" value="945"/></item>
+<item name="A4" rev="13">
+<attrib name="value" value="999"/></item>
+<item name="A5" rev="13">
+<attrib name="value" value="981"/></item>
+<item name="A6" rev="13">
+<attrib name="value" value="979"/></item>
+<item name="AMUX" rev="13">
+<attrib name="value" value="184"/></item>
+<item name="AQ" rev="13">
+<attrib name="value" value="567"/></item>
+<item name="AX" rev="13">
+<attrib name="value" value="253"/></item>
+<item name="B" rev="13">
+<attrib name="value" value="532"/></item>
+<item name="B1" rev="13">
+<attrib name="value" value="518"/></item>
+<item name="B2" rev="13">
+<attrib name="value" value="693"/></item>
+<item name="B3" rev="13">
+<attrib name="value" value="757"/></item>
+<item name="B4" rev="13">
+<attrib name="value" value="804"/></item>
+<item name="B5" rev="13">
+<attrib name="value" value="785"/></item>
+<item name="B6" rev="13">
+<attrib name="value" value="779"/></item>
+<item name="BMUX" rev="13">
+<attrib name="value" value="184"/></item>
+<item name="BQ" rev="13">
+<attrib name="value" value="454"/></item>
+<item name="BX" rev="13">
+<attrib name="value" value="195"/></item>
+<item name="C" rev="13">
+<attrib name="value" value="467"/></item>
+<item name="C1" rev="13">
+<attrib name="value" value="459"/></item>
+<item name="C2" rev="13">
+<attrib name="value" value="608"/></item>
+<item name="C3" rev="13">
+<attrib name="value" value="689"/></item>
+<item name="C4" rev="13">
+<attrib name="value" value="735"/></item>
+<item name="C5" rev="13">
+<attrib name="value" value="714"/></item>
+<item name="C6" rev="13">
+<attrib name="value" value="707"/></item>
+<item name="CE" rev="13">
+<attrib name="value" value="363"/></item>
+<item name="CLK" rev="13">
+<attrib name="value" value="753"/></item>
+<item name="CMUX" rev="13">
+<attrib name="value" value="180"/></item>
+<item name="CQ" rev="13">
+<attrib name="value" value="446"/></item>
+<item name="CX" rev="13">
+<attrib name="value" value="194"/></item>
+<item name="D" rev="13">
+<attrib name="value" value="500"/></item>
+<item name="D1" rev="13">
+<attrib name="value" value="514"/></item>
+<item name="D2" rev="13">
+<attrib name="value" value="637"/></item>
+<item name="D3" rev="13">
+<attrib name="value" value="707"/></item>
+<item name="D4" rev="13">
+<attrib name="value" value="752"/></item>
+<item name="D5" rev="13">
+<attrib name="value" value="730"/></item>
+<item name="D6" rev="13">
+<attrib name="value" value="729"/></item>
+<item name="DMUX" rev="13">
+<attrib name="value" value="173"/></item>
+<item name="DQ" rev="13">
+<attrib name="value" value="409"/></item>
+<item name="DX" rev="13">
+<attrib name="value" value="167"/></item>
+<item name="SR" rev="13">
+<attrib name="value" value="415"/></item>
+</group>
+<group name="BUFG_BUFG">
+<item name="I0" rev="13">
+<attrib name="value" value="4"/></item>
+<item name="O" rev="13">
+<attrib name="value" value="4"/></item>
+</group>
+<group name="BUFIO2FB_BUFIO2FB">
+<item name="I" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="O" rev="13">
+<attrib name="value" value="1"/></item>
+</group>
+<group name="PAD">
+<item name="PAD" rev="13">
+<attrib name="value" value="82"/></item>
+</group>
+<group name="BUFIO2FB">
+<item name="I" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="O" rev="13">
+<attrib name="value" value="1"/></item>
+</group>
+<group name="BUFIO2_BUFIO2">
+<item name="DIVCLK" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="I" rev="13">
+<attrib name="value" value="1"/></item>
+</group>
+<group name="IOB_INBUF">
+<item name="OUT" rev="13">
+<attrib name="value" value="27"/></item>
+<item name="PAD" rev="13">
+<attrib name="value" value="27"/></item>
+</group>
+<group name="RAMB16BWER">
+<item name="ADDRA10" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="ADDRA11" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="ADDRA12" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="ADDRA13" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="ADDRA2" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="ADDRA3" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="ADDRA4" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="ADDRA5" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="ADDRA6" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="ADDRA7" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="ADDRA8" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="ADDRA9" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="CLKA" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="DIA0" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="DIA1" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="DIA2" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="DIA3" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="DOA0" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="DOA1" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="DOA2" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="DOA3" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="ENA" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="REGCEA" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="RSTA" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="WEA0" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="WEA1" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="WEA2" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="WEA3" rev="13">
+<attrib name="value" value="2"/></item>
+</group>
+<group name="RAMB8BWER">
+<item name="ADDRAWRADDR10" rev="13">
+<attrib name="value" value="6"/></item>
+<item name="ADDRAWRADDR11" rev="13">
+<attrib name="value" value="6"/></item>
+<item name="ADDRAWRADDR12" rev="13">
+<attrib name="value" value="6"/></item>
+<item name="ADDRAWRADDR2" rev="13">
+<attrib name="value" value="3"/></item>
+<item name="ADDRAWRADDR3" rev="13">
+<attrib name="value" value="5"/></item>
+<item name="ADDRAWRADDR4" rev="13">
+<attrib name="value" value="6"/></item>
+<item name="ADDRAWRADDR5" rev="13">
+<attrib name="value" value="6"/></item>
+<item name="ADDRAWRADDR6" rev="13">
+<attrib name="value" value="6"/></item>
+<item name="ADDRAWRADDR7" rev="13">
+<attrib name="value" value="6"/></item>
+<item name="ADDRAWRADDR8" rev="13">
+<attrib name="value" value="6"/></item>
+<item name="ADDRAWRADDR9" rev="13">
+<attrib name="value" value="6"/></item>
+<item name="ADDRBRDADDR10" rev="13">
+<attrib name="value" value="5"/></item>
+<item name="ADDRBRDADDR11" rev="13">
+<attrib name="value" value="5"/></item>
+<item name="ADDRBRDADDR12" rev="13">
+<attrib name="value" value="5"/></item>
+<item name="ADDRBRDADDR2" rev="13">
+<attrib name="value" value="3"/></item>
+<item name="ADDRBRDADDR3" rev="13">
+<attrib name="value" value="5"/></item>
+<item name="ADDRBRDADDR4" rev="13">
+<attrib name="value" value="5"/></item>
+<item name="ADDRBRDADDR5" rev="13">
+<attrib name="value" value="5"/></item>
+<item name="ADDRBRDADDR6" rev="13">
+<attrib name="value" value="5"/></item>
+<item name="ADDRBRDADDR7" rev="13">
+<attrib name="value" value="5"/></item>
+<item name="ADDRBRDADDR8" rev="13">
+<attrib name="value" value="5"/></item>
+<item name="ADDRBRDADDR9" rev="13">
+<attrib name="value" value="5"/></item>
+<item name="CLKAWRCLK" rev="13">
+<attrib name="value" value="6"/></item>
+<item name="CLKBRDCLK" rev="13">
+<attrib name="value" value="5"/></item>
+<item name="DIADI0" rev="13">
+<attrib name="value" value="6"/></item>
+<item name="DIADI1" rev="13">
+<attrib name="value" value="6"/></item>
+<item name="DIADI10" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="DIADI11" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="DIADI12" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="DIADI13" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="DIADI14" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="DIADI15" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="DIADI2" rev="13">
+<attrib name="value" value="6"/></item>
+<item name="DIADI3" rev="13">
+<attrib name="value" value="6"/></item>
+<item name="DIADI4" rev="13">
+<attrib name="value" value="3"/></item>
+<item name="DIADI5" rev="13">
+<attrib name="value" value="3"/></item>
+<item name="DIADI6" rev="13">
+<attrib name="value" value="3"/></item>
+<item name="DIADI7" rev="13">
+<attrib name="value" value="3"/></item>
+<item name="DIADI8" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="DIADI9" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="DIPADIP0" rev="13">
+<attrib name="value" value="3"/></item>
+<item name="DIPADIP1" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="DOADO0" rev="13">
+<attrib name="value" value="3"/></item>
+<item name="DOADO1" rev="13">
+<attrib name="value" value="3"/></item>
+<item name="DOADO10" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="DOADO11" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="DOADO12" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="DOADO13" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="DOADO14" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="DOADO15" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="DOADO2" rev="13">
+<attrib name="value" value="3"/></item>
+<item name="DOADO3" rev="13">
+<attrib name="value" value="3"/></item>
+<item name="DOADO4" rev="13">
+<attrib name="value" value="3"/></item>
+<item name="DOADO5" rev="13">
+<attrib name="value" value="3"/></item>
+<item name="DOADO6" rev="13">
+<attrib name="value" value="3"/></item>
+<item name="DOADO7" rev="13">
+<attrib name="value" value="3"/></item>
+<item name="DOADO8" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="DOADO9" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="DOBDO0" rev="13">
+<attrib name="value" value="3"/></item>
+<item name="DOBDO1" rev="13">
+<attrib name="value" value="3"/></item>
+<item name="DOBDO2" rev="13">
+<attrib name="value" value="3"/></item>
+<item name="DOBDO3" rev="13">
+<attrib name="value" value="3"/></item>
+<item name="ENAWREN" rev="13">
+<attrib name="value" value="6"/></item>
+<item name="ENBRDEN" rev="13">
+<attrib name="value" value="5"/></item>
+<item name="REGCEA" rev="13">
+<attrib name="value" value="6"/></item>
+<item name="REGCEBREGCE" rev="13">
+<attrib name="value" value="5"/></item>
+<item name="RSTA" rev="13">
+<attrib name="value" value="6"/></item>
+<item name="RSTBRST" rev="13">
+<attrib name="value" value="5"/></item>
+<item name="WEAWEL0" rev="13">
+<attrib name="value" value="6"/></item>
+<item name="WEAWEL1" rev="13">
+<attrib name="value" value="6"/></item>
+<item name="WEBWEU0" rev="13">
+<attrib name="value" value="5"/></item>
+<item name="WEBWEU1" rev="13">
+<attrib name="value" value="5"/></item>
+</group>
+<group name="RAMB16BWER_RAMB16BWER">
+<item name="ADDRA10" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="ADDRA11" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="ADDRA12" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="ADDRA13" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="ADDRA2" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="ADDRA3" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="ADDRA4" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="ADDRA5" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="ADDRA6" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="ADDRA7" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="ADDRA8" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="ADDRA9" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="CLKA" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="DIA0" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="DIA1" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="DIA2" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="DIA3" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="DOA0" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="DOA1" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="DOA2" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="DOA3" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="ENA" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="REGCEA" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="RSTA" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="WEA0" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="WEA1" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="WEA2" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="WEA3" rev="13">
+<attrib name="value" value="2"/></item>
+</group>
+<group name="CARRY4">
+<item name="CIN" rev="13">
+<attrib name="value" value="259"/></item>
+<item name="CO0" rev="13">
+<attrib name="value" value="4"/></item>
+<item name="CO1" rev="13">
+<attrib name="value" value="4"/></item>
+<item name="CO2" rev="13">
+<attrib name="value" value="2"/></item>
+<item name="CO3" rev="13">
+<attrib name="value" value="259"/></item>
+<item name="CYINIT" rev="13">
+<attrib name="value" value="70"/></item>
+<item name="DI0" rev="13">
+<attrib name="value" value="315"/></item>
+<item name="DI1" rev="13">
+<attrib name="value" value="306"/></item>
+<item name="DI2" rev="13">
+<attrib name="value" value="277"/></item>
+<item name="DI3" rev="13">
+<attrib name="value" value="259"/></item>
+<item name="O0" rev="13">
+<attrib name="value" value="259"/></item>
+<item name="O1" rev="13">
+<attrib name="value" value="252"/></item>
+<item name="O2" rev="13">
+<attrib name="value" value="250"/></item>
+<item name="O3" rev="13">
+<attrib name="value" value="230"/></item>
+<item name="S0" rev="13">
+<attrib name="value" value="329"/></item>
+<item name="S1" rev="13">
+<attrib name="value" value="313"/></item>
+<item name="S2" rev="13">
+<attrib name="value" value="302"/></item>
+<item name="S3" rev="13">
+<attrib name="value" value="275"/></item>
+</group>
+<group name="LUT5">
+<item name="A1" rev="13">
+<attrib name="value" value="412"/></item>
+<item name="A2" rev="13">
+<attrib name="value" value="523"/></item>
+<item name="A3" rev="13">
+<attrib name="value" value="568"/></item>
+<item name="A4" rev="13">
+<attrib name="value" value="476"/></item>
+<item name="A5" rev="13">
+<attrib name="value" value="400"/></item>
+<item name="O5" rev="13">
+<attrib name="value" value="1310"/></item>
+</group>
+<group name="LUT6">
+<item name="A1" rev="13">
+<attrib name="value" value="2712"/></item>
+<item name="A2" rev="13">
+<attrib name="value" value="3564"/></item>
+<item name="A3" rev="13">
+<attrib name="value" value="4168"/></item>
+<item name="A4" rev="13">
+<attrib name="value" value="4698"/></item>
+<item name="A5" rev="13">
+<attrib name="value" value="5071"/></item>
+<item name="A6" rev="13">
+<attrib name="value" value="5212"/></item>
+<item name="O6" rev="13">
+<attrib name="value" value="5242"/></item>
+</group>
+<group name="RAMB8BWER_RAMB8BWER">
+<item name="ADDRAWRADDR10" rev="13">
+<attrib name="value" value="6"/></item>
+<item name="ADDRAWRADDR11" rev="13">
+<attrib name="value" value="6"/></item>
+<item name="ADDRAWRADDR12" rev="13">
+<attrib name="value" value="6"/></item>
+<item name="ADDRAWRADDR2" rev="13">
+<attrib name="value" value="3"/></item>
+<item name="ADDRAWRADDR3" rev="13">
+<attrib name="value" value="5"/></item>
+<item name="ADDRAWRADDR4" rev="13">
+<attrib name="value" value="6"/></item>
+<item name="ADDRAWRADDR5" rev="13">
+<attrib name="value" value="6"/></item>
+<item name="ADDRAWRADDR6" rev="13">
+<attrib name="value" value="6"/></item>
+<item name="ADDRAWRADDR7" rev="13">
+<attrib name="value" value="6"/></item>
+<item name="ADDRAWRADDR8" rev="13">
+<attrib name="value" value="6"/></item>
+<item name="ADDRAWRADDR9" rev="13">
+<attrib name="value" value="6"/></item>
+<item name="ADDRBRDADDR10" rev="13">
+<attrib name="value" value="5"/></item>
+<item name="ADDRBRDADDR11" rev="13">
+<attrib name="value" value="5"/></item>
+<item name="ADDRBRDADDR12" rev="13">
+<attrib name="value" value="5"/></item>
+<item name="ADDRBRDADDR2" rev="13">
+<attrib name="value" value="3"/></item>
+<item name="ADDRBRDADDR3" rev="13">
+<attrib name="value" value="5"/></item>
+<item name="ADDRBRDADDR4" rev="13">
+<attrib name="value" value="5"/></item>
+<item name="ADDRBRDADDR5" rev="13">
+<attrib name="value" value="5"/></item>
+<item name="ADDRBRDADDR6" rev="13">
+<attrib name="value" value="5"/></item>
+<item name="ADDRBRDADDR7" rev="13">
+<attrib name="value" value="5"/></item>
+<item name="ADDRBRDADDR8" rev="13">
+<attrib name="value" value="5"/></item>
+<item name="ADDRBRDADDR9" rev="13">
+<attrib name="value" value="5"/></item>
+<item name="CLKAWRCLK" rev="13">
+<attrib name="value" value="6"/></item>
+<item name="CLKBRDCLK" rev="13">
+<attrib name="value" value="5"/></item>
+<item name="DIADI0" rev="13">
+<attrib name="value" value="6"/></item>
+<item name="DIADI1" rev="13">
+<attrib name="value" value="6"/></item>
+<item name="DIADI10" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="DIADI11" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="DIADI12" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="DIADI13" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="DIADI14" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="DIADI15" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="DIADI2" rev="13">
+<attrib name="value" value="6"/></item>
+<item name="DIADI3" rev="13">
+<attrib name="value" value="6"/></item>
+<item name="DIADI4" rev="13">
+<attrib name="value" value="3"/></item>
+<item name="DIADI5" rev="13">
+<attrib name="value" value="3"/></item>
+<item name="DIADI6" rev="13">
+<attrib name="value" value="3"/></item>
+<item name="DIADI7" rev="13">
+<attrib name="value" value="3"/></item>
+<item name="DIADI8" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="DIADI9" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="DIPADIP0" rev="13">
+<attrib name="value" value="3"/></item>
+<item name="DIPADIP1" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="DOADO0" rev="13">
+<attrib name="value" value="3"/></item>
+<item name="DOADO1" rev="13">
+<attrib name="value" value="3"/></item>
+<item name="DOADO10" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="DOADO11" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="DOADO12" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="DOADO13" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="DOADO14" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="DOADO15" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="DOADO2" rev="13">
+<attrib name="value" value="3"/></item>
+<item name="DOADO3" rev="13">
+<attrib name="value" value="3"/></item>
+<item name="DOADO4" rev="13">
+<attrib name="value" value="3"/></item>
+<item name="DOADO5" rev="13">
+<attrib name="value" value="3"/></item>
+<item name="DOADO6" rev="13">
+<attrib name="value" value="3"/></item>
+<item name="DOADO7" rev="13">
+<attrib name="value" value="3"/></item>
+<item name="DOADO8" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="DOADO9" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="DOBDO0" rev="13">
+<attrib name="value" value="3"/></item>
+<item name="DOBDO1" rev="13">
+<attrib name="value" value="3"/></item>
+<item name="DOBDO2" rev="13">
+<attrib name="value" value="3"/></item>
+<item name="DOBDO3" rev="13">
+<attrib name="value" value="3"/></item>
+<item name="ENAWREN" rev="13">
+<attrib name="value" value="6"/></item>
+<item name="ENBRDEN" rev="13">
+<attrib name="value" value="5"/></item>
+<item name="REGCEA" rev="13">
+<attrib name="value" value="6"/></item>
+<item name="REGCEBREGCE" rev="13">
+<attrib name="value" value="5"/></item>
+<item name="RSTA" rev="13">
+<attrib name="value" value="6"/></item>
+<item name="RSTBRST" rev="13">
+<attrib name="value" value="5"/></item>
+<item name="WEAWEL0" rev="13">
+<attrib name="value" value="6"/></item>
+<item name="WEAWEL1" rev="13">
+<attrib name="value" value="6"/></item>
+<item name="WEBWEU0" rev="13">
+<attrib name="value" value="5"/></item>
+<item name="WEBWEU1" rev="13">
+<attrib name="value" value="5"/></item>
+</group>
+<group name="SELMUX2_1">
+<item name="0" rev="13">
+<attrib name="value" value="474"/></item>
+<item name="1" rev="13">
+<attrib name="value" value="473"/></item>
+<item name="OUT" rev="13">
+<attrib name="value" value="474"/></item>
+<item name="S0" rev="13">
+<attrib name="value" value="474"/></item>
+</group>
+<group name="IOB_IMUX">
+<item name="I" rev="13">
+<attrib name="value" value="27"/></item>
+<item name="OUT" rev="13">
+<attrib name="value" value="27"/></item>
+</group>
+<group name="IOB">
+<item name="I" rev="13">
+<attrib name="value" value="27"/></item>
+<item name="O" rev="13">
+<attrib name="value" value="73"/></item>
+<item name="PAD" rev="13">
+<attrib name="value" value="82"/></item>
+<item name="T" rev="13">
+<attrib name="value" value="18"/></item>
+</group>
+<group name="DCM_DCM">
+<item name="CLK2X" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="CLKDV" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="CLKFB" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="CLKFX" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="CLKIN" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="LOCKED" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="PSCLK" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="PSEN" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="PSINCDEC" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="RST" rev="13">
+<attrib name="value" value="1"/></item>
+</group>
+<group name="HARD0">
+<item name="0" rev="13">
+<attrib name="value" value="19"/></item>
+</group>
+<group name="HARD1">
+<item name="1" rev="13">
+<attrib name="value" value="25"/></item>
+</group>
+<group name="FF_SR">
+<item name="CE" rev="13">
+<attrib name="value" value="195"/></item>
+<item name="CK" rev="13">
+<attrib name="value" value="494"/></item>
+<item name="D" rev="13">
+<attrib name="value" value="494"/></item>
+<item name="Q" rev="13">
+<attrib name="value" value="494"/></item>
+<item name="SR" rev="13">
+<attrib name="value" value="110"/></item>
+</group>
+<group name="BUFG">
+<item name="I0" rev="13">
+<attrib name="value" value="4"/></item>
+<item name="O" rev="13">
+<attrib name="value" value="4"/></item>
+</group>
+<group name="DCM">
+<item name="CLK2X" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="CLKDV" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="CLKFB" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="CLKFX" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="CLKIN" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="LOCKED" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="PSCLK" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="PSEN" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="PSINCDEC" rev="13">
+<attrib name="value" value="1"/></item>
+<item name="RST" rev="13">
+<attrib name="value" value="1"/></item>
+</group>
+</ReportPinData>
+<CmdHistory>
+</CmdHistory>
+</DeviceUsageSummary>

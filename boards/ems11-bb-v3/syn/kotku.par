@@ -1,0 +1,228 @@
+Release 14.7 par P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+CP-VIRTUALBOX::  Tue Sep 16 19:26:17 2014
+
+par -w -intstyle ise -ol high -mt off kotku_map.ncd kotku.ncd kotku.pcf 
+
+
+Constraints file: kotku.pcf.
+Loading device for application Rf_Device from file '6slx45.nph' in environment C:\Xilinx\14.7\ISE_DS\ISE\.
+   "kotku" is an NCD, version 3.2, device xc6slx45, package fgg676, speed -2
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.260 Volts)
+
+INFO:Par:282 - No user timing constraints were detected or you have set the option to ignore timing constraints ("par
+   -x"). Place and Route will run in "Performance Evaluation Mode" to automatically improve the performance of all
+   internal clocks in this design. Because there are not defined timing requirements, a timing score will not be
+   reported in the PAR report in this mode. The PAR timing summary will list the performance achieved for each clock.
+   Note: For the fastest runtime, set the effort level to "std".  For best performance, set the effort level to "high".
+
+Device speed data version:  "PRODUCTION 1.23 2013-10-13".
+
+
+
+Device Utilization Summary:
+
+Slice Logic Utilization:
+  Number of Slice Registers:                 3,162 out of  54,576    5%
+    Number used as Flip Flops:               3,124
+    Number used as Latches:                     24
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:               14
+  Number of Slice LUTs:                      5,614 out of  27,288   20%
+    Number used as logic:                    5,236 out of  27,288   19%
+      Number using O6 output only:           4,103
+      Number using O5 output only:              93
+      Number using O5 and O6:                1,040
+      Number used as ROM:                        0
+    Number used as Memory:                     203 out of   6,408    3%
+      Number used as Dual Port RAM:            120
+        Number using O6 output only:            96
+        Number using O5 output only:             5
+        Number using O5 and O6:                 19
+      Number used as Single Port RAM:            0
+      Number used as Shift Register:            83
+        Number using O6 output only:            24
+        Number using O5 output only:             0
+        Number using O5 and O6:                 59
+    Number used exclusively as route-thrus:    175
+      Number with same-slice register load:    162
+      Number with same-slice carry load:        12
+      Number with other load:                    1
+
+Slice Logic Distribution:
+  Number of occupied Slices:                 2,032 out of   6,822   29%
+  Number of MUXCYs used:                     1,316 out of  13,644    9%
+  Number of LUT Flip Flop pairs used:        6,101
+    Number with an unused Flip Flop:         3,397 out of   6,101   55%
+    Number with an unused LUT:                 487 out of   6,101    7%
+    Number of fully used LUT-FF pairs:       2,217 out of   6,101   36%
+    Number of slice register sites lost
+      to control set restrictions:               0 out of  54,576    0%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        82 out of     358   22%
+    Number of LOCed IOBs:                       82 out of      82  100%
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         2 out of     116    1%
+  Number of RAMB8BWERs:                          6 out of     232    2%
+  Number of BUFIO2/BUFIO2_2CLKs:                 1 out of      32    3%
+    Number used as BUFIO2s:                      1
+    Number used as BUFIO2_2CLKs:                 0
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             1 out of      32    3%
+    Number used as BUFIO2FBs:                    1
+    Number used as BUFIO2FB_2CLKs:               0
+  Number of BUFG/BUFGMUXs:                       4 out of      16   25%
+    Number used as BUFGs:                        4
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     1 out of       8   12%
+    Number used as DCMs:                         1
+    Number used as DCM_CLKGENs:                  0
+  Number of ILOGIC2/ISERDES2s:                   0 out of     376    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     376    0%
+  Number of OLOGIC2/OSERDES2s:                   0 out of     376    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     256    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            1 out of      58    1%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            0 out of       4    0%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+
+Overall effort level (-ol):   High 
+Router effort level (-rl):    High 
+
+Starting initial Timing Analysis.  REAL time: 9 secs 
+Finished initial Timing Analysis.  REAL time: 9 secs 
+
+WARNING:Par:288 - The signal UART1_RXD_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal fmlbrg/tagmem/Mram_tags6_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal fmlbrg/tagmem/Mram_tags3_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal fmlbrg/tagmem/Mram_tags5_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal vga/config_iface/Mram_seq2_RAMC_D1_DPO has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal vga/config_iface/Mram_seq2_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal vga/lcd/dac_regs/Mram_blue_dac12_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal vga/lcd/dac_regs/Mram_blue_dac11_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal fmlbrg/tagmem/Mram_tags2_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal fmlbrg/tagmem/Mram_tags4_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal vga/config_iface/Mram_seq11_RAMA_D1_DPO has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal vga/config_iface/Mram_seq11_RAMB_D1_DPO has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal vga/config_iface/Mram_seq11_RAMC_D1_DPO has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal vga/config_iface/Mram_seq11_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal vga/lcd/dac_regs/Mram_green_dac12_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal vga/lcd/dac_regs/Mram_blue_dac14_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal vga/lcd/dac_regs/Mram_blue_dac13_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal vga/lcd/dac_regs/Mram_green_dac11_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal vga/lcd/dac_regs/Mram_green_dac13_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal vga/config_iface/Mram_seq31_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal vga/config_iface/Mram_seq21_RAMA_D1_DPO has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal vga/config_iface/Mram_seq21_RAMB_D1_DPO has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal vga/config_iface/Mram_seq21_RAMC_D1_DPO has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal vga/config_iface/Mram_seq21_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal vga/lcd/dac_regs/Mram_red_dac12_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal vga/lcd/dac_regs/Mram_red_dac14_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal vga/lcd/dac_regs/Mram_red_dac11_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal vga/lcd/dac_regs/Mram_green_dac14_RAMD_O has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal vga/lcd/dac_regs/Mram_red_dac13_RAMD_O has no load.  PAR will not attempt to route this signal.
+Starting Router
+
+
+Phase  1  : 32300 unrouted;      REAL time: 10 secs 
+
+Phase  2  : 29344 unrouted;      REAL time: 13 secs 
+
+Phase  3  : 13308 unrouted;      REAL time: 36 secs 
+
+Phase  4  : 13331 unrouted; (Par is working to improve performance)     REAL time: 39 secs 
+
+Updating file: kotku.ncd with current fully routed design.
+
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 17 secs 
+
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 17 secs 
+
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 17 secs 
+
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 17 secs 
+
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 17 secs 
+
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 20 secs 
+Total REAL time to Router completion: 1 mins 20 secs 
+Total CPU time to Router completion: 1 mins 17 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+INFO:Par:459 - The Clock Report is not displayed in the non timing-driven mode.
+Timing Score: 0 (Setup: 0, Hold: 0)
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|    43.615ns|     N/A|           0
+                                            | HOLD        |     0.343ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net vga | SETUP       |         N/A|     8.028ns|     N/A|           0
+  _clk                                      | HOLD        |     0.366ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net sdr | SETUP       |         N/A|     9.120ns|     N/A|           0
+  am_clk                                    | HOLD        |     0.399ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+
+
+All constraints were met.
+INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the 
+   constraint is not analyzed due to the following: No paths covered by this 
+   constraint; Other constraints intersect with this constraint; or This 
+   constraint was disabled by a Path Tracing Control. Please run the Timespec 
+   Interaction Report (TSI) via command line (trce tsi) or Timing Analyzer GUI.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+WARNING:Par:283 - There are 29 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+
+Total REAL time to PAR completion: 1 mins 36 secs 
+Total CPU time to PAR completion: 1 mins 25 secs 
+
+Peak Memory Usage:  349 MB
+
+Placer: Placement generated during map.
+Routing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 31
+Number of info messages: 2
+
+Writing design to file kotku.ncd
+
+
+
+PAR done!

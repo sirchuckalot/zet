@@ -1,0 +1,9 @@
+Storage Target: SPI Flash Single FPGA
+64M
+FF
+kotku
+E:\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\bin/
+
+MCS
+No
+No
