@@ -1,0 +1,87 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 2 -n
+3 -fastpaths -xml boardtest.twx boardtest.ncd -o boardtest.twr boardtest.pcf
+-ucf boardtest.ucf
+
+Design file:              boardtest.ncd
+Physical constraint file: boardtest.pcf
+Device,package,speed:     xc6slx45,fgg676,C,-2 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock CLK50
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+M1_T1       |    9.912(R)|      SLOW  |   -4.208(R)|      FAST  |clk               |   0.000|
+M1_T2       |   12.034(R)|      SLOW  |   -5.442(R)|      FAST  |clk               |   0.000|
+RESET_N     |   12.162(R)|      SLOW  |   -5.304(R)|      FAST  |clk               |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock CLK50 to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+LED2        |        10.837(R)|      SLOW  |         6.760(R)|      FAST  |clk               |   0.000|
+M1_LED1     |         7.750(R)|      SLOW  |         4.201(R)|      FAST  |clk               |   0.000|
+M1_SSEG_A<0>|         9.395(R)|      SLOW  |         4.792(R)|      FAST  |clk               |   0.000|
+M1_SSEG_A<1>|         9.304(R)|      SLOW  |         4.730(R)|      FAST  |clk               |   0.000|
+M1_SSEG_A<2>|         7.706(R)|      SLOW  |         3.822(R)|      FAST  |clk               |   0.000|
+M1_SSEG_A<3>|         6.964(R)|      SLOW  |         3.409(R)|      FAST  |clk               |   0.000|
+M1_SSEG_A<4>|         8.360(R)|      SLOW  |         4.092(R)|      FAST  |clk               |   0.000|
+M1_SSEG_A<5>|         9.266(R)|      SLOW  |         4.546(R)|      FAST  |clk               |   0.000|
+M1_SSEG_A<6>|         9.270(R)|      SLOW  |         4.530(R)|      FAST  |clk               |   0.000|
+M1_SSEG_B<0>|         7.835(R)|      SLOW  |         3.947(R)|      FAST  |clk               |   0.000|
+M1_SSEG_B<1>|         7.535(R)|      SLOW  |         3.783(R)|      FAST  |clk               |   0.000|
+M1_SSEG_B<2>|        10.029(R)|      SLOW  |         5.040(R)|      FAST  |clk               |   0.000|
+M1_SSEG_B<3>|         9.257(R)|      SLOW  |         4.604(R)|      FAST  |clk               |   0.000|
+M1_SSEG_B<4>|        10.332(R)|      SLOW  |         5.186(R)|      FAST  |clk               |   0.000|
+M1_SSEG_B<5>|         9.866(R)|      SLOW  |         4.941(R)|      FAST  |clk               |   0.000|
+M1_SSEG_B<6>|         8.892(R)|      SLOW  |         4.411(R)|      FAST  |clk               |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock CLK50
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK50          |   37.099|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Tue Sep 16 21:21:01 2014 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 217 MB
+
+
+
