@@ -84,7 +84,7 @@ module post (
 			end
 	    else
 		    begin
-			  post = wr_post ? wb_dat_ir[ 7:0] : post;
+			  post <= wr_post ? wb_dat_ir[ 7:0] : post;
 		    end
     end
 	
