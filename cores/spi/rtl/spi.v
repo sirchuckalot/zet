@@ -17,7 +17,7 @@
  *  <http://www.gnu.org/licenses/>.
  */
 
-module spi_master(
+module spi (
     // Wishbone slave interface
     input             wb_clk_i,
     input             wb_rst_i,
