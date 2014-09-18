@@ -8,5 +8,188 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/GitHub/sirchuckalot/zet/boards/ems11-bb-v3/boardtest/boardtest.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/GitHub/sirchuckalot/zet/cores/flash/bootrom.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/GitHub/sirchuckalot/zet/cores/gpio/rtl/hex_display.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/GitHub/sirchuckalot/zet/cores/gpio/rtl/post.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/GitHub/sirchuckalot/zet/cores/gpio/rtl/seg_7.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/GitHub/sirchuckalot/zet/cores/gpio/rtl/sw_leds.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/GitHub/sirchuckalot/zet/cores/wb_switch/wb_switch.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/altera/zet_signmul17.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/zet.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">E:/GitHub/sirchuckalot/zet/cores/zet/rtl/zet.v</arg>&quot; Line <arg fmt="%d" index="2">22</arg>. <arg fmt="%s" index="3">Include file found: &apos;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/defines.v&apos; in file &quot;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/zet.v&quot; line 22
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">E:/GitHub/sirchuckalot/zet/cores/zet/rtl/defines.v</arg>&quot; Line <arg fmt="%d" index="2">19</arg>. <arg fmt="%s" index="3">Include file found: &apos;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/rom_def.v&apos; in file &quot;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/defines.v&quot; line 19
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/zet_addsub.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/zet_alu.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/zet_arlog.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/zet_bitlog.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/zet_conv.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/zet_core.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">E:/GitHub/sirchuckalot/zet/cores/zet/rtl/zet_core.v</arg>&quot; Line <arg fmt="%d" index="2">20</arg>. <arg fmt="%s" index="3">Include file found: &apos;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/defines.v&apos; in file &quot;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/zet_core.v&quot; line 20
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">E:/GitHub/sirchuckalot/zet/cores/zet/rtl/defines.v</arg>&quot; Line <arg fmt="%d" index="2">19</arg>. <arg fmt="%s" index="3">Include file found: &apos;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/rom_def.v&apos; in file &quot;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/defines.v&quot; line 19
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/zet_decode.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">E:/GitHub/sirchuckalot/zet/cores/zet/rtl/zet_decode.v</arg>&quot; Line <arg fmt="%d" index="2">20</arg>. <arg fmt="%s" index="3">Include file found: &apos;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/defines.v&apos; in file &quot;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/zet_decode.v&quot; line 20
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">E:/GitHub/sirchuckalot/zet/cores/zet/rtl/defines.v</arg>&quot; Line <arg fmt="%d" index="2">19</arg>. <arg fmt="%s" index="3">Include file found: &apos;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/rom_def.v&apos; in file &quot;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/defines.v&quot; line 19
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/zet_div_su.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/zet_div_uu.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/zet_exec.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">E:/GitHub/sirchuckalot/zet/cores/zet/rtl/zet_exec.v</arg>&quot; Line <arg fmt="%d" index="2">22</arg>. <arg fmt="%s" index="3">Include file found: &apos;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/defines.v&apos; in file &quot;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/zet_exec.v&quot; line 22
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">E:/GitHub/sirchuckalot/zet/cores/zet/rtl/defines.v</arg>&quot; Line <arg fmt="%d" index="2">19</arg>. <arg fmt="%s" index="3">Include file found: &apos;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/rom_def.v&apos; in file &quot;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/defines.v&quot; line 19
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/zet_fetch.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">E:/GitHub/sirchuckalot/zet/cores/zet/rtl/zet_fetch.v</arg>&quot; Line <arg fmt="%d" index="2">22</arg>. <arg fmt="%s" index="3">Include file found: &apos;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/defines.v&apos; in file &quot;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/zet_fetch.v&quot; line 22
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">E:/GitHub/sirchuckalot/zet/cores/zet/rtl/defines.v</arg>&quot; Line <arg fmt="%d" index="2">19</arg>. <arg fmt="%s" index="3">Include file found: &apos;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/rom_def.v&apos; in file &quot;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/defines.v&quot; line 19
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/zet_fulladd16.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/zet_jmp_cond.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/zet_memory_regs.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/zet_micro_data.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">E:/GitHub/sirchuckalot/zet/cores/zet/rtl/zet_micro_data.v</arg>&quot; Line <arg fmt="%d" index="2">20</arg>. <arg fmt="%s" index="3">Include file found: &apos;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/defines.v&apos; in file &quot;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/zet_micro_data.v&quot; line 20
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">E:/GitHub/sirchuckalot/zet/cores/zet/rtl/defines.v</arg>&quot; Line <arg fmt="%d" index="2">19</arg>. <arg fmt="%s" index="3">Include file found: &apos;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/rom_def.v&apos; in file &quot;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/defines.v&quot; line 19
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/zet_micro_rom.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">E:/GitHub/sirchuckalot/zet/cores/zet/rtl/zet_micro_rom.v</arg>&quot; Line <arg fmt="%d" index="2">20</arg>. <arg fmt="%s" index="3">Include file found: &apos;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/defines.v&apos; in file &quot;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/zet_micro_rom.v&quot; line 20
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">E:/GitHub/sirchuckalot/zet/cores/zet/rtl/defines.v</arg>&quot; Line <arg fmt="%d" index="2">19</arg>. <arg fmt="%s" index="3">Include file found: &apos;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/rom_def.v&apos; in file &quot;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/defines.v&quot; line 19
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/zet_muldiv.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/zet_mux8_1.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/zet_mux8_16.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/zet_next_or_not.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/zet_nstate.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/zet_opcode_deco.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">E:/GitHub/sirchuckalot/zet/cores/zet/rtl/zet_opcode_deco.v</arg>&quot; Line <arg fmt="%d" index="2">20</arg>. <arg fmt="%s" index="3">Include file found: &apos;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/defines.v&apos; in file &quot;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/zet_opcode_deco.v&quot; line 20
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">E:/GitHub/sirchuckalot/zet/cores/zet/rtl/defines.v</arg>&quot; Line <arg fmt="%d" index="2">19</arg>. <arg fmt="%s" index="3">Include file found: &apos;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/rom_def.v&apos; in file &quot;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/defines.v&quot; line 19
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/zet_othop.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/zet_regfile.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">E:/GitHub/sirchuckalot/zet/cores/zet/rtl/zet_regfile.v</arg>&quot; Line <arg fmt="%d" index="2">21</arg>. <arg fmt="%s" index="3">Include file found: &apos;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/defines.v&apos; in file &quot;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/zet_regfile.v&quot; line 21
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">E:/GitHub/sirchuckalot/zet/cores/zet/rtl/defines.v</arg>&quot; Line <arg fmt="%d" index="2">19</arg>. <arg fmt="%s" index="3">Include file found: &apos;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/rom_def.v&apos; in file &quot;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/defines.v&quot; line 19
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/zet_rxr16.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/zet_rxr8.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/zet_shrot.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;E:/GitHub/sirchuckalot/zet/cores/zet/rtl/zet_wb_master.v&quot; into library work</arg>
+</msg>
+
 </messages>
 

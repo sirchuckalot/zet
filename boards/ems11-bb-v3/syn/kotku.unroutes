@@ -1,41 +1,13 @@
 Release 14.7 - par P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Tue Sep 16 19:27:53 2014
+Thu Sep 18 11:21:09 2014
 
 All signals are completely routed.
 
-WARNING:ParHelpers:361 - There are 29 loadless signals in this design. This design will cause Bitgen to issue DRC
+WARNING:ParHelpers:361 - There are 1 loadless signals in this design. This design will cause Bitgen to issue DRC
    warnings.
 
-   UART1_RXD_IBUF
-   fmlbrg/tagmem/Mram_tags2_RAMD_O
-   fmlbrg/tagmem/Mram_tags3_RAMD_O
-   fmlbrg/tagmem/Mram_tags4_RAMD_O
-   fmlbrg/tagmem/Mram_tags5_RAMD_O
-   fmlbrg/tagmem/Mram_tags6_RAMD_O
-   vga/config_iface/Mram_seq11_RAMA_D1_DPO
-   vga/config_iface/Mram_seq11_RAMB_D1_DPO
-   vga/config_iface/Mram_seq11_RAMC_D1_DPO
-   vga/config_iface/Mram_seq11_RAMD_D1_O
-   vga/config_iface/Mram_seq21_RAMA_D1_DPO
-   vga/config_iface/Mram_seq21_RAMB_D1_DPO
-   vga/config_iface/Mram_seq21_RAMC_D1_DPO
-   vga/config_iface/Mram_seq21_RAMD_D1_O
-   vga/config_iface/Mram_seq2_RAMC_D1_DPO
-   vga/config_iface/Mram_seq2_RAMD_D1_O
-   vga/config_iface/Mram_seq31_RAMD_D1_O
-   vga/lcd/dac_regs/Mram_blue_dac11_RAMD_O
-   vga/lcd/dac_regs/Mram_blue_dac12_RAMD_O
-   vga/lcd/dac_regs/Mram_blue_dac13_RAMD_O
-   vga/lcd/dac_regs/Mram_blue_dac14_RAMD_O
-   vga/lcd/dac_regs/Mram_green_dac11_RAMD_O
-   vga/lcd/dac_regs/Mram_green_dac12_RAMD_O
-   vga/lcd/dac_regs/Mram_green_dac13_RAMD_O
-   vga/lcd/dac_regs/Mram_green_dac14_RAMD_O
-   vga/lcd/dac_regs/Mram_red_dac11_RAMD_O
-   vga/lcd/dac_regs/Mram_red_dac12_RAMD_O
-   vga/lcd/dac_regs/Mram_red_dac13_RAMD_O
-   vga/lcd/dac_regs/Mram_red_dac14_RAMD_O
+   DIAG_N_IBUF
 
 

@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2014-09-16T20:54:42</DateModified>
+  <DateModified>2014-09-18T10:16:03</DateModified>
   <ModuleName>boardtest</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>E:/GitHub/sirchuckalot/zet/boards/ems11-bb-v3/boardtest/iseconfig/boardtest.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>E:/GitHub/sirchuckalot/zet/boards/ems11-bb-v3/boardtest</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>E:/GitHub/sirchuckalot/zet/boards/ems11-bb-v3/boardtest\</ImplementationReportsDirectory>
   <DateInitialized>2014-09-16T19:49:03</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

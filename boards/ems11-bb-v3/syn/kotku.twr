@@ -3,9 +3,7 @@ Release 14.7 Trace  (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 2 -n
-3 -fastpaths -xml kotku.twx kotku.ncd -o kotku.twr kotku.pcf -ucf
-EMS11_BB30_sdram.ucf -ucf EMS11_TM30_V0.0.ucf -ucf EMS11_BB30_base.ucf -ucf
-EMS11_BB30_ssram.ucf
+3 -fastpaths -xml kotku.twx kotku.ncd -o kotku.twr kotku.pcf -ucf kotku.ucf
 
 Design file:              kotku.ncd
 Physical constraint file: kotku.pcf
@@ -34,132 +32,55 @@ Data Sheet report:
 All values displayed in nanoseconds (ns)
 
 Setup/Hold to clock CLK50
--------------+------------+------------+------------+------------+------------------+--------+
-             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
-Source       | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
--------------+------------+------------+------------+------------+------------------+--------+
-DIAG_N       |    6.160(R)|      SLOW  |   -2.394(R)|      FAST  |clk               |   0.000|
-DR_D<0>      |    7.107(R)|      SLOW  |   -3.181(R)|      FAST  |sdram_clk         |   0.000|
-DR_D<1>      |    7.201(R)|      SLOW  |   -3.221(R)|      FAST  |sdram_clk         |   0.000|
-DR_D<2>      |    6.964(R)|      SLOW  |   -3.102(R)|      FAST  |sdram_clk         |   0.000|
-DR_D<3>      |    6.964(R)|      SLOW  |   -3.119(R)|      FAST  |sdram_clk         |   0.000|
-DR_D<4>      |    6.475(R)|      SLOW  |   -2.831(R)|      FAST  |sdram_clk         |   0.000|
-DR_D<5>      |    6.392(R)|      SLOW  |   -2.748(R)|      FAST  |sdram_clk         |   0.000|
-DR_D<6>      |    6.303(R)|      SLOW  |   -2.673(R)|      FAST  |sdram_clk         |   0.000|
-DR_D<7>      |    6.595(R)|      SLOW  |   -2.856(R)|      FAST  |sdram_clk         |   0.000|
-DR_D<8>      |    8.284(R)|      SLOW  |   -3.865(R)|      FAST  |sdram_clk         |   0.000|
-DR_D<9>      |    8.414(R)|      SLOW  |   -3.919(R)|      FAST  |sdram_clk         |   0.000|
-DR_D<10>     |    7.063(R)|      SLOW  |   -3.090(R)|      FAST  |sdram_clk         |   0.000|
-DR_D<11>     |    7.192(R)|      SLOW  |   -3.227(R)|      FAST  |sdram_clk         |   0.000|
-DR_D<12>     |    6.141(R)|      SLOW  |   -2.576(R)|      FAST  |sdram_clk         |   0.000|
-DR_D<13>     |    6.330(R)|      SLOW  |   -2.759(R)|      FAST  |sdram_clk         |   0.000|
-DR_D<14>     |    5.844(R)|      SLOW  |   -2.422(R)|      FAST  |sdram_clk         |   0.000|
-DR_D<15>     |    6.389(R)|      SLOW  |   -2.819(R)|      FAST  |sdram_clk         |   0.000|
-FPGA_SD_D0   |    9.609(R)|      SLOW  |   -4.663(R)|      FAST  |sdram_clk         |   0.000|
-M1_PS2_A_CLK |    6.072(R)|      SLOW  |   -2.580(R)|      FAST  |clk               |   0.000|
-M1_PS2_A_DATA|    5.930(R)|      SLOW  |   -2.474(R)|      FAST  |clk               |   0.000|
-M1_PS2_B_CLK |    4.698(R)|      SLOW  |   -1.793(R)|      FAST  |clk               |   0.000|
-M1_PS2_B_DATA|    5.075(R)|      SLOW  |   -1.991(R)|      FAST  |clk               |   0.000|
-M1_T1        |   11.685(R)|      SLOW  |   -4.989(R)|      FAST  |clk               |   0.000|
-M1_T2        |   19.343(R)|      SLOW  |   -5.610(R)|      FAST  |clk               |   0.000|
-RESET_N      |   21.240(R)|      SLOW  |   -3.940(R)|      FAST  |clk               |   0.000|
--------------+------------+------------+------------+------------+------------------+--------+
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+M1_T1       |    9.912(R)|      SLOW  |   -4.208(R)|      FAST  |clk               |   0.000|
+M1_T2       |   12.034(R)|      SLOW  |   -5.442(R)|      FAST  |clk               |   0.000|
+RESET_N     |   12.162(R)|      SLOW  |   -5.304(R)|      FAST  |clk               |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
 
 Clock CLK50 to Pad
----------------+-----------------+------------+-----------------+------------+------------------+--------+
-               |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
-Destination    |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
----------------+-----------------+------------+-----------------+------------+------------------+--------+
-DR_A<0>        |         6.895(R)|      SLOW  |         3.714(R)|      FAST  |sdram_clk         |   0.000|
-DR_A<1>        |         7.317(R)|      SLOW  |         3.939(R)|      FAST  |sdram_clk         |   0.000|
-DR_A<2>        |         7.286(R)|      SLOW  |         3.923(R)|      FAST  |sdram_clk         |   0.000|
-DR_A<3>        |         7.057(R)|      SLOW  |         3.810(R)|      FAST  |sdram_clk         |   0.000|
-DR_A<4>        |         7.115(R)|      SLOW  |         3.898(R)|      FAST  |sdram_clk         |   0.000|
-DR_A<5>        |         7.010(R)|      SLOW  |         3.782(R)|      FAST  |sdram_clk         |   0.000|
-DR_A<6>        |         6.943(R)|      SLOW  |         3.728(R)|      FAST  |sdram_clk         |   0.000|
-DR_A<7>        |         7.294(R)|      SLOW  |         3.914(R)|      FAST  |sdram_clk         |   0.000|
-DR_A<8>        |         7.025(R)|      SLOW  |         3.764(R)|      FAST  |sdram_clk         |   0.000|
-DR_A<9>        |         6.763(R)|      SLOW  |         3.612(R)|      FAST  |sdram_clk         |   0.000|
-DR_A<10>       |         6.936(R)|      SLOW  |         3.659(R)|      FAST  |sdram_clk         |   0.000|
-DR_A<11>       |         6.877(R)|      SLOW  |         3.652(R)|      FAST  |sdram_clk         |   0.000|
-DR_BA<0>       |         4.798(R)|      SLOW  |         2.450(R)|      FAST  |sdram_clk         |   0.000|
-DR_BA<1>       |         4.788(R)|      SLOW  |         2.475(R)|      FAST  |sdram_clk         |   0.000|
-DR_CAS_N       |         5.761(R)|      SLOW  |         3.010(R)|      FAST  |sdram_clk         |   0.000|
-DR_CKE         |         5.288(R)|      SLOW  |         2.709(R)|      FAST  |sdram_clk         |   0.000|
-DR_CS_N        |         6.200(R)|      SLOW  |         3.218(R)|      FAST  |sdram_clk         |   0.000|
-DR_D<0>        |         8.114(R)|      SLOW  |         3.881(R)|      FAST  |sdram_clk         |   0.000|
-DR_D<1>        |         8.012(R)|      SLOW  |         3.850(R)|      FAST  |sdram_clk         |   0.000|
-DR_D<2>        |         8.050(R)|      SLOW  |         3.864(R)|      FAST  |sdram_clk         |   0.000|
-DR_D<3>        |         7.763(R)|      SLOW  |         3.702(R)|      FAST  |sdram_clk         |   0.000|
-DR_D<4>        |         8.005(R)|      SLOW  |         3.843(R)|      FAST  |sdram_clk         |   0.000|
-DR_D<5>        |         8.422(R)|      SLOW  |         3.478(R)|      FAST  |sdram_clk         |   0.000|
-DR_D<6>        |         8.176(R)|      SLOW  |         3.430(R)|      FAST  |sdram_clk         |   0.000|
-DR_D<7>        |         8.416(R)|      SLOW  |         3.454(R)|      FAST  |sdram_clk         |   0.000|
-DR_D<8>        |         9.947(R)|      SLOW  |         4.864(R)|      FAST  |sdram_clk         |   0.000|
-DR_D<9>        |         9.911(R)|      SLOW  |         4.959(R)|      FAST  |sdram_clk         |   0.000|
-DR_D<10>       |         7.935(R)|      SLOW  |         3.426(R)|      FAST  |sdram_clk         |   0.000|
-DR_D<11>       |         8.220(R)|      SLOW  |         3.497(R)|      FAST  |sdram_clk         |   0.000|
-DR_D<12>       |         8.079(R)|      SLOW  |         3.403(R)|      FAST  |sdram_clk         |   0.000|
-DR_D<13>       |         7.999(R)|      SLOW  |         3.840(R)|      FAST  |sdram_clk         |   0.000|
-DR_D<14>       |         8.047(R)|      SLOW  |         3.569(R)|      FAST  |sdram_clk         |   0.000|
-DR_D<15>       |         7.910(R)|      SLOW  |         3.768(R)|      FAST  |sdram_clk         |   0.000|
-DR_RAS_N       |         6.059(R)|      SLOW  |         3.254(R)|      FAST  |sdram_clk         |   0.000|
-DR_WE_N        |         6.134(R)|      SLOW  |         3.238(R)|      FAST  |sdram_clk         |   0.000|
-FPGA_SD_CMD    |         8.117(R)|      SLOW  |         4.555(R)|      FAST  |sdram_clk         |   0.000|
-FPGA_SD_D3     |         6.974(F)|      SLOW  |         3.847(F)|      FAST  |sdram_clk         |   0.000|
-FPGA_SD_SCLK   |         7.195(R)|      SLOW  |         3.965(R)|      FAST  |sdram_clk         |   0.000|
-LED2           |         8.959(R)|      SLOW  |         5.686(R)|      FAST  |clk               |   0.000|
-M1_LED1        |         7.341(R)|      SLOW  |         4.015(R)|      FAST  |clk               |   0.000|
-M1_PS2_B_CLK   |         6.901(R)|      SLOW  |         3.697(R)|      FAST  |clk               |   0.000|
-M1_PS2_B_DATA  |         8.310(R)|      SLOW  |         3.287(R)|      FAST  |clk               |   0.000|
-M1_SSEG_A<0>   |         9.340(R)|      SLOW  |         4.542(R)|      FAST  |clk               |   0.000|
-M1_SSEG_A<1>   |         8.767(R)|      SLOW  |         4.214(R)|      FAST  |clk               |   0.000|
-M1_SSEG_A<2>   |         7.496(R)|      SLOW  |         3.624(R)|      FAST  |clk               |   0.000|
-M1_SSEG_A<3>   |         7.099(R)|      SLOW  |         3.367(R)|      FAST  |clk               |   0.000|
-M1_SSEG_A<4>   |         8.528(R)|      SLOW  |         4.015(R)|      FAST  |clk               |   0.000|
-M1_SSEG_A<5>   |         9.477(R)|      SLOW  |         4.544(R)|      FAST  |clk               |   0.000|
-M1_SSEG_A<6>   |         9.104(R)|      SLOW  |         4.422(R)|      FAST  |clk               |   0.000|
-M1_SSEG_B<0>   |         6.709(R)|      SLOW  |         3.337(R)|      FAST  |clk               |   0.000|
-M1_SSEG_B<1>   |         6.409(R)|      SLOW  |         3.173(R)|      FAST  |clk               |   0.000|
-M1_SSEG_B<2>   |         9.048(R)|      SLOW  |         4.599(R)|      FAST  |clk               |   0.000|
-M1_SSEG_B<3>   |         8.459(R)|      SLOW  |         4.252(R)|      FAST  |clk               |   0.000|
-M1_SSEG_B<4>   |         9.525(R)|      SLOW  |         4.775(R)|      FAST  |clk               |   0.000|
-M1_SSEG_B<5>   |         9.231(R)|      SLOW  |         4.625(R)|      FAST  |clk               |   0.000|
-M1_SSEG_B<6>   |         8.268(R)|      SLOW  |         4.083(R)|      FAST  |clk               |   0.000|
-M1_VGA_BLUE<0> |         5.096(R)|      SLOW  |         2.603(R)|      FAST  |vga_clk           |   0.000|
-M1_VGA_BLUE<1> |         5.311(R)|      SLOW  |         2.710(R)|      FAST  |vga_clk           |   0.000|
-M1_VGA_BLUE<2> |         5.587(R)|      SLOW  |         2.881(R)|      FAST  |vga_clk           |   0.000|
-M1_VGA_BLUE<3> |         5.749(R)|      SLOW  |         2.940(R)|      FAST  |vga_clk           |   0.000|
-M1_VGA_GREEN<0>|         6.679(R)|      SLOW  |         3.438(R)|      FAST  |vga_clk           |   0.000|
-M1_VGA_GREEN<1>|         6.711(R)|      SLOW  |         3.462(R)|      FAST  |vga_clk           |   0.000|
-M1_VGA_GREEN<2>|         6.895(R)|      SLOW  |         3.560(R)|      FAST  |vga_clk           |   0.000|
-M1_VGA_GREEN<3>|         6.726(R)|      SLOW  |         3.463(R)|      FAST  |vga_clk           |   0.000|
-M1_VGA_HSYNC   |         6.418(R)|      SLOW  |         3.299(R)|      FAST  |vga_clk           |   0.000|
-M1_VGA_RED<0>  |         6.995(R)|      SLOW  |         3.655(R)|      FAST  |vga_clk           |   0.000|
-M1_VGA_RED<1>  |         7.067(R)|      SLOW  |         3.691(R)|      FAST  |vga_clk           |   0.000|
-M1_VGA_RED<2>  |         6.639(R)|      SLOW  |         3.468(R)|      FAST  |vga_clk           |   0.000|
-M1_VGA_RED<3>  |         6.332(R)|      SLOW  |         3.294(R)|      FAST  |vga_clk           |   0.000|
-M1_VGA_VSYNC   |         7.744(R)|      SLOW  |         3.944(R)|      FAST  |vga_clk           |   0.000|
-UART1_TXD      |         6.217(R)|      SLOW  |         3.408(R)|      FAST  |clk               |   0.000|
----------------+-----------------+------------+-----------------+------------+------------------+--------+
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+LED2        |        10.837(R)|      SLOW  |         6.760(R)|      FAST  |clk               |   0.000|
+M1_LED1     |         7.750(R)|      SLOW  |         4.201(R)|      FAST  |clk               |   0.000|
+M1_SSEG_A<0>|         9.395(R)|      SLOW  |         4.792(R)|      FAST  |clk               |   0.000|
+M1_SSEG_A<1>|         9.304(R)|      SLOW  |         4.730(R)|      FAST  |clk               |   0.000|
+M1_SSEG_A<2>|         7.706(R)|      SLOW  |         3.822(R)|      FAST  |clk               |   0.000|
+M1_SSEG_A<3>|         6.964(R)|      SLOW  |         3.409(R)|      FAST  |clk               |   0.000|
+M1_SSEG_A<4>|         8.360(R)|      SLOW  |         4.092(R)|      FAST  |clk               |   0.000|
+M1_SSEG_A<5>|         9.266(R)|      SLOW  |         4.546(R)|      FAST  |clk               |   0.000|
+M1_SSEG_A<6>|         9.270(R)|      SLOW  |         4.530(R)|      FAST  |clk               |   0.000|
+M1_SSEG_B<0>|         7.835(R)|      SLOW  |         3.947(R)|      FAST  |clk               |   0.000|
+M1_SSEG_B<1>|         7.535(R)|      SLOW  |         3.783(R)|      FAST  |clk               |   0.000|
+M1_SSEG_B<2>|        10.029(R)|      SLOW  |         5.040(R)|      FAST  |clk               |   0.000|
+M1_SSEG_B<3>|         9.257(R)|      SLOW  |         4.604(R)|      FAST  |clk               |   0.000|
+M1_SSEG_B<4>|        10.332(R)|      SLOW  |         5.186(R)|      FAST  |clk               |   0.000|
+M1_SSEG_B<5>|         9.866(R)|      SLOW  |         4.941(R)|      FAST  |clk               |   0.000|
+M1_SSEG_B<6>|         8.892(R)|      SLOW  |         4.411(R)|      FAST  |clk               |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
 
 Clock to Setup on destination clock CLK50
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK50          |   43.615|         |   11.999|         |
+CLK50          |   37.099|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Tue Sep 16 19:28:13 2014 
+Analysis completed Thu Sep 18 11:21:25 2014 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 242 MB
+Peak Memory Usage: 217 MB
 
 
 

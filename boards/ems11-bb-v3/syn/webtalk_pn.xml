@@ -3,10 +3,10 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pn" timeStamp="Tue Sep 16 19:26:16 2014">
+<application name="pn" timeStamp="Thu Sep 18 11:19:40 2014">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="D756B98AD3444961963E4952C78114F3" type="project"/>
-<property name="ProjectIteration" value="6" type="project"/>
+<property name="ProjectIteration" value="8" type="project"/>
 <property name="ProjectFile" value="E:/GitHub/sirchuckalot/zet/boards/ems11-bb-v3/syn/kotku.xise" type="project"/>
 <property name="ProjectCreationTimestamp" value="2014-09-13T22:09:13" type="project"/>
 </section>
@@ -25,7 +25,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_UserConstraintEditorPreference" value="Text Editor" type="process"/>
 <property name="PROP_intProjectCreationTimestamp" value="2014-09-13T22:09:13" type="design"/>
 <property name="PROP_intWbtProjectID" value="D756B98AD3444961963E4952C78114F3" type="design"/>
-<property name="PROP_intWbtProjectIteration" value="6" type="process"/>
+<property name="PROP_intWbtProjectIteration" value="8" type="process"/>
 <property name="PROP_intWorkingDirLocWRTProjDir" value="Same" type="design"/>
 <property name="PROP_intWorkingDirUsed" value="No" type="design"/>
 <property name="PROP_xilxBitgStart_IntDone" value="true" type="process"/>
@@ -38,8 +38,8 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_DevSpeed" value="-2" type="design"/>
 <property name="PROP_PreferredLanguage" value="Verilog" type="design"/>
 <property name="FILE_COREGEN" value="1" type="source"/>
-<property name="FILE_UCF" value="4" type="source"/>
-<property name="FILE_VERILOG" value="84" type="source"/>
+<property name="FILE_UCF" value="1" type="source"/>
+<property name="FILE_VERILOG" value="37" type="source"/>
 </section>
 </application>
 </document>
