@@ -18,23 +18,31 @@
  */
  
 module kotku (
-   
-	// Clock input
-	input        CLK50,
-	
-	// General purpose IO
-	input RESET_N,     // System reset <- ems11-bb-v3.0 RESET push button
-	input M1_T1,          // Flash floppy image boot <- ems11-bb-v3.0 S2 push button
-	input M1_T2,          // Bootstrap BIOS from SD CARD <- ems11-bb-v3.0 S1 push button
-	input DIAG_N,      // NMI pushbutton 
-	
-	// Segment display for BIOS Post Code
-	output [6:0]  M1_SSEG_A,
-	output [6:0]  M1_SSEG_B,
-	
-	output M1_LED1,
-	output LED2
-		
+
+  // Clock input
+  input        CLK50,
+
+  // General purpose IO
+  input RESET_N,     // System reset <- ems11-bb-v3.0 RESET push button
+  input M1_T1,          // Flash floppy image boot <- ems11-bb-v3.0 S2 push button
+  input M1_T2,          // Bootstrap BIOS from SD CARD <- ems11-bb-v3.0 S1 push button
+  input DIAG_N,      // NMI pushbutton 
+
+  // Segment display for BIOS Post Code
+  output [6:0]  M1_SSEG_A,
+  output [6:0]  M1_SSEG_B,
+
+  output M1_LED1,
+  output LED2,
+
+  // Serial master bus signals 
+  output FPGA_CCLK_2,  // spi_sclk
+  input  FPGA_MISO1,   // spi_miso
+  output FPGA_MOSI0,   // spi_mosi
+
+  // Serial slave select signals
+  output FPGA_CSO      // S25FL064P flash select
+
  ); 
 
   // Registers and nets
@@ -99,6 +107,23 @@ module kotku (
   
   wire [19:0] cpu_pc;
   
+  // wires to spi master bus controller
+  wire [15:0] spi_dat_i;
+  wire [15:0] spi_dat_o;
+  wire        spi_tga_i;
+  wire [19:1] spi_adr_i;
+  wire        spi_we_i;
+  wire [ 1:0] spi_sel_i;
+  wire        spi_stb_i;
+  wire        spi_cyc_i;
+  wire        spi_ack_o;
+  
+  // wires to spi bus
+  wire        spi_sclk;
+  wire        spi_miso;
+  wire        spi_mosi;
+  wire [7:0]  spi_ss;
+
   // Module instantiations
   pll pll (
     .inclk0 (CLK50),
@@ -204,6 +229,25 @@ module kotku (
   assign M1_SSEG_A = ~(M1_SSEG_A_INV);
   assign M1_SSEG_B = ~(M1_SSEG_B_INV);
   
+  spi spi (     
+    .wb_clk_i(clk), 
+    .wb_rst_i(rst),
+    .wb_dat_i(spi_dat_i),
+    .wb_dat_o(spi_dat_o[7:0]),
+    .wb_cyc_i(spi_cyc_i),
+    .wb_stb_i(spi_stb_i),
+    .wb_sel_i(spi_sel_i),
+    .wb_we_i(spi_we_i),
+    .wb_ack_o(spi_ack_o),
+
+    // Serial master bus signals
+    .sclk(spi_sclk),   // spi_sclk
+    .miso(spi_miso),   // spi_miso
+    .mosi(spi_mosi),   // spi_mosi
+
+    // Max 1 slave per spi bus cycle
+    .ss(spi_ss)
+  );
 
   zet zet (
     .pc (cpu_pc),
@@ -254,8 +298,8 @@ module kotku (
     .s7_addr_1 (20'b1_0000_0000_0000_0100_000), // io 0x40 - 0x43
     .s7_mask_1 (20'b1_0000_1111_1111_1111_110), // Timer control port
 
-    .s8_addr_1 (20'b1_0000_0000_0010_0011_100), // io 0x0238 - 0x023b
-    .s8_mask_1 (20'b1_0000_1111_1111_1111_110), // Flash IO port
+    .s8_addr_1 (20'b1_0000_0000_0010_0011_100), // io 0x0238 - 0x023f
+    .s8_mask_1 (20'b1_0000_1111_1111_1111_100), // SPI IO port
 
     .s9_addr_1 (20'b1_0000_0000_0010_0001_000), // io 0x0210 - 0x021F
     .s9_mask_1 (20'b1_0000_1111_1111_1111_000), // Sound Blaster
@@ -372,15 +416,15 @@ module kotku (
     .s7_stb_o (),
     .s7_ack_i (1'b0),
 
-    // Slave 8 interface - flash
-    .s8_dat_i (16'h0000),
-    .s8_dat_o (),
-    .s8_adr_o (),
-    .s8_sel_o (),
-    .s8_we_o  (),
-    .s8_cyc_o (),
-    .s8_stb_o (),
-    .s8_ack_i (1'b0),
+    // Slave 8 interface - spi
+    .s8_dat_i (spi_dat_o),
+    .s8_dat_o (spi_dat_i),
+    .s8_adr_o ({spi_tga_i,spi_adr_i}),
+    .s8_sel_o (spi_sel_i),
+    .s8_we_o  (spi_we_i),
+    .s8_cyc_o (spi_cyc_i),
+    .s8_stb_o (spi_stb_i),
+    .s8_ack_i (spi_ack_o),
 
     // Slave 9 interface - not connected
     .s9_dat_i (16'h0000),
@@ -451,15 +495,23 @@ module kotku (
     .sF_cyc_o (),
     .sF_stb_o (),
     .sF_ack_i (1'b0)
-	 
+ 
   );
 
   // Continuous assignments
   assign rst = !lock;
 
   assign DR_CLK_O = sdram_oddr2_clk;
-  
+
   // Required ems11-bb-v3.0 adv7123 vga dac clock
   assign	M1_VGA_CLOCK = vga_oddr2_clk;
   
+  // External fpga spi pins 
+  assign FPGA_CCLK_2 = spi_sclk; // spi_sclk
+  assign FPGA_MISO1  = spi_miso; // spi_miso
+  assign FPGA_MOSI0  = spi_mosi; // spi_mosi
+
+  // Spi flash select 
+  assign FPGA_CSO = spi_ss[0];
+
 endmodule

@@ -66,3 +66,12 @@ NET "M1_SSEG_B<5>" LOC = "Y21";
 NET "M1_SSEG_B<6>" LOC = "AF25";
 
 NET M1_* IOSTANDARD = LVTTL |DRIVE = 8 | SLEW = FAST;
+
+#
+# Weird auxilary pins, JTAG, etc. ---------------------------------
+#
+
+NET "FPGA_CCLK_2" LOC = "AD22";
+NET "FPGA_MISO1" LOC = "AD20";
+NET "FPGA_MOSI0" LOC = "AF20";
+NET "FPGA_CSO" LOC = "AF4";
