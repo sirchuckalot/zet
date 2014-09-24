@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total CPU time to Xst completion: 0.21 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total CPU time to Xst completion: 0.22 secs
  
 --> Reading design: kotku.prj
 
@@ -192,6 +192,8 @@ Parsing verilog file "\\vboxsrv\documents\GitHub\sirchuckalot\zet\cores\zet\rtl\
 Parsing module <zet>.
 Analyzing Verilog file "\\vboxsrv\documents\GitHub\sirchuckalot\zet\cores\wb_switch\wb_switch.v" into library work
 Parsing module <wb_switch>.
+Analyzing Verilog file "\\vboxsrv\documents\GitHub\sirchuckalot\zet\cores\spi\rtl\spi.v" into library work
+Parsing module <spi>.
 Analyzing Verilog file "\\vboxsrv\documents\GitHub\sirchuckalot\zet\cores\gpio\rtl\sw_leds.v" into library work
 Parsing module <sw_leds>.
 Analyzing Verilog file "\\vboxsrv\documents\GitHub\sirchuckalot\zet\cores\gpio\rtl\post.v" into library work
@@ -202,20 +204,20 @@ Analyzing Verilog file "\\vboxsrv\documents\GitHub\sirchuckalot\zet\cores\flash\
 Parsing module <bootrom>.
 Analyzing Verilog file "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" into library work
 Parsing module <kotku>.
-WARNING:HDLCompiler:568 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 268: Constant value is truncated to fit in <20> bits.
-WARNING:HDLCompiler:568 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 269: Constant value is truncated to fit in <20> bits.
-WARNING:HDLCompiler:568 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 271: Constant value is truncated to fit in <20> bits.
-WARNING:HDLCompiler:568 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 272: Constant value is truncated to fit in <20> bits.
-WARNING:HDLCompiler:568 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 277: Constant value is truncated to fit in <20> bits.
-WARNING:HDLCompiler:568 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 278: Constant value is truncated to fit in <20> bits.
-WARNING:HDLCompiler:568 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 280: Constant value is truncated to fit in <20> bits.
-WARNING:HDLCompiler:568 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 281: Constant value is truncated to fit in <20> bits.
+WARNING:HDLCompiler:568 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 312: Constant value is truncated to fit in <20> bits.
+WARNING:HDLCompiler:568 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 313: Constant value is truncated to fit in <20> bits.
+WARNING:HDLCompiler:568 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 315: Constant value is truncated to fit in <20> bits.
+WARNING:HDLCompiler:568 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 316: Constant value is truncated to fit in <20> bits.
+WARNING:HDLCompiler:568 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 321: Constant value is truncated to fit in <20> bits.
+WARNING:HDLCompiler:568 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 322: Constant value is truncated to fit in <20> bits.
+WARNING:HDLCompiler:568 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 324: Constant value is truncated to fit in <20> bits.
+WARNING:HDLCompiler:568 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 325: Constant value is truncated to fit in <20> bits.
 
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
-WARNING:HDLCompiler:1016 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 114: Port Q is not connected to this instance
-WARNING:HDLCompiler:1016 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 122: Port Q is not connected to this instance
+WARNING:HDLCompiler:1016 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 139: Port Q is not connected to this instance
+WARNING:HDLCompiler:1016 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 147: Port Q is not connected to this instance
 
 Elaborating module <kotku>.
 
@@ -236,25 +238,27 @@ Reading initialization file \"\vboxsrv\documents\GitHub\sirchuckalot\zet\cores\f
 Elaborating module <post>.
 
 Elaborating module <sw_leds>.
-WARNING:HDLCompiler:189 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 176: Size mismatch in connection of port <leds_>. Formal port size is 14-bit while actual signal size is 18-bit.
-WARNING:HDLCompiler:1127 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 176: Assignment to leds ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 182: Assignment to nmi_pb ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 201: Size mismatch in connection of port <leds_>. Formal port size is 14-bit while actual signal size is 18-bit.
+WARNING:HDLCompiler:1127 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 201: Assignment to leds ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 207: Assignment to nmi_pb ignored, since the identifier is never used
 
 Elaborating module <hex_display>.
 
 Elaborating module <seg_7>.
-WARNING:HDLCompiler:189 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 193: Size mismatch in connection of port <hex0>. Formal port size is 7-bit while actual signal size is 1-bit.
-WARNING:HDLCompiler:1127 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 193: Assignment to hex0_ ignored, since the identifier is never used
-WARNING:HDLCompiler:189 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 194: Size mismatch in connection of port <hex1>. Formal port size is 7-bit while actual signal size is 1-bit.
-WARNING:HDLCompiler:1127 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 194: Assignment to hex1_ ignored, since the identifier is never used
-WARNING:HDLCompiler:189 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 195: Size mismatch in connection of port <hex2>. Formal port size is 7-bit while actual signal size is 1-bit.
-WARNING:HDLCompiler:1127 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 195: Assignment to hex2_ ignored, since the identifier is never used
-WARNING:HDLCompiler:189 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 196: Size mismatch in connection of port <hex3>. Formal port size is 7-bit while actual signal size is 1-bit.
-WARNING:HDLCompiler:1127 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 196: Assignment to hex3_ ignored, since the identifier is never used
-WARNING:HDLCompiler:189 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 197: Size mismatch in connection of port <hex4>. Formal port size is 7-bit while actual signal size is 1-bit.
-WARNING:HDLCompiler:1127 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 197: Assignment to hex4_ ignored, since the identifier is never used
-WARNING:HDLCompiler:189 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 198: Size mismatch in connection of port <hex5>. Formal port size is 7-bit while actual signal size is 1-bit.
-WARNING:HDLCompiler:1127 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 198: Assignment to hex5_ ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 218: Size mismatch in connection of port <hex0>. Formal port size is 7-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 218: Assignment to hex0_ ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 219: Size mismatch in connection of port <hex1>. Formal port size is 7-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 219: Assignment to hex1_ ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 220: Size mismatch in connection of port <hex2>. Formal port size is 7-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 220: Assignment to hex2_ ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 221: Size mismatch in connection of port <hex3>. Formal port size is 7-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 221: Assignment to hex3_ ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 222: Size mismatch in connection of port <hex4>. Formal port size is 7-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 222: Assignment to hex4_ ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 223: Size mismatch in connection of port <hex5>. Formal port size is 7-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 223: Assignment to hex5_ ignored, since the identifier is never used
+
+Elaborating module <spi>.
 
 Elaborating module <zet>.
 
@@ -319,16 +323,20 @@ Elaborating module <zet_jmp_cond>.
 Elaborating module <zet_wb_master>.
 
 Elaborating module
-<wb_switch(s0_addr_1=20'b01111111111100000000,s0_mask_1=20'b11111111111100000000,s1_addr_1=20'b01010000000000000000,s1_mask_1=20'b11110000000000000000,s1_addr_2=20'b10000000000111100000,s1_mask_2=20'b10000111111111110000,s2_addr_1=20'b10000000000111111100,s2_mask_1=20'b10000111111111111100,s3_addr_1=20'b10000000000000110000,s3_mask_1=20'b10000111111111111101,s4_addr_1=20'b10000000000010000000,s4_mask_1=20'b10000111111111111111,s5_addr_1=20'b10000111100010000000,s5_mask_1=20'b10000111111111111110,s6_addr_1=20'b10000111100100000000,s6_mask_1=20'b10000111111111111000,s7_addr_1=20'b10000000000000100000,s7_mask_1=20'b10000111111111111110,s8_addr_1=20'b10000000000100011100,s8_mask_1=20'b10000111111111111110,s9_addr_1=20'b10000000000100001000,s9_mask_1=20'b10000111111111111000,sA_addr_1=20'b10000111100110000000,sA_mask_1=20'b10000111111110000000,sA_addr_2=20'b0,sA_mask_2=20'b10000000000000000000,sB_addr_1=20'b0,sB_mask_1=20'b11111111111111111111,sC_addr_1=20'b0,sC_mask_1=20'b11111111111111111111,sD_addr_1=20'b100000
+<wb_switch(s0_addr_1=20'b01111111111100000000,s0_mask_1=20'b11111111111100000000,s1_addr_1=20'b01010000000000000000,s1_mask_1=20'b11110000000000000000,s1_addr_2=20'b10000000000111100000,s1_mask_2=20'b10000111111111110000,s2_addr_1=20'b10000000000111111100,s2_mask_1=20'b10000111111111111100,s3_addr_1=20'b10000000000000110000,s3_mask_1=20'b10000111111111111101,s4_addr_1=20'b10000000000010000000,s4_mask_1=20'b10000111111111111111,s5_addr_1=20'b10000111100010000000,s5_mask_1=20'b10000111111111111110,s6_addr_1=20'b10000111100100000000,s6_mask_1=20'b10000111111111111000,s7_addr_1=20'b10000000000000100000,s7_mask_1=20'b10000111111111111110,s8_addr_1=20'b10000000000100011100,s8_mask_1=20'b10000111111111111100,s9_addr_1=20'b10000000000100001000,s9_mask_1=20'b10000111111111111000,sA_addr_1=20'b10000111100110000000,sA_mask_1=20'b10000111111110000000,sA_addr_2=20'b0,sA_mask_2=20'b10000000000000000000,sB_addr_1=20'b0,sB_mask_1=20'b11111111111111111111,sC_addr_1=20'b0,sC_mask_1=20'b11111111111111111111,sD_addr_1=20'b100000
 00000001000000,sD_mask_1=20'b10000111111111111110,sE_addr_1=20'b0,sE_mask_1=20'b11111111111111111111,sF_addr_1=20'b0,sF_mask_1=20'b11111111111111111111)>.
-WARNING:HDLCompiler:1127 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 348: Assignment to gpio_tga_i ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 428: Assignment to post_tga_i ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 460: Assignment to DR_CLK_O ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 463: Assignment to M1_VGA_CLOCK ignored, since the identifier is never used
-WARNING:HDLCompiler:634 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 96: Net <intv[0]> does not have a driver.
-WARNING:HDLCompiler:634 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 113: Net <sdram_oddr2_clk> does not have a driver.
-WARNING:HDLCompiler:634 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 121: Net <vga_oddr2_clk> does not have a driver.
-WARNING:HDLCompiler:552 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 283: Input port s4_dat_i[15] is not connected on this instance
+WARNING:HDLCompiler:1127 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 392: Assignment to gpio_tga_i ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 422: Assignment to spi_adr_i ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 472: Assignment to post_tga_i ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 504: Assignment to DR_CLK_O ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 507: Assignment to M1_VGA_CLOCK ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 511: Assignment to FPGA_MISO1 ignored, since the identifier is never used
+WARNING:HDLCompiler:634 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 104: Net <intv[0]> does not have a driver.
+WARNING:HDLCompiler:634 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 112: Net <spi_dat_o[15]> does not have a driver.
+WARNING:HDLCompiler:634 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 123: Net <spi_miso> does not have a driver.
+WARNING:HDLCompiler:634 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 138: Net <sdram_oddr2_clk> does not have a driver.
+WARNING:HDLCompiler:634 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 146: Net <vga_oddr2_clk> does not have a driver.
+WARNING:HDLCompiler:552 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" Line 327: Input port s4_dat_i[15] is not connected on this instance
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -337,94 +345,92 @@ WARNING:HDLCompiler:552 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\em
 Synthesizing Unit <kotku>.
     Related source file is "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v".
 WARNING:Xst:2898 - Port 's4_dat_i', unconnected in block instance 'wbs', is tied to GND.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 160: Output port <nmi_pb> of the instance <sw_leds> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 189: Output port <hex0> of the instance <hex16> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 189: Output port <hex1> of the instance <hex16> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 189: Output port <hex2> of the instance <hex16> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 189: Output port <hex3> of the instance <hex16> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 189: Output port <hex4> of the instance <hex16> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 189: Output port <hex5> of the instance <hex16> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 208: Output port <wb_tgc_o> of the instance <zet> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 208: Output port <nmia> of the instance <zet> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <s1_dat_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <s1_adr_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <s1_sel_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <s2_dat_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <s2_adr_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <s2_sel_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <s3_dat_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <s3_adr_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <s3_sel_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <s4_dat_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <s4_adr_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <s4_sel_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <s6_dat_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <s6_adr_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <s6_sel_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <s7_dat_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <s7_adr_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <s7_sel_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <s8_dat_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <s8_adr_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <s8_sel_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <s9_dat_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <s9_adr_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <s9_sel_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <sA_dat_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <sA_adr_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <sA_sel_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <sB_dat_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <sB_adr_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <sB_sel_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <sC_dat_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <sC_adr_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <sC_sel_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <sE_dat_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <sE_adr_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <sE_sel_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <sF_dat_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <sF_adr_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <sF_sel_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <s1_we_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <s1_cyc_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <s1_stb_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <s2_we_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <s2_cyc_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <s2_stb_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <s3_we_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <s3_cyc_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <s3_stb_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <s4_we_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <s4_cyc_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <s4_stb_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <s6_we_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <s6_cyc_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <s6_stb_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <s7_we_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <s7_cyc_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <s7_stb_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <s8_we_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <s8_cyc_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <s8_stb_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <s9_we_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <s9_cyc_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <s9_stb_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <sA_we_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <sA_cyc_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <sA_stb_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <sB_we_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <sB_cyc_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <sB_stb_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <sC_we_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <sC_cyc_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <sC_stb_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <sE_we_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <sE_cyc_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <sE_stb_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <sF_we_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <sF_cyc_o> of the instance <wbs> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 283: Output port <sF_stb_o> of the instance <wbs> is unconnected or connected to loadless signal.
+WARNING:Xst:647 - Input <FPGA_MISO1> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 185: Output port <nmi_pb> of the instance <sw_leds> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 214: Output port <hex0> of the instance <hex16> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 214: Output port <hex1> of the instance <hex16> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 214: Output port <hex2> of the instance <hex16> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 214: Output port <hex3> of the instance <hex16> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 214: Output port <hex4> of the instance <hex16> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 214: Output port <hex5> of the instance <hex16> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 252: Output port <wb_tgc_o> of the instance <zet> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 252: Output port <nmia> of the instance <zet> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <s1_dat_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <s1_adr_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <s1_sel_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <s2_dat_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <s2_adr_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <s2_sel_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <s3_dat_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <s3_adr_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <s3_sel_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <s4_dat_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <s4_adr_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <s4_sel_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <s6_dat_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <s6_adr_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <s6_sel_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <s7_dat_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <s7_adr_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <s7_sel_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <s8_adr_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <s9_dat_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <s9_adr_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <s9_sel_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <sA_dat_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <sA_adr_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <sA_sel_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <sB_dat_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <sB_adr_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <sB_sel_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <sC_dat_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <sC_adr_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <sC_sel_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <sE_dat_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <sE_adr_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <sE_sel_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <sF_dat_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <sF_adr_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <sF_sel_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <s1_we_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <s1_cyc_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <s1_stb_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <s2_we_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <s2_cyc_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <s2_stb_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <s3_we_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <s3_cyc_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <s3_stb_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <s4_we_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <s4_cyc_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <s4_stb_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <s6_we_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <s6_cyc_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <s6_stb_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <s7_we_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <s7_cyc_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <s7_stb_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <s9_we_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <s9_cyc_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <s9_stb_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <sA_we_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <sA_cyc_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <sA_stb_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <sB_we_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <sB_cyc_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <sB_stb_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <sC_we_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <sC_cyc_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <sC_stb_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <sE_we_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <sE_cyc_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <sE_stb_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <sF_we_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <sF_cyc_o> of the instance <wbs> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\rtl\kotku.v" line 327: Output port <sF_stb_o> of the instance <wbs> is unconnected or connected to loadless signal.
 WARNING:Xst:653 - Signal <intv<0>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <spi_dat_o<15:8>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <spi_miso> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <sdram_oddr2_clk> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <vga_oddr2_clk> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Summary:
@@ -494,6 +500,24 @@ Synthesizing Unit <seg_7>.
     Summary:
 	inferred   1 Multiplexer(s).
 Unit <seg_7> synthesized.
+
+Synthesizing Unit <spi>.
+    Related source file is "\\vboxsrv\documents\GitHub\sirchuckalot\zet\cores\spi\rtl\spi.v".
+    Found 8-bit register for signal <tr>.
+    Found 1-bit register for signal <wb_ack_o>.
+    Found 8-bit register for signal <sft>.
+    Found 1-bit register for signal <st>.
+    Found 8-bit register for signal <wb_dat_o>.
+    Found 1-bit register for signal <sclk>.
+    Found 8-bit register for signal <ss>.
+    Found 2-bit register for signal <clk_div>.
+    Found 1-bit register for signal <mosi>.
+    Found 2-bit subtractor for signal <clk_div[1]_GND_12_o_sub_29_OUT> created at line 99.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  38 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+Unit <spi> synthesized.
 
 Synthesizing Unit <zet>.
     Related source file is "\\vboxsrv\documents\GitHub\sirchuckalot\zet\cores\zet\rtl\zet.v".
@@ -567,9 +591,9 @@ WARNING:Xst:647 - Input <ld_base> is never used. This port will be preserved and
     Found 1-bit register for signal <inta>.
     Found 1-bit register for signal <nmia>.
     Found 1-bit register for signal <ifld>.
-    Found 5-bit subtractor for signal <div_cnt[4]_GND_17_o_sub_21_OUT> created at line 124.
+    Found 5-bit subtractor for signal <div_cnt[4]_GND_18_o_sub_21_OUT> created at line 124.
     Found 9-bit adder for signal <seq_addr> created at line 85.
-    Found 9-bit adder for signal <seq[8]_GND_17_o_add_11_OUT> created at line 119.
+    Found 9-bit adder for signal <seq[8]_GND_18_o_add_11_OUT> created at line 119.
     Summary:
 	inferred   3 Adder/Subtractor(s).
 	inferred  23 D-type flip-flop(s).
@@ -578,8 +602,8 @@ Unit <zet_decode> synthesized.
 
 Synthesizing Unit <zet_opcode_deco>.
     Related source file is "\\vboxsrv\documents\GitHub\sirchuckalot\zet\cores\zet\rtl\zet_opcode_deco.v".
-    Found 9-bit 8-to-1 multiplexer for signal <regm[2]_GND_18_o_wide_mux_118_OUT> created at line 963.
-    Found 9-bit 8-to-1 multiplexer for signal <regm[2]_PWR_18_o_wide_mux_138_OUT> created at line 1073.
+    Found 9-bit 8-to-1 multiplexer for signal <regm[2]_GND_19_o_wide_mux_118_OUT> created at line 963.
+    Found 9-bit 8-to-1 multiplexer for signal <regm[2]_PWR_20_o_wide_mux_138_OUT> created at line 1073.
     Summary:
 	inferred  35 Multiplexer(s).
 Unit <zet_opcode_deco> synthesized.
@@ -636,15 +660,15 @@ Unit <zet_fulladd16> synthesized.
 
 Synthesizing Unit <zet_conv>.
     Related source file is "\\vboxsrv\documents\GitHub\sirchuckalot\zet\cores\zet\rtl\zet_conv.v".
-    Found 16-bit subtractor for signal <x[15]_GND_26_o_sub_4_OUT> created at line 44.
-    Found 8-bit subtractor for signal <x[7]_GND_26_o_sub_11_OUT> created at line 48.
-    Found 8-bit subtractor for signal <tmpdas[7]_GND_26_o_sub_13_OUT> created at line 49.
-    Found 16-bit adder for signal <x[15]_GND_26_o_add_0_OUT> created at line 43.
-    Found 8-bit adder for signal <x[7]_GND_26_o_add_6_OUT> created at line 46.
-    Found 8-bit adder for signal <tmpdaa[7]_GND_26_o_add_8_OUT> created at line 47.
-    Found 8-bit comparator greater for signal <GND_26_o_x[7]_LessThan_18_o> created at line 54
-    Found 8-bit comparator greater for signal <PWR_27_o_x[7]_LessThan_19_o> created at line 55
-    Found 8-bit comparator greater for signal <x[7]_GND_26_o_LessThan_20_o> created at line 62
+    Found 16-bit subtractor for signal <x[15]_GND_27_o_sub_4_OUT> created at line 44.
+    Found 8-bit subtractor for signal <x[7]_GND_27_o_sub_11_OUT> created at line 48.
+    Found 8-bit subtractor for signal <tmpdas[7]_GND_27_o_sub_13_OUT> created at line 49.
+    Found 16-bit adder for signal <x[15]_GND_27_o_add_0_OUT> created at line 43.
+    Found 8-bit adder for signal <x[7]_GND_27_o_add_6_OUT> created at line 46.
+    Found 8-bit adder for signal <tmpdaa[7]_GND_27_o_add_8_OUT> created at line 47.
+    Found 8-bit comparator greater for signal <GND_27_o_x[7]_LessThan_18_o> created at line 54
+    Found 8-bit comparator greater for signal <PWR_29_o_x[7]_LessThan_19_o> created at line 55
+    Found 8-bit comparator greater for signal <x[7]_GND_27_o_LessThan_20_o> created at line 62
     Summary:
 	inferred   6 Adder/Subtractor(s).
 	inferred   3 Comparator(s).
@@ -690,10 +714,10 @@ INFO:Xst:3210 - "\\vboxsrv\documents\GitHub\sirchuckalot\zet\cores\zet\rtl\zet_d
     Found 18-bit register for signal <s>.
     Found 1-bit register for signal <ovf>.
     Found 17-bit register for signal <id>.
-    Found 17-bit adder for signal <d[16]_GND_31_o_add_2_OUT> created at line 101.
-    Found 34-bit adder for signal <z[33]_GND_31_o_add_8_OUT> created at line 109.
-    Found 18-bit adder for signal <GND_31_o_GND_31_o_add_20_OUT> created at line 153.
-    Found 18-bit adder for signal <GND_31_o_GND_31_o_add_23_OUT> created at line 155.
+    Found 17-bit adder for signal <d[16]_GND_32_o_add_2_OUT> created at line 101.
+    Found 34-bit adder for signal <z[33]_GND_32_o_add_8_OUT> created at line 109.
+    Found 18-bit adder for signal <GND_32_o_GND_32_o_add_20_OUT> created at line 153.
+    Found 18-bit adder for signal <GND_32_o_GND_32_o_add_23_OUT> created at line 155.
     Summary:
 	inferred   4 Adder/Subtractor(s).
 	inferred 126 D-type flip-flop(s).
@@ -1797,309 +1821,309 @@ Synthesizing Unit <zet_div_uu>.
     Found 35-bit adder for signal <s_pipe[16][33]_d_pipe[16][34]_add_50_OUT> created at line 96.
     Found 35-bit adder for signal <s_pipe[17][34]_d_pipe[17][34]_add_64_OUT> created at line 116.
     Found 17-bit comparator lessequal for signal <z[33]_d[16]_LessThan_56_o> created at line 176
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<1><4><34:34>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<1><10><4:4>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<2><10><10:10>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<1><7><10:10>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<1><15><7:7>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<2><4><15:15>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<3><4><4:4>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<4><4><4:4>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<3><10><4:4>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<1><6><34:34>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<1><15><6:6>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<1><5><15:15>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<1><7><5:5>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<1><14><7:7>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<1><10><14:14>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<1><9><10:10>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<1><34><9:9>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<2><14><34:34>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<3><14><14:14>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<2><34><14:14>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<2><10><34:34>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<4><14><10:10>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<3><34><14:14>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<3><10><34:34>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<2><15><10:10>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<2><7><15:15>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<1><34><7:7>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<1><16><34:34>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<1><14><16:16>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<1><13><14:14>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<2><9><15:15>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<2><7><9:9>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<2><6><7:7>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<2><5><6:6>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<1><16><5:5>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<1><13><16:16>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<1><12><13:13>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<1><11><12:12>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<1><9><11:11>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<1><8><9:9>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<1><6><8:8>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<1><5><6:6>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<1><3><5:5>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<1><8><11:11>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<1><4><8:8>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<1><3><4:4>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<1><2><3:3>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<1><1><2:2>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<1><0><1:1>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<5><4><0:0>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<4><10><4:4>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<5><14><0:0>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<4><34><14:14>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<4><10><34:34>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<3><15><10:10>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<3><7><15:15>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<2><34><7:7>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<2><16><34:34>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<2><14><16:16>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<2><13><14:14>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<3><9><15:15>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<3><7><9:9>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<3><6><7:7>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<3><5><6:6>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<2><16><5:5>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<2><13><16:16>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<2><12><13:13>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<2><11><12:12>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<2><9><11:11>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<2><8><9:9>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<2><6><8:8>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<2><5><6:6>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<2><3><5:5>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<2><8><11:11>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<2><4><8:8>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<2><3><4:4>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<2><2><3:3>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<2><1><2:2>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<2><0><1:1>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<6><4><0:0>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<5><10><4:4>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<6><14><0:0>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<5><34><14:14>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<5><10><34:34>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<4><15><10:10>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<4><7><15:15>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<3><34><7:7>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<3><16><34:34>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<3><14><16:16>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<3><13><14:14>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<4><9><15:15>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<4><7><9:9>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<4><6><7:7>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<4><5><6:6>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<3><16><5:5>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<3><13><16:16>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<3><12><13:13>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<3><11><12:12>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<3><9><11:11>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<3><8><9:9>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<3><6><8:8>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<3><5><6:6>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<3><3><5:5>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<3><8><11:11>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<3><4><8:8>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<3><3><4:4>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<3><2><3:3>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<3><1><2:2>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<3><0><1:1>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<7><4><0:0>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<6><10><4:4>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<7><14><0:0>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<6><34><14:14>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<6><10><34:34>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<5><15><10:10>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<5><7><15:15>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<4><34><7:7>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<4><16><34:34>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<4><14><16:16>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<4><13><14:14>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<5><9><15:15>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<5><7><9:9>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<5><6><7:7>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<5><5><6:6>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<4><16><5:5>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<4><13><16:16>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<4><12><13:13>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<4><11><12:12>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<4><9><11:11>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<4><8><9:9>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<4><6><8:8>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<4><5><6:6>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<4><3><5:5>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<4><8><11:11>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<4><4><8:8>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<4><3><4:4>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<4><2><3:3>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<4><1><2:2>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<4><0><1:1>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<8><4><0:0>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<7><10><4:4>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<8><14><0:0>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<7><34><14:14>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<7><10><34:34>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<6><15><10:10>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<6><7><15:15>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<5><34><7:7>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<5><16><34:34>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<5><14><16:16>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<5><13><14:14>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<6><9><15:15>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<6><7><9:9>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<6><6><7:7>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<6><5><6:6>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<5><16><5:5>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<5><13><16:16>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<5><12><13:13>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<5><11><12:12>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<5><9><11:11>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<5><8><9:9>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<5><6><8:8>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<5><5><6:6>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<5><3><5:5>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<5><8><11:11>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<5><4><8:8>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<5><3><4:4>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<5><2><3:3>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<5><1><2:2>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<5><0><1:1>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<9><4><0:0>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<8><10><4:4>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<9><14><0:0>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<8><34><14:14>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<8><10><34:34>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<7><15><10:10>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<7><7><15:15>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<6><34><7:7>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<6><16><34:34>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<6><14><16:16>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<6><13><14:14>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<7><9><15:15>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<7><7><9:9>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<7><6><7:7>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<7><5><6:6>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<6><16><5:5>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<6><13><16:16>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<6><12><13:13>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<6><11><12:12>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<6><9><11:11>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<6><8><9:9>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<6><6><8:8>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<6><5><6:6>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<6><3><5:5>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<6><8><11:11>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<6><4><8:8>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<6><3><4:4>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<6><2><3:3>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<6><1><2:2>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<6><0><1:1>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<10><4><0:0>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<9><10><4:4>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<10><14><0:0>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<9><34><14:14>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<9><10><34:34>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<8><15><10:10>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<8><7><15:15>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<7><34><7:7>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<7><16><34:34>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<7><14><16:16>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<7><13><14:14>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<8><9><15:15>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<8><7><9:9>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<8><6><7:7>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<8><5><6:6>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<7><16><5:5>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<7><13><16:16>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<7><12><13:13>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<7><11><12:12>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<7><9><11:11>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<7><8><9:9>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<7><6><8:8>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<7><5><6:6>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<7><3><5:5>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<7><8><11:11>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<7><4><8:8>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<7><3><4:4>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<7><2><3:3>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<7><1><2:2>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<7><0><1:1>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<11><4><0:0>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<10><10><4:4>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<11><14><0:0>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<10><34><14:14>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<10><10><34:34>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<9><15><10:10>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<9><7><15:15>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<8><34><7:7>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<8><16><34:34>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<8><14><16:16>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<8><13><14:14>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<9><9><15:15>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<9><7><9:9>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<9><6><7:7>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<9><5><6:6>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<8><16><5:5>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<8><13><16:16>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<8><12><13:13>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<8><11><12:12>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<8><9><11:11>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<8><8><9:9>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<8><6><8:8>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<8><5><6:6>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<8><3><5:5>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<8><8><11:11>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<8><4><8:8>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<8><3><4:4>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<8><2><3:3>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<8><1><2:2>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<8><0><1:1>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<12><4><0:0>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<11><10><4:4>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<12><14><0:0>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<11><34><14:14>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<11><10><34:34>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<10><15><10:10>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<10><7><15:15>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<9><34><7:7>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<9><16><34:34>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<9><14><16:16>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<9><13><14:14>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<10><9><15:15>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<10><7><9:9>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<10><6><7:7>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<10><5><6:6>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<9><16><5:5>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<9><13><16:16>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<9><12><13:13>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<9><11><12:12>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<9><9><11:11>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<9><8><9:9>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<9><6><8:8>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<9><5><6:6>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<9><3><5:5>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<9><8><11:11>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<9><4><8:8>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<9><3><4:4>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<9><2><3:3>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<9><1><2:2>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<9><0><1:1>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<13><4><0:0>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<12><10><4:4>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<13><14><0:0>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<12><34><14:14>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<12><10><34:34>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<11><15><10:10>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<11><7><15:15>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<10><34><7:7>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<10><16><34:34>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<10><14><16:16>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<10><13><14:14>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<11><9><15:15>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<11><7><9:9>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<11><6><7:7>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<11><5><6:6>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<10><16><5:5>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<10><13><16:16>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<10><12><13:13>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<10><11><12:12>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<10><9><11:11>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<10><8><9:9>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<10><6><8:8>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<10><5><6:6>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<10><3><5:5>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<10><8><11:11>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<10><4><8:8>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<10><3><4:4>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<10><2><3:3>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<10><1><2:2>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<10><0><1:1>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<14><4><0:0>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<13><10><4:4>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<14><14><0:0>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<13><34><14:14>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<13><10><34:34>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<12><15><10:10>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<12><7><15:15>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<11><34><7:7>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<11><16><34:34>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<11><14><16:16>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<11><13><14:14>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<12><9><15:15>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<12><7><9:9>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<12><6><7:7>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<12><5><6:6>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<11><16><5:5>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<11><13><16:16>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<11><12><13:13>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<11><11><12:12>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<11><9><11:11>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<11><8><9:9>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<11><6><8:8>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<11><5><6:6>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<11><3><5:5>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<11><8><11:11>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<11><4><8:8>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<11><3><4:4>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<11><2><3:3>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<11><1><2:2>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<11><0><1:1>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<15><4><0:0>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<14><10><4:4>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<15><14><0:0>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<14><34><14:14>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<14><10><34:34>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<13><15><10:10>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<13><7><15:15>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<12><34><7:7>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<12><16><34:34>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<12><14><16:16>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<12><13><14:14>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<13><9><15:15>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<13><7><9:9>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<13><6><7:7>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<13><5><6:6>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<12><16><5:5>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<12><13><16:16>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<12><12><13:13>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<12><11><12:12>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<12><9><11:11>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<12><8><9:9>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<12><6><8:8>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<12><5><6:6>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<12><3><5:5>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<12><8><11:11>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<12><4><8:8>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<12><3><4:4>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<12><2><3:3>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<12><1><2:2>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<12><0><1:1>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<16><4><0:0>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<15><10><4:4>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<16><14><0:0>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<15><34><14:14>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<15><10><34:34>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<14><15><10:10>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<14><7><15:15>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<13><34><7:7>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<13><16><34:34>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<13><14><16:16>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<13><13><14:14>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<14><9><15:15>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<14><7><9:9>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<14><6><7:7>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<14><5><6:6>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<13><16><5:5>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<13><13><16:16>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<13><12><13:13>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<13><11><12:12>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<13><9><11:11>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<13><8><9:9>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<13><6><8:8>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<13><5><6:6>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<13><3><5:5>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<13><8><11:11>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<13><4><8:8>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<13><3><4:4>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<13><2><3:3>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<13><1><2:2>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<13><0><1:1>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<17><4><0:0>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<16><10><4:4>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<17><14><0:0>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<16><34><14:14>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<16><10><34:34>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<15><15><10:10>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<15><7><15:15>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<14><34><7:7>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<14><16><34:34>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<14><14><16:16>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<14><13><14:14>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<15><9><15:15>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<15><7><9:9>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<15><6><7:7>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<15><5><6:6>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<14><16><5:5>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<14><13><16:16>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<14><12><13:13>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<14><11><12:12>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<14><9><11:11>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<14><8><9:9>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<14><6><8:8>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<14><5><6:6>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<14><3><5:5>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<14><8><11:11>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<14><4><8:8>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<14><3><4:4>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<14><2><3:3>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<14><1><2:2>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<14><0><1:1>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<17><10><0:0>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<17><34><0:0>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<17><10><34:34>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<16><15><10:10>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<16><7><15:15>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<15><34><7:7>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<15><16><34:34>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<15><14><16:16>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<15><13><14:14>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<16><9><15:15>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<16><7><9:9>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<16><6><7:7>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<16><5><6:6>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<15><16><5:5>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<15><13><16:16>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<15><12><13:13>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<15><11><12:12>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<15><9><11:11>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<15><8><9:9>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<15><6><8:8>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<15><5><6:6>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<15><3><5:5>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<15><8><11:11>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<15><4><8:8>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<15><3><4:4>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<15><2><3:3>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<15><1><2:2>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<15><0><1:1>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<17><15><0:0>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<17><7><15:15>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<16><34><7:7>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<16><16><34:34>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<16><14><16:16>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<16><13><14:14>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<17><9><15:15>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<17><7><9:9>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<17><6><7:7>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<17><5><6:6>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<16><16><5:5>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<16><13><16:16>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<16><12><13:13>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<16><11><12:12>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<16><9><11:11>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<16><8><9:9>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<16><6><8:8>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<16><5><6:6>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<16><3><5:5>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<16><8><11:11>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<16><4><8:8>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<16><3><4:4>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<16><2><3:3>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<16><1><2:2>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<16><0><1:1>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<17><34><0:0>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<17><16><34:34>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<17><14><16:16>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<17><13><14:14>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<17><16><0:0>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<17><13><16:16>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<17><12><13:13>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<17><11><12:12>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<17><9><11:11>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<17><8><9:9>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<17><6><8:8>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<17><5><6:6>> (without init value) have a constant value of 0 in block <zet_div_uu>.
-    WARNING:Xst:2404 -  FFs/Latches <d_pipe<17><3><5:5>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<17><8><11:11>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<17><4><8:8>> (without init value) have a constant value of 0 in block <zet_div_uu>.
+    WARNING:Xst:2404 -  FFs/Latches <d_pipe<17><3><4:4>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<17><2><3:3>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<17><1><2:2>> (without init value) have a constant value of 0 in block <zet_div_uu>.
     WARNING:Xst:2404 -  FFs/Latches <d_pipe<17><0><1:1>> (without init value) have a constant value of 0 in block <zet_div_uu>.
@@ -2126,26 +2150,26 @@ Synthesizing Unit <zet_shrot>.
     Related source file is "\\vboxsrv\documents\GitHub\sirchuckalot\zet\cores\zet\rtl\zet_shrot.v".
     Found 4-bit subtractor for signal <rol16<3:0>> created at line 106.
     Found 3-bit subtractor for signal <rol8<2:0>> created at line 108.
-    Found 4-bit subtractor for signal <y[3]_GND_35_o_sub_8_OUT> created at line 110.
-    Found 5-bit subtractor for signal <PWR_39_o_y[4]_sub_11_OUT> created at line 111.
-    Found 5-bit subtractor for signal <GND_35_o_y[4]_sub_12_OUT> created at line 111.
-    Found 3-bit subtractor for signal <y[2]_GND_35_o_sub_15_OUT> created at line 112.
-    Found 4-bit subtractor for signal <PWR_39_o_y[3]_sub_18_OUT> created at line 113.
-    Found 4-bit subtractor for signal <GND_35_o_y[3]_sub_19_OUT> created at line 113.
-    Found 9-bit subtractor for signal <GND_35_o_GND_35_o_sub_31_OUT> created at line 125.
-    Found 9-bit subtractor for signal <GND_35_o_GND_35_o_sub_40_OUT> created at line 131.
+    Found 4-bit subtractor for signal <y[3]_GND_36_o_sub_8_OUT> created at line 110.
+    Found 5-bit subtractor for signal <PWR_41_o_y[4]_sub_11_OUT> created at line 111.
+    Found 5-bit subtractor for signal <GND_36_o_y[4]_sub_12_OUT> created at line 111.
+    Found 3-bit subtractor for signal <y[2]_GND_36_o_sub_15_OUT> created at line 112.
+    Found 4-bit subtractor for signal <PWR_41_o_y[3]_sub_18_OUT> created at line 113.
+    Found 4-bit subtractor for signal <GND_36_o_y[3]_sub_19_OUT> created at line 113.
+    Found 9-bit subtractor for signal <GND_36_o_GND_36_o_sub_31_OUT> created at line 125.
+    Found 9-bit subtractor for signal <GND_36_o_GND_36_o_sub_40_OUT> created at line 131.
     Found 17-bit shifter logical left for signal <n0095> created at line 123
-    Found 17-bit shifter logical left for signal <PWR_39_o_GND_35_o_shift_left_31_OUT> created at line 125
+    Found 17-bit shifter logical left for signal <PWR_41_o_GND_36_o_shift_left_31_OUT> created at line 125
     Found 17-bit shifter logical right for signal <n0097[16:0]> created at line 125
     Found 9-bit shifter logical left for signal <n0098> created at line 129
-    Found 9-bit shifter logical left for signal <PWR_39_o_GND_35_o_shift_left_40_OUT> created at line 131
+    Found 9-bit shifter logical left for signal <PWR_41_o_GND_36_o_shift_left_40_OUT> created at line 131
     Found 9-bit shifter logical right for signal <n0100[8:0]> created at line 131
     Found 5-bit comparator lessequal for signal <n0007> created at line 110
     Found 5-bit comparator lessequal for signal <n0011> created at line 111
     Found 4-bit comparator lessequal for signal <n0016> created at line 112
     Found 4-bit comparator lessequal for signal <n0020> created at line 113
-    Found 8-bit comparator greater for signal <GND_35_o_y[7]_LessThan_29_o> created at line 124
-    Found 8-bit comparator greater for signal <GND_35_o_y[7]_LessThan_38_o> created at line 130
+    Found 8-bit comparator greater for signal <GND_36_o_y[7]_LessThan_29_o> created at line 124
+    Found 8-bit comparator greater for signal <GND_36_o_y[7]_LessThan_38_o> created at line 130
     Found 1-bit comparator not equal for signal <n0058> created at line 145
     Found 1-bit comparator not equal for signal <n0060> created at line 145
     Summary:
@@ -2251,7 +2275,7 @@ Synthesizing Unit <zet_wb_master>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 19-bit adder for signal <cpu_adr_o[19]_GND_50_o_add_13_OUT> created at line 86.
+    Found 19-bit adder for signal <cpu_adr_o[19]_GND_51_o_add_13_OUT> created at line 86.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  73 D-type flip-flop(s).
@@ -2280,7 +2304,7 @@ Synthesizing Unit <wb_switch>.
         s7_addr_1 = 20'b10000000000000100000
         s7_mask_1 = 20'b10000111111111111110
         s8_addr_1 = 20'b10000000000100011100
-        s8_mask_1 = 20'b10000111111111111110
+        s8_mask_1 = 20'b10000111111111111100
         s9_addr_1 = 20'b10000000000100001000
         s9_mask_1 = 20'b10000111111111111000
         sA_addr_1 = 20'b10000111100110000000
@@ -2311,13 +2335,14 @@ Macro Statistics
  8x4-bit single-port Read Only RAM                     : 1
 # Multipliers                                          : 1
  17x17-bit multiplier                                  : 1
-# Adders/Subtractors                                   : 52
+# Adders/Subtractors                                   : 53
  16-bit adder                                          : 4
  16-bit addsub                                         : 1
  16-bit subtractor                                     : 1
  17-bit adder                                          : 5
  18-bit adder                                          : 2
  19-bit adder                                          : 1
+ 2-bit subtractor                                      : 1
  20-bit adder                                          : 3
  3-bit adder                                           : 1
  3-bit subtractor                                      : 2
@@ -2331,20 +2356,20 @@ Macro Statistics
  8-bit subtractor                                      : 2
  9-bit adder                                           : 2
  9-bit subtractor                                      : 2
-# Registers                                            : 1054
- 1-bit register                                        : 1023
+# Registers                                            : 1063
+ 1-bit register                                        : 1027
  14-bit register                                       : 1
  16-bit register                                       : 4
  17-bit register                                       : 3
  18-bit register                                       : 2
  19-bit register                                       : 4
- 2-bit register                                        : 2
+ 2-bit register                                        : 3
  256-bit register                                      : 1
  3-bit register                                        : 3
  34-bit register                                       : 2
  35-bit register                                       : 2
  5-bit register                                        : 1
- 8-bit register                                        : 4
+ 8-bit register                                        : 8
  9-bit register                                        : 2
 # Comparators                                          : 17
  1-bit comparator equal                                : 1
@@ -2357,9 +2382,9 @@ Macro Statistics
  5-bit comparator lessequal                            : 2
  8-bit comparator equal                                : 1
  8-bit comparator greater                              : 5
-# Multiplexers                                         : 793
+# Multiplexers                                         : 796
  1-bit 16-to-1 multiplexer                             : 1
- 1-bit 2-to-1 multiplexer                              : 624
+ 1-bit 2-to-1 multiplexer                              : 626
  1-bit 3-to-1 multiplexer                              : 1
  1-bit 4-to-1 multiplexer                              : 1
  1-bit 8-to-1 multiplexer                              : 3
@@ -2382,7 +2407,7 @@ Macro Statistics
  5-bit 2-to-1 multiplexer                              : 6
  7-bit 2-to-1 multiplexer                              : 8
  8-bit 16-to-1 multiplexer                             : 6
- 8-bit 2-to-1 multiplexer                              : 10
+ 8-bit 2-to-1 multiplexer                              : 11
  9-bit 2-to-1 multiplexer                              : 34
  9-bit 8-to-1 multiplexer                              : 2
 # Logic shifters                                       : 6
@@ -2417,7 +2442,22 @@ WARNING:Xst:1290 - Hierarchical block <hex_group5> is unconnected in block <hex1
    It will be removed from the design.
 INFO:Xst:2261 - The FF/Latch <dat_o_8> in Unit <post> is equivalent to the following 7 FFs/Latches, which will be removed : <dat_o_9> <dat_o_10> <dat_o_11> <dat_o_12> <dat_o_13> <dat_o_14> <dat_o_15> 
 WARNING:Xst:1710 - FF/Latch <dat_o_8> (without init value) has a constant value of 0 in block <post>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <wb_dat_o_0> (without init value) has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <nmir> (without init value) has a constant value of 0 in block <core>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <wb_dat_o_1> (without init value) has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <wb_dat_o_2> (without init value) has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <wb_dat_o_3> (without init value) has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <wb_dat_o_4> (without init value) has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <wb_dat_o_5> (without init value) has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <wb_dat_o_6> (without init value) has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <wb_dat_o_7> (without init value) has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <ss_1> of sequential type is unconnected in block <spi>.
+WARNING:Xst:2677 - Node <ss_2> of sequential type is unconnected in block <spi>.
+WARNING:Xst:2677 - Node <ss_3> of sequential type is unconnected in block <spi>.
+WARNING:Xst:2677 - Node <ss_4> of sequential type is unconnected in block <spi>.
+WARNING:Xst:2677 - Node <ss_5> of sequential type is unconnected in block <spi>.
+WARNING:Xst:2677 - Node <ss_6> of sequential type is unconnected in block <spi>.
+WARNING:Xst:2677 - Node <ss_7> of sequential type is unconnected in block <spi>.
 WARNING:Xst:2677 - Node <wb_dat_o_14> of sequential type is unconnected in block <wb_master>.
 WARNING:Xst:2677 - Node <wb_dat_o_15> of sequential type is unconnected in block <wb_master>.
 WARNING:Xst:2677 - Node <p_32> of sequential type is unconnected in block <signmul17>.
@@ -2443,6 +2483,10 @@ INFO:Xst:3226 - The RAM <bootrom/Mram_rom> will be implemented as a BLOCK RAM, a
     | optimization       | speed                               |          |
     -----------------------------------------------------------------------
 Unit <kotku> synthesized (advanced).
+
+Synthesizing (advanced) Unit <spi>.
+The following registers are absorbed into counter <clk_div>: 1 register on signal <clk_div>.
+Unit <spi> synthesized (advanced).
 
 Synthesizing (advanced) Unit <sw_leds>.
 The following registers are absorbed into counter <nmi_cnt>: 1 register on signal <nmi_cnt>.
@@ -2518,12 +2562,13 @@ Macro Statistics
  8-bit subtractor                                      : 2
  9-bit adder                                           : 1
  9-bit subtractor                                      : 2
-# Counters                                             : 3
+# Counters                                             : 4
+ 2-bit down counter                                    : 1
  3-bit up counter                                      : 1
  5-bit down counter                                    : 1
  9-bit up counter                                      : 1
-# Registers                                            : 1675
- Flip-Flops                                            : 1675
+# Registers                                            : 1711
+ Flip-Flops                                            : 1711
 # Comparators                                          : 17
  1-bit comparator equal                                : 1
  1-bit comparator not equal                            : 2
@@ -2535,9 +2580,9 @@ Macro Statistics
  5-bit comparator lessequal                            : 2
  8-bit comparator equal                                : 1
  8-bit comparator greater                              : 5
-# Multiplexers                                         : 809
+# Multiplexers                                         : 811
  1-bit 16-to-1 multiplexer                             : 1
- 1-bit 2-to-1 multiplexer                              : 645
+ 1-bit 2-to-1 multiplexer                              : 646
  1-bit 4-to-1 multiplexer                              : 1
  1-bit 8-to-1 multiplexer                              : 3
  16-bit 16-to-1 multiplexer                            : 4
@@ -2559,7 +2604,7 @@ Macro Statistics
  5-bit 2-to-1 multiplexer                              : 5
  7-bit 2-to-1 multiplexer                              : 8
  8-bit 16-to-1 multiplexer                             : 6
- 8-bit 2-to-1 multiplexer                              : 9
+ 8-bit 2-to-1 multiplexer                              : 10
  9-bit 2-to-1 multiplexer                              : 33
  9-bit 8-to-1 multiplexer                              : 2
 # Logic shifters                                       : 6
@@ -2586,6 +2631,14 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dat_o_12> (without 
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dat_o_13> (without init value) has a constant value of 0 in block <post>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dat_o_14> (without init value) has a constant value of 0 in block <post>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dat_o_15> (without init value) has a constant value of 0 in block <post>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <wb_dat_o_0> (without init value) has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <wb_dat_o_1> (without init value) has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <wb_dat_o_2> (without init value) has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <wb_dat_o_3> (without init value) has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <wb_dat_o_4> (without init value) has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <wb_dat_o_5> (without init value) has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <wb_dat_o_6> (without init value) has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <wb_dat_o_7> (without init value) has a constant value of 0 in block <spi>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <nmir> (without init value) has a constant value of 0 in block <zet_core>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1898 - Due to constant pushing, FF/Latch <nmia_old> is unconnected in block <zet_core>.
 Analyzing FSM <MFsm> for best encoding.
@@ -2598,6 +2651,7 @@ Optimizing FSM <FSM_0> on signal <cs[1:2]> with user encoding.
  11    | 11
  10    | 10
 -------------------
+WARNING:Xst:1710 - FF/Latch <tr_0> (without init value) has a constant value of 1 in block <spi>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <s_pipe<1>_34> has a constant value of 0 in block <zet_div_uu>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <s_pipe_0> of sequential type is unconnected in block <zet_div_uu>.
 WARNING:Xst:2677 - Node <s_pipe_1> of sequential type is unconnected in block <zet_div_uu>.
@@ -2626,6 +2680,8 @@ Optimizing unit <kotku> ...
 Optimizing unit <sw_leds> ...
 
 Optimizing unit <post> ...
+
+Optimizing unit <spi> ...
 
 Optimizing unit <zet_core> ...
 
@@ -2665,6 +2721,13 @@ WARNING:Xst:2677 - Node <sw_leds/nmi_cnt_1> of sequential type is unconnected in
 WARNING:Xst:2677 - Node <sw_leds/nmi_cnt_0> of sequential type is unconnected in block <kotku>.
 WARNING:Xst:2677 - Node <sw_leds/nmi_pb> of sequential type is unconnected in block <kotku>.
 WARNING:Xst:2677 - Node <sw_leds/nmi_pb_pressed> of sequential type is unconnected in block <kotku>.
+WARNING:Xst:2677 - Node <spi/ss_7> of sequential type is unconnected in block <kotku>.
+WARNING:Xst:2677 - Node <spi/ss_6> of sequential type is unconnected in block <kotku>.
+WARNING:Xst:2677 - Node <spi/ss_5> of sequential type is unconnected in block <kotku>.
+WARNING:Xst:2677 - Node <spi/ss_4> of sequential type is unconnected in block <kotku>.
+WARNING:Xst:2677 - Node <spi/ss_3> of sequential type is unconnected in block <kotku>.
+WARNING:Xst:2677 - Node <spi/ss_2> of sequential type is unconnected in block <kotku>.
+WARNING:Xst:2677 - Node <spi/ss_1> of sequential type is unconnected in block <kotku>.
 WARNING:Xst:2677 - Node <zet/core/exec/alu/muldiv/div_su/s_17> of sequential type is unconnected in block <kotku>.
 WARNING:Xst:2677 - Node <zet/core/exec/alu/muldiv/div_su/s_16> of sequential type is unconnected in block <kotku>.
 WARNING:Xst:2677 - Node <zet/core/exec/alu/muldiv/div_su/divider/s_16> of sequential type is unconnected in block <kotku>.
@@ -2848,9 +2911,12 @@ INFO:Xst:2261 - The FF/Latch <zet/core/exec/alu/muldiv/div_su/divider/s_pipe<1>_
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block kotku, actual ratio is 16.
+FlipFlop zet/core/fetch/opcode_l_0 has been replicated 1 time(s)
+FlipFlop zet/core/fetch/opcode_l_1 has been replicated 1 time(s)
 FlipFlop zet/core/fetch/state_0 has been replicated 2 time(s)
 FlipFlop zet/core/fetch/state_1 has been replicated 2 time(s)
 FlipFlop zet/core/fetch/state_2 has been replicated 2 time(s)
+FlipFlop zet/wb_master/cpu_dat_i_0 has been replicated 1 time(s)
 FlipFlop zet/wb_master/cpu_dat_i_1 has been replicated 1 time(s)
 
 Final Macro Processing ...
@@ -2874,14 +2940,15 @@ Processing Unit <kotku> :
 	Found 4-bit shift register for signal <zet/core/exec/alu/muldiv/div_su/divider/q_4>.
 	Found 3-bit shift register for signal <zet/core/exec/alu/muldiv/div_su/divider/q_3>.
 	Found 2-bit shift register for signal <zet/core/exec/alu/muldiv/div_su/divider/q_2>.
+INFO:Xst:741 - HDL ADVISOR - A 7-bit shift register was found for signal <spi/sft_0> and currently occupies 7 logic cells (3 slices). Removing the set/reset logic would take advantage of SRL32 (and derived) primitives and reduce this to 1 logic cells (1 slices). Evaluate if the set/reset can be removed for this simple shift register. The majority of simple pipeline structures do not need to be set/reset operationally.
 Unit <kotku> processed.
 
 =========================================================================
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1291
- Flip-Flops                                            : 1291
+# Registers                                            : 1316
+ Flip-Flops                                            : 1316
 # Shift Registers                                      : 18
  10-bit shift register                                 : 1
  11-bit shift register                                 : 1
@@ -2921,27 +2988,28 @@ Top Level Output File Name         : kotku.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 6045
+# BELS                             : 6095
 #      GND                         : 1
-#      INV                         : 188
+#      INV                         : 189
 #      LUT1                        : 20
-#      LUT2                        : 268
-#      LUT3                        : 515
-#      LUT4                        : 441
-#      LUT5                        : 687
-#      LUT6                        : 1882
+#      LUT2                        : 275
+#      LUT3                        : 503
+#      LUT4                        : 395
+#      LUT5                        : 736
+#      LUT6                        : 1926
 #      MUXCY                       : 846
-#      MUXF7                       : 361
+#      MUXF7                       : 368
 #      MUXF8                       : 125
 #      VCC                         : 1
 #      XORCY                       : 710
-# FlipFlops/Latches                : 1311
-#      FD                          : 872
-#      FDE                         : 75
-#      FDR                         : 288
-#      FDRE                        : 53
-#      FDS                         : 16
-#      FDSE                        : 5
+# FlipFlops/Latches                : 1336
+#      FD                          : 869
+#      FDE                         : 76
+#      FDR                         : 293
+#      FDRE                        : 63
+#      FDS                         : 18
+#      FDSE                        : 14
+#      FDSE_1                      : 1
 #      ODDR2                       : 2
 # RAMS                             : 1
 #      RAMB8BWER                   : 1
@@ -2950,10 +3018,10 @@ Primitive and Black Box Usage:
 #      SRLC32E                     : 3
 # Clock Buffers                    : 4
 #      BUFG                        : 4
-# IO Buffers                       : 20
+# IO Buffers                       : 23
 #      IBUF                        : 3
 #      IBUFG                       : 1
-#      OBUF                        : 16
+#      OBUF                        : 19
 # DCMs                             : 1
 #      DCM_SP                      : 1
 # DSPs                             : 1
@@ -2966,22 +3034,22 @@ Selected Device : 6slx45fgg676-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            1311  out of  54576     2%  
- Number of Slice LUTs:                 4019  out of  27288    14%  
-    Number used as Logic:              4001  out of  27288    14%  
+ Number of Slice Registers:            1336  out of  54576     2%  
+ Number of Slice LUTs:                 4062  out of  27288    14%  
+    Number used as Logic:              4044  out of  27288    14%  
     Number used as Memory:               18  out of   6408     0%  
        Number used as SRL:               18
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   4275
-   Number with an unused Flip Flop:    2964  out of   4275    69%  
-   Number with an unused LUT:           256  out of   4275     5%  
-   Number of fully used LUT-FF pairs:  1055  out of   4275    24%  
-   Number of unique control sets:        34
+ Number of LUT Flip Flop pairs used:   4326
+   Number with an unused Flip Flop:    2990  out of   4326    69%  
+   Number with an unused LUT:           264  out of   4326     6%  
+   Number of fully used LUT-FF pairs:  1072  out of   4326    24%  
+   Number of unique control sets:        41
 
 IO Utilization: 
- Number of IOs:                          21
- Number of bonded IOBs:                  20  out of    358     5%  
+ Number of IOs:                          25
+ Number of bonded IOBs:                  23  out of    358     6%  
 
 Specific Feature Utilization:
  Number of Block RAM/FIFO:                1  out of    116     0%  
@@ -3010,7 +3078,7 @@ Clock Information:
 ------------------------------------------------------------------+------------------------+-------+
 Clock Signal                                                      | Clock buffer(FF name)  | Load  |
 ------------------------------------------------------------------+------------------------+-------+
-CLK50                                                             | DCM_SP:CLKFX           | 1329  |
+CLK50                                                             | DCM_SP:CLKFX           | 1354  |
 CLK50                                                             | DCM_SP:CLK2X           | 1     |
 zet/core/exec/alu/muldiv/div_su/divider/Mcompar_ovf_pipe<0>_lutdi8| NONE(sdram_oddr2)      | 2     |
 CLK50                                                             | DCM_SP:CLKDV           | 1     |
@@ -3025,8 +3093,8 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 9.189ns (Maximum Frequency: 108.821MHz)
-   Minimum input arrival time before clock: 4.813ns
+   Minimum period: 9.183ns (Maximum Frequency: 108.897MHz)
+   Minimum input arrival time before clock: 5.415ns
    Maximum output required time after clock: 5.592ns
    Maximum combinational path delay: No path found
 
@@ -3036,81 +3104,82 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CLK50'
-  Clock period: 9.189ns (frequency: 108.821MHz)
-  Total number of paths / destination ports: 487585210527077 / 1508
+  Clock period: 9.183ns (frequency: 108.897MHz)
+  Total number of paths / destination ports: 785389379898239 / 1561
 -------------------------------------------------------------------------
-Delay:               36.758ns (Levels of Logic = 31)
+Delay:               36.732ns (Levels of Logic = 32)
   Source:            zet/core/fetch/state_2_1 (FF)
-  Destination:       zet/core/fetch/sop_l_2 (FF)
+  Destination:       zet/core/fetch/pref_l_1 (FF)
   Source Clock:      CLK50 rising 0.3X
   Destination Clock: CLK50 rising 0.3X
 
-  Data Path: zet/core/fetch/state_2_1 to zet/core/fetch/sop_l_2
+  Data Path: zet/core/fetch/state_2_1 to zet/core/fetch/pref_l_1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDSE:C->Q            18   0.525   1.511  zet/core/fetch/state_2_1 (zet/core/fetch/state_2_1)
-     LUT5:I1->O          116   0.254   2.258  zet/core/fetch/mux211 (zet/core/opcode<2>)
-     LUT5:I4->O            9   0.254   0.976  zet/core/decode/opcode_deco/op[7]_GND_18_o_equal_153_o11 (zet/core/decode/opcode_deco/op[7]_GND_18_o_equal_153_o1)
-     LUT3:I2->O            2   0.254   0.834  zet/core/decode/opcode_deco/op[7]_GND_18_o_equal_155_o1 (zet/core/decode/opcode_deco/op[7]_GND_18_o_equal_155_o)
-     LUT6:I4->O            1   0.250   0.682  zet/core/decode/opcode_deco/seq_addr<2>82 (zet/core/decode/opcode_deco/seq_addr<2>82)
-     LUT6:I5->O            2   0.254   1.156  zet/core/decode/opcode_deco/seq_addr<2>85 (zet/core/decode/opcode_deco/seq_addr<2>8)
-     LUT6:I1->O            1   0.254   0.000  zet/core/decode/Madd_seq_addr_lut<2> (zet/core/decode/Madd_seq_addr_lut<2>)
-     MUXCY:S->O            1   0.215   0.000  zet/core/decode/Madd_seq_addr_cy<2> (zet/core/decode/Madd_seq_addr_cy<2>)
+     FDSE:C->Q            16   0.525   1.458  zet/core/fetch/state_2_1 (zet/core/fetch/state_2_1)
+     LUT5:I1->O            9   0.254   1.252  zet/core/fetch/mux611_1 (zet/core/fetch/mux611)
+     LUT6:I2->O           14   0.254   1.127  zet/core/decode/opcode_deco/op[7]_PWR_20_o_equal_175_o<7>11 (zet/core/decode/opcode_deco/op[7]_PWR_20_o_equal_175_o<7>1)
+     LUT6:I5->O            7   0.254   0.910  zet/core/decode/opcode_deco/op[7]_PWR_20_o_equal_182_o<7>1 (zet/core/decode/opcode_deco/op[7]_PWR_20_o_equal_182_o)
+     LUT5:I4->O            1   0.254   0.790  zet/core/decode/Mmux_n0099214 (zet/core/decode/Mmux_n0099213)
+     LUT6:I4->O            1   0.250   0.682  zet/core/decode/Mmux_n0099215 (zet/core/decode/Mmux_n0099214)
+     LUT5:I4->O            1   0.254   0.682  zet/core/decode/Mmux_n009926_SW0 (N299)
+     LUT6:I5->O            1   0.254   0.000  zet/core/decode/Madd_seq_addr_lut<1> (zet/core/decode/Madd_seq_addr_lut<1>)
+     MUXCY:S->O            1   0.215   0.000  zet/core/decode/Madd_seq_addr_cy<1> (zet/core/decode/Madd_seq_addr_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  zet/core/decode/Madd_seq_addr_cy<2> (zet/core/decode/Madd_seq_addr_cy<2>)
      MUXCY:CI->O           1   0.023   0.000  zet/core/decode/Madd_seq_addr_cy<3> (zet/core/decode/Madd_seq_addr_cy<3>)
      XORCY:CI->O         298   0.206   2.892  zet/core/decode/Madd_seq_addr_xor<4> (zet/core/seq_addr<4>)
-     LUT6:I0->O            1   0.254   0.000  zet/core/micro_data_micro_rom/Mram_rom146114_G (zet/core/micro_data_N116)
+     LUT6:I0->O            1   0.254   0.000  zet/core/micro_data_micro_rom/Mram_rom146114_G (zet/core/micro_data_N119)
      MUXF7:I1->O           1   0.175   0.790  zet/core/micro_data_micro_rom/Mram_rom146114 (zet/core/micro_data_micro_rom/Mram_rom146113)
-     LUT6:I4->O            1   0.250   0.000  zet/core/micro_data_micro_rom/Mram_rom1461110_F (zet/core/micro_data_N133)
-     MUXF7:I0->O          30   0.163   1.487  zet/core/micro_data_micro_rom/Mram_rom1461110 (zet/core/micro_data/micro_o<39>)
-     LUT5:I4->O           85   0.254   2.092  zet/core/Mmux_ir351 (zet/core/ir<8>)
-     MUXF7:S->O            1   0.185   0.000  zet/core/exec/regfile/Mmux_addr_b[3]_r[15][15]_wide_mux_8_OUT_4_f7_9 (zet/core/exec/regfile/Mmux_addr_b[3]_r[15][15]_wide_mux_8_OUT_4_f710)
-     MUXF8:I0->O           6   0.144   0.984  zet/core/exec/regfile/Mmux_addr_b[3]_r[15][15]_wide_mux_8_OUT_2_f8_9 (zet/core/exec/regfile/addr_b[3]_r[15][15]_wide_mux_8_OUT<4>)
-     LUT6:I4->O           16   0.250   1.290  zet/core/exec/Mmux_bus_b112 (zet/core/exec/Mmux_bus_b112)
-     LUT3:I1->O            1   0.250   0.682  zet/core/exec/alu/shrot/Mmux_rcl16_rs_cy<3>11_SW0 (N1069)
-     LUT5:I4->O            1   0.254   0.682  zet/core/exec/alu/shrot/Mmux_rcl16_rs_cy<3>11 (zet/core/exec/alu/shrot/Mmux_rcl16_rs_cy<3>)
-     LUT6:I5->O           97   0.254   2.186  zet/core/exec/alu/shrot/Mmux_rot1651 (zet/core/exec/alu/shrot/rot16<4>)
-     LUT6:I5->O           10   0.254   1.284  zet/core/exec/alu/shrot/rxr16/y[4]_PWR_41_o_equal_16_o<4>1 (zet/core/exec/alu/shrot/rxr16/y[4]_PWR_41_o_equal_16_o)
-     LUT6:I2->O            1   0.254   0.682  zet/core/exec/alu/shrot/Mmux_cfor_cfo_sal_MUX_2612_o43115 (zet/core/exec/alu/shrot/Mmux_cfor_cfo_sal_MUX_2612_o43115)
-     LUT6:I5->O            1   0.254   0.790  zet/core/exec/alu/shrot/Mmux_cfor_cfo_sal_MUX_2612_o43119 (zet/core/exec/alu/rot<5>)
-     LUT6:I4->O            1   0.250   0.000  zet/core/exec/alu/m0/Mmux_out_2_f7_4_G (N1553)
-     MUXF7:I1->O           5   0.175   0.841  zet/core/exec/alu/m0/Mmux_out_2_f7_4 (zet/core/addr_exec<5>)
-     LUT6:I5->O           13   0.254   1.206  zet/core/exec/Mmux_omemalu121 (zet/core/exec/omemalu<5>)
-     LUT6:I4->O            1   0.250   0.682  zet/core/exec/regfile/Mmux_cx_zero18_SW3_F (N1440)
-     LUT3:I2->O            3   0.254   0.766  zet/core/exec/regfile/Mmux_cx_zero18_SW31 (N1163)
-     LUT6:I5->O           38   0.254   1.620  zet/core/fetch/nstate/Mmux_next_state2 (zet/core/fetch/next_state<1>)
-     LUT6:I5->O            1   0.254   0.682  zet/core/fetch/sop_l_0_dpot1 (zet/core/fetch/sop_l_0_dpot1)
-     LUT4:I3->O            1   0.254   0.000  zet/core/fetch/sop_l_0_rstpot (zet/core/fetch/sop_l_0_rstpot)
-     FD:D                      0.074          zet/core/fetch/sop_l_0
+     LUT6:I4->O            1   0.250   0.000  zet/core/micro_data_micro_rom/Mram_rom1461110_F (zet/core/micro_data_N128)
+     MUXF7:I0->O          31   0.163   1.503  zet/core/micro_data_micro_rom/Mram_rom1461110 (zet/core/micro_data/micro_o<39>)
+     LUT6:I5->O           18   0.254   1.343  zet/core/Mmux_ir33_2 (zet/core/Mmux_ir331)
+     LUT6:I4->O            5   0.250   0.840  zet/core/exec/regfile/Mmux_addr_b[3]_r[15][15]_wide_mux_8_OUT_614 (zet/core/exec/Mmux_bus_b11)
+     MUXF7:S->O            4   0.185   1.080  zet/core/exec/Mmux_bus_b19_SW2 (N927)
+     LUT6:I2->O            9   0.254   0.976  zet/core/exec/Mmux_bus_b110_1 (zet/core/exec/Mmux_bus_b1101)
+     LUT5:I4->O            1   0.254   0.682  zet/core/exec/alu/shrot/Mmux_rcl16_rs_cy<3>11_SW0 (N1267)
+     LUT3:I2->O            2   0.254   0.726  zet/core/exec/alu/shrot/Mmux_rcl16_rs_cy<3>11 (zet/core/exec/alu/shrot/Mmux_rcl16_rs_cy<3>)
+     LUT6:I5->O           89   0.254   2.124  zet/core/exec/alu/shrot/Mmux_rot1651 (zet/core/exec/alu/shrot/rot16<4>)
+     LUT6:I5->O           10   0.254   1.008  zet/core/exec/alu/shrot/rxr16/y[4]_PWR_43_o_equal_16_o<4>1 (zet/core/exec/alu/shrot/rxr16/y[4]_PWR_43_o_equal_16_o)
+     LUT3:I2->O            2   0.254   1.156  zet/core/exec/alu/shrot/Mmux_unchanged1112 (zet/core/exec/alu/shrot/Mmux_unchanged1111)
+     LUT6:I1->O            1   0.254   0.000  zet/core/exec/alu/m0/Mmux_out_3 (zet/core/exec/alu/m0/Mmux_out_3)
+     MUXF7:I1->O          30   0.175   1.487  zet/core/exec/alu/m0/Mmux_out_2_f7 (zet/core/addr_exec<0>)
+     LUT6:I5->O           19   0.254   1.261  zet/core/exec/Mmux_omemalu17 (zet/core/exec/omemalu<0>)
+     LUT6:I5->O            1   0.254   0.682  zet/core/exec/regfile/Mmux_cx_zero19_SW0_SW0_SW0_SW3_F (N1509)
+     LUT3:I2->O            1   0.254   0.682  zet/core/exec/regfile/Mmux_cx_zero19_SW0_SW0_SW0_SW31 (N1069)
+     LUT6:I5->O           32   0.254   1.520  zet/core/fetch/nstate/Mmux_next_state15 (zet/core/fetch/next_state<0>)
+     LUT6:I5->O           14   0.254   1.235  zet/core/fetch/next_state[2]_data[7]_select_48_OUT<0>11 (zet/core/fetch/next_state[2]_data[7]_select_48_OUT<0>1)
+     LUT6:I4->O            1   0.250   0.000  zet/core/fetch/pref_l_1_rstpot (zet/core/fetch/pref_l_1_rstpot)
+     FD:D                      0.074          zet/core/fetch/pref_l_1
     ----------------------------------------
-    Total                     36.758ns (7.703ns logic, 29.054ns route)
-                                       (21.0% logic, 79.0% route)
+    Total                     36.732ns (7.844ns logic, 28.887ns route)
+                                       (21.4% logic, 78.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK50'
-  Total number of paths / destination ports: 7 / 7
+  Total number of paths / destination ports: 8 / 8
 -------------------------------------------------------------------------
-Offset:              4.813ns (Levels of Logic = 4)
-  Source:            M1_T2 (PAD)
-  Destination:       zet/wb_master/cpu_dat_i_10 (FF)
+Offset:              5.415ns (Levels of Logic = 4)
+  Source:            RESET_N (PAD)
+  Destination:       zet/wb_master/cpu_dat_i_8 (FF)
   Destination Clock: CLK50 rising 0.3X
 
-  Data Path: M1_T2 to zet/wb_master/cpu_dat_i_10
+  Data Path: RESET_N to zet/wb_master/cpu_dat_i_8
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   1.328   0.790  M1_T2_IBUF (M1_T2_IBUF)
-     LUT3:I1->O            1   0.250   0.682  zet/wb_master/Mmux_cpu_dat_i[15]_cpu_dat_i[15]_mux_10_OUT[10]14_SW0 (N14)
-     LUT6:I5->O            2   0.254   1.181  zet/wb_master/Mmux_cpu_dat_i[15]_cpu_dat_i[15]_mux_10_OUT[10]14 (zet/wb_master/Mmux_cpu_dat_i[15]_cpu_dat_i[15]_mux_10_OUT[10]14)
-     LUT6:I0->O            1   0.254   0.000  zet/wb_master/Mmux_cpu_dat_i[15]_cpu_dat_i[15]_mux_10_OUT[10]11 (zet/wb_master/cpu_dat_i[15]_cpu_dat_i[15]_mux_10_OUT[10])
-     FDE:D                     0.074          zet/wb_master/cpu_dat_i_10
+     IBUF:I->O             1   1.328   0.958  RESET_N_IBUF (RESET_N_IBUF)
+     LUT6:I2->O            1   0.254   1.112  wbs/i_dat_s<0>_SW0 (N2)
+     LUT5:I0->O            2   0.254   1.181  wbs/i_dat_s<0> (dat_i<0>)
+     LUT6:I0->O            1   0.254   0.000  zet/wb_master/Mmux_cpu_dat_i[15]_cpu_dat_i[15]_mux_10_OUT[8]11 (zet/wb_master/cpu_dat_i[15]_cpu_dat_i[15]_mux_10_OUT[8])
+     FDE:D                     0.074          zet/wb_master/cpu_dat_i_8
     ----------------------------------------
-    Total                      4.813ns (2.160ns logic, 2.653ns route)
-                                       (44.9% logic, 55.1% route)
+    Total                      5.415ns (2.164ns logic, 3.251ns route)
+                                       (40.0% logic, 60.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK50'
-  Total number of paths / destination ports: 58 / 16
+  Total number of paths / destination ports: 61 / 19
 -------------------------------------------------------------------------
 Offset:              5.592ns (Levels of Logic = 2)
   Source:            post/post_1 (FF)
@@ -3138,20 +3207,20 @@ Clock to Setup on destination clock CLK50
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK50          |   36.758|         |         |         |
+CLK50          |   36.732|         |   16.641|         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 82.00 secs
-Total CPU time to Xst completion: 82.15 secs
+Total REAL time to Xst completion: 83.00 secs
+Total CPU time to Xst completion: 83.25 secs
  
 --> 
 
-Total memory usage is 179528 kilobytes
+Total memory usage is 179848 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  592 (   0 filtered)
-Number of infos    :   96 (   0 filtered)
+Number of warnings :  630 (   0 filtered)
+Number of infos    :   92 (   0 filtered)
 

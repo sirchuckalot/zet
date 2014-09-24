@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-CP-VIRTUALBOX::  Thu Sep 18 11:19:41 2014
+CP-VIRTUALBOX::  Thu Sep 18 23:57:18 2014
 
 par -w -intstyle ise -ol high -mt off kotku_map.ncd kotku.ncd kotku.pcf 
 
@@ -26,16 +26,16 @@ Device speed data version:  "PRODUCTION 1.23 2013-10-13".
 Device Utilization Summary:
 
 Slice Logic Utilization:
-  Number of Slice Registers:                 1,323 out of  54,576    2%
-    Number used as Flip Flops:               1,309
+  Number of Slice Registers:                 1,348 out of  54,576    2%
+    Number used as Flip Flops:               1,334
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:               14
-  Number of Slice LUTs:                      3,959 out of  27,288   14%
-    Number used as logic:                    3,832 out of  27,288   14%
-      Number using O6 output only:           3,375
-      Number using O5 output only:              18
-      Number using O5 and O6:                  439
+  Number of Slice LUTs:                      3,994 out of  27,288   14%
+    Number used as logic:                    3,873 out of  27,288   14%
+      Number using O6 output only:           3,409
+      Number using O5 output only:              23
+      Number using O5 and O6:                  441
       Number used as ROM:                        0
     Number used as Memory:                      18 out of   6,408    1%
       Number used as Dual Port RAM:              0
@@ -44,18 +44,18 @@ Slice Logic Utilization:
         Number using O6 output only:            18
         Number using O5 output only:             0
         Number using O5 and O6:                  0
-    Number used exclusively as route-thrus:    109
-      Number with same-slice register load:    104
-      Number with same-slice carry load:         4
+    Number used exclusively as route-thrus:    103
+      Number with same-slice register load:     97
+      Number with same-slice carry load:         5
       Number with other load:                    1
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 1,297 out of   6,822   19%
+  Number of occupied Slices:                 1,121 out of   6,822   16%
   Number of MUXCYs used:                       920 out of  13,644    6%
-  Number of LUT Flip Flop pairs used:        4,045
-    Number with an unused Flip Flop:         2,893 out of   4,045   71%
-    Number with an unused LUT:                  86 out of   4,045    2%
-    Number of fully used LUT-FF pairs:       1,066 out of   4,045   26%
+  Number of LUT Flip Flop pairs used:        4,034
+    Number with an unused Flip Flop:         2,892 out of   4,034   71%
+    Number with an unused LUT:                  40 out of   4,034    1%
+    Number of fully used LUT-FF pairs:       1,102 out of   4,034   27%
     Number of slice register sites lost
       to control set restrictions:               0 out of  54,576    0%
 
@@ -66,8 +66,8 @@ Slice Logic Distribution:
   over-mapped for a non-slice resource or if Placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        21 out of     358    5%
-    Number of LOCed IOBs:                       21 out of      21  100%
+  Number of bonded IOBs:                        25 out of     358    6%
+    Number of LOCed IOBs:                       25 out of      25  100%
 
 Specific Feature Utilization:
   Number of RAMB16BWERs:                         0 out of     116    0%
@@ -104,36 +104,37 @@ Specific Feature Utilization:
 Overall effort level (-ol):   High 
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 7 secs 
-Finished initial Timing Analysis.  REAL time: 7 secs 
+Starting initial Timing Analysis.  REAL time: 6 secs 
+Finished initial Timing Analysis.  REAL time: 6 secs 
 
 WARNING:Par:288 - The signal DIAG_N_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal FPGA_MISO1_IBUF has no load.  PAR will not attempt to route this signal.
 Starting Router
 
 
-Phase  1  : 21150 unrouted;      REAL time: 8 secs 
+Phase  1  : 21512 unrouted;      REAL time: 6 secs 
 
-Phase  2  : 20046 unrouted;      REAL time: 10 secs 
+Phase  2  : 20370 unrouted;      REAL time: 8 secs 
 
-Phase  3  : 9710 unrouted;      REAL time: 22 secs 
+Phase  3  : 9728 unrouted;      REAL time: 19 secs 
 
-Phase  4  : 9819 unrouted; (Par is working to improve performance)     REAL time: 26 secs 
+Phase  4  : 10298 unrouted; (Par is working to improve performance)     REAL time: 27 secs 
 
 Updating file: kotku.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 10 secs 
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 25 secs 
 
-Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 10 secs 
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 57 secs 
 
-Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 10 secs 
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 57 secs 
 
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 10 secs 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 57 secs 
 
-Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 11 secs 
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 57 secs 
 
-Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 1 mins 13 secs 
-Total REAL time to Router completion: 1 mins 13 secs 
-Total CPU time to Router completion: 1 mins 12 secs 
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 2 mins 
+Total REAL time to Router completion: 2 mins 
+Total CPU time to Router completion: 1 mins 59 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -153,8 +154,8 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clk | SETUP       |         N/A|    37.099ns|     N/A|           0
-                                            | HOLD        |     0.349ns|            |       0|           0
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|    39.028ns|     N/A|           0
+                                            | HOLD        |     0.223ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -170,18 +171,18 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-WARNING:Par:283 - There are 1 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+WARNING:Par:283 - There are 2 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
-Total REAL time to PAR completion: 1 mins 28 secs 
-Total CPU time to PAR completion: 1 mins 19 secs 
+Total REAL time to PAR completion: 2 mins 14 secs 
+Total CPU time to PAR completion: 2 mins 7 secs 
 
-Peak Memory Usage:  309 MB
+Peak Memory Usage:  290 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.
 
 Number of error messages: 0
-Number of warning messages: 3
+Number of warning messages: 4
 Number of info messages: 2
 
 Writing design to file kotku.ncd

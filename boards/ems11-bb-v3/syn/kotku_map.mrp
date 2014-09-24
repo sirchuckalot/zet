@@ -10,23 +10,23 @@ Target Device  : xc6slx45
 Target Package : fgg676
 Target Speed   : -2
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Thu Sep 18 11:16:46 2014
+Mapped Date    : Thu Sep 18 23:55:57 2014
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    1
 Slice Logic Utilization:
-  Number of Slice Registers:                 1,323 out of  54,576    2%
-    Number used as Flip Flops:               1,309
+  Number of Slice Registers:                 1,348 out of  54,576    2%
+    Number used as Flip Flops:               1,334
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:               14
-  Number of Slice LUTs:                      3,959 out of  27,288   14%
-    Number used as logic:                    3,832 out of  27,288   14%
-      Number using O6 output only:           3,375
-      Number using O5 output only:              18
-      Number using O5 and O6:                  439
+  Number of Slice LUTs:                      3,994 out of  27,288   14%
+    Number used as logic:                    3,873 out of  27,288   14%
+      Number using O6 output only:           3,409
+      Number using O5 output only:              23
+      Number using O5 and O6:                  441
       Number used as ROM:                        0
     Number used as Memory:                      18 out of   6,408    1%
       Number used as Dual Port RAM:              0
@@ -35,21 +35,21 @@ Slice Logic Utilization:
         Number using O6 output only:            18
         Number using O5 output only:             0
         Number using O5 and O6:                  0
-    Number used exclusively as route-thrus:    109
-      Number with same-slice register load:    104
-      Number with same-slice carry load:         4
+    Number used exclusively as route-thrus:    103
+      Number with same-slice register load:     97
+      Number with same-slice carry load:         5
       Number with other load:                    1
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 1,297 out of   6,822   19%
+  Number of occupied Slices:                 1,121 out of   6,822   16%
   Number of MUXCYs used:                       920 out of  13,644    6%
-  Number of LUT Flip Flop pairs used:        4,045
-    Number with an unused Flip Flop:         2,893 out of   4,045   71%
-    Number with an unused LUT:                  86 out of   4,045    2%
-    Number of fully used LUT-FF pairs:       1,066 out of   4,045   26%
-    Number of unique control sets:              34
+  Number of LUT Flip Flop pairs used:        4,034
+    Number with an unused Flip Flop:         2,892 out of   4,034   71%
+    Number with an unused LUT:                  40 out of   4,034    1%
+    Number of fully used LUT-FF pairs:       1,102 out of   4,034   27%
+    Number of unique control sets:              41
     Number of slice register sites lost
-      to control set restrictions:             185 out of  54,576    1%
+      to control set restrictions:             224 out of  54,576    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -58,8 +58,8 @@ Slice Logic Distribution:
   over-mapped for a non-slice resource or if Placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        21 out of     358    5%
-    Number of LOCed IOBs:                       21 out of      21  100%
+  Number of bonded IOBs:                        25 out of     358    6%
+    Number of LOCed IOBs:                       25 out of      25  100%
 
 Specific Feature Utilization:
   Number of RAMB16BWERs:                         0 out of     116    0%
@@ -92,11 +92,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                5.07
+Average Fanout of Non-Clock Nets:                5.09
 
-Peak Memory Usage:  325 MB
-Total REAL time to MAP completion:  2 mins 52 secs 
-Total CPU time to MAP completion:   2 mins 44 secs 
+Peak Memory Usage:  324 MB
+Total REAL time to MAP completion:  1 mins 19 secs 
+Total CPU time to MAP completion:   1 mins 14 secs 
 
 Table of Contents
 -----------------
@@ -127,6 +127,10 @@ WARNING:PhysDesignRules:2410 - This design is using one or more 9K Block RAMs
 Section 3 - Informational
 -------------------------
 INFO:LIT:243 - Logical network DIAG_N_IBUF has no load.
+INFO:LIT:395 - The above info message is repeated 1 more times for the following
+   (max. 5 shown):
+   FPGA_MISO1_IBUF
+   To see the details of these info messages, please use the -detail switch.
 INFO:MapLib:562 - No environment variables are currently set.
 INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
    0.000 to 85.000 Celsius)
@@ -188,6 +192,10 @@ Section 6 - IOB Properties
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 | CLK50                              | IOB              | INPUT     | LVTTL                |       |          |      |              |          |          |
 | DIAG_N                             | IOB              | INPUT     | LVTTL                |       |          |      |              |          |          |
+| FPGA_CCLK_2                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| FPGA_CSO                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| FPGA_MISO1                         | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| FPGA_MOSI0                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | LED2                               | IOB              | OUTPUT    | LVTTL                |       | 2        | SLOW |              |          |          |
 | M1_LED1                            | IOB              | OUTPUT    | LVTTL                |       | 8        | FAST |              |          |          |
 | M1_SSEG_A<0>                       | IOB              | OUTPUT    | LVTTL                |       | 8        | FAST |              |          |          |

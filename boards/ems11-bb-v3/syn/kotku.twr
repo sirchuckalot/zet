@@ -36,9 +36,9 @@ Setup/Hold to clock CLK50
             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------+------------+------------------+--------+
-M1_T1       |    9.912(R)|      SLOW  |   -4.208(R)|      FAST  |clk               |   0.000|
-M1_T2       |   12.034(R)|      SLOW  |   -5.442(R)|      FAST  |clk               |   0.000|
-RESET_N     |   12.162(R)|      SLOW  |   -5.304(R)|      FAST  |clk               |   0.000|
+M1_T1       |    9.243(R)|      SLOW  |   -3.863(R)|      FAST  |clk               |   0.000|
+M1_T2       |    9.336(R)|      SLOW  |   -4.066(R)|      FAST  |clk               |   0.000|
+RESET_N     |   10.253(R)|      SLOW  |   -4.572(R)|      FAST  |clk               |   0.000|
 ------------+------------+------------+------------+------------+------------------+--------+
 
 Clock CLK50 to Pad
@@ -46,22 +46,25 @@ Clock CLK50 to Pad
             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
 Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
-LED2        |        10.837(R)|      SLOW  |         6.760(R)|      FAST  |clk               |   0.000|
-M1_LED1     |         7.750(R)|      SLOW  |         4.201(R)|      FAST  |clk               |   0.000|
-M1_SSEG_A<0>|         9.395(R)|      SLOW  |         4.792(R)|      FAST  |clk               |   0.000|
-M1_SSEG_A<1>|         9.304(R)|      SLOW  |         4.730(R)|      FAST  |clk               |   0.000|
-M1_SSEG_A<2>|         7.706(R)|      SLOW  |         3.822(R)|      FAST  |clk               |   0.000|
-M1_SSEG_A<3>|         6.964(R)|      SLOW  |         3.409(R)|      FAST  |clk               |   0.000|
-M1_SSEG_A<4>|         8.360(R)|      SLOW  |         4.092(R)|      FAST  |clk               |   0.000|
-M1_SSEG_A<5>|         9.266(R)|      SLOW  |         4.546(R)|      FAST  |clk               |   0.000|
-M1_SSEG_A<6>|         9.270(R)|      SLOW  |         4.530(R)|      FAST  |clk               |   0.000|
-M1_SSEG_B<0>|         7.835(R)|      SLOW  |         3.947(R)|      FAST  |clk               |   0.000|
-M1_SSEG_B<1>|         7.535(R)|      SLOW  |         3.783(R)|      FAST  |clk               |   0.000|
-M1_SSEG_B<2>|        10.029(R)|      SLOW  |         5.040(R)|      FAST  |clk               |   0.000|
-M1_SSEG_B<3>|         9.257(R)|      SLOW  |         4.604(R)|      FAST  |clk               |   0.000|
-M1_SSEG_B<4>|        10.332(R)|      SLOW  |         5.186(R)|      FAST  |clk               |   0.000|
-M1_SSEG_B<5>|         9.866(R)|      SLOW  |         4.941(R)|      FAST  |clk               |   0.000|
-M1_SSEG_B<6>|         8.892(R)|      SLOW  |         4.411(R)|      FAST  |clk               |   0.000|
+FPGA_CCLK_2 |         7.803(R)|      SLOW  |         4.058(R)|      FAST  |clk               |   0.000|
+FPGA_CSO    |         8.907(F)|      SLOW  |         4.842(F)|      FAST  |clk               |   0.000|
+FPGA_MOSI0  |         8.094(R)|      SLOW  |         4.266(R)|      FAST  |clk               |   0.000|
+LED2        |         9.986(R)|      SLOW  |         6.278(R)|      FAST  |clk               |   0.000|
+M1_LED1     |         7.530(R)|      SLOW  |         4.065(R)|      FAST  |clk               |   0.000|
+M1_SSEG_A<0>|         9.084(R)|      SLOW  |         4.503(R)|      FAST  |clk               |   0.000|
+M1_SSEG_A<1>|         8.511(R)|      SLOW  |         4.175(R)|      FAST  |clk               |   0.000|
+M1_SSEG_A<2>|         7.173(R)|      SLOW  |         3.580(R)|      FAST  |clk               |   0.000|
+M1_SSEG_A<3>|         6.830(R)|      SLOW  |         3.396(R)|      FAST  |clk               |   0.000|
+M1_SSEG_A<4>|         8.294(R)|      SLOW  |         4.089(R)|      FAST  |clk               |   0.000|
+M1_SSEG_A<5>|         9.196(R)|      SLOW  |         4.586(R)|      FAST  |clk               |   0.000|
+M1_SSEG_A<6>|         8.701(R)|      SLOW  |         4.407(R)|      FAST  |clk               |   0.000|
+M1_SSEG_B<0>|         6.875(R)|      SLOW  |         3.308(R)|      FAST  |clk               |   0.000|
+M1_SSEG_B<1>|         6.377(R)|      SLOW  |         3.014(R)|      FAST  |clk               |   0.000|
+M1_SSEG_B<2>|         8.422(R)|      SLOW  |         4.246(R)|      FAST  |clk               |   0.000|
+M1_SSEG_B<3>|         7.842(R)|      SLOW  |         3.899(R)|      FAST  |clk               |   0.000|
+M1_SSEG_B<4>|         8.848(R)|      SLOW  |         4.412(R)|      FAST  |clk               |   0.000|
+M1_SSEG_B<5>|         8.563(R)|      SLOW  |         4.262(R)|      FAST  |clk               |   0.000|
+M1_SSEG_B<6>|         7.822(R)|      SLOW  |         3.949(R)|      FAST  |clk               |   0.000|
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
 
 Clock to Setup on destination clock CLK50
@@ -69,11 +72,11 @@ Clock to Setup on destination clock CLK50
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK50          |   37.099|         |         |         |
+CLK50          |   39.028|         |   16.017|    2.315|
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Thu Sep 18 11:21:25 2014 
+Analysis completed Thu Sep 18 23:59:49 2014 
 --------------------------------------------------------------------------------
 
 Trace Settings:

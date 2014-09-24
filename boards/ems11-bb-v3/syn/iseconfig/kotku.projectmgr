@@ -7,13 +7,15 @@
    <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/kotku E:|GitHub|sirchuckalot|zet|boards|ems11-bb-v3|rtl|kotku.v/hex16 - hex_display</ClosedNode>
+         <ClosedNode>/kotku E:|GitHub|sirchuckalot|zet|boards|ems11-bb-v3|rtl|kotku.v/zet - zet</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
          <SelectedItem>kotku (E:/GitHub/sirchuckalot/zet/boards/ems11-bb-v3/rtl/kotku.v)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >1</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001b9000000020000000000000000000000000200000064ffffffff000000810000000300000002000001b90000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000106000000020000000000000000000000000200000064ffffffff000000810000000300000002000001060000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
       <CurrentItem>kotku (E:/GitHub/sirchuckalot/zet/boards/ems11-bb-v3/rtl/kotku.v)</CurrentItem>
    </ItemView>
@@ -40,7 +42,7 @@
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000391000000040101000100000000000000000000000064ffffffff000000810000000000000004000000420000000100000000000000240000000100000000000000660000000100000000000002c50000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>EMS11_BB30_base.ucf</CurrentItem>
+      <CurrentItem>bootrom.v</CurrentItem>
    </ItemView>
    <ItemView guiview="Library" >
       <ClosedNodes>
