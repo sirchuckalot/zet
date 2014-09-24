@@ -273,7 +273,7 @@ static void bios_printf(Bit16u action, Bit8u *s, ...)
 //--------------------------------------------------------------------------
 //--------------------------------------------------------------------------
 #define BIOS_COPYRIGHT_STRING   "(c) 2009, 2010 Zeus Gomez Marmolejo and (c) 2002 MandrakeSoft S.A."
-#define BIOS_BANNER             "Zet Test BIOS - build date: "
+#define BIOS_BANNER             "Zet EMS11-BB-V3.0 SoC PC BIOS - build date: "
 #define BIOS_BUILD_DATE         "(build-date)\n"
 #define BIOS_VERS               " Version: (git)\n"
 #define BIOS_DATE               " Version date: (commit-date)\n\n"
