@@ -34,6 +34,36 @@ module kotku (
 
   output M1_LED1,
   output LED2,
+  
+    // sdram signals
+    output [11:0] DR_A,
+    inout  [15:0] DR_D,
+    output [ 1:0] DR_BA,
+    output        DR_RAS_N,
+    output        DR_CAS_N,
+    output        DR_CKE,
+    output        DR_CLK_O,
+    output        DR_WE_N,
+    output        DR_CS_N,
+
+    // VGA signals
+    output [ 3:0] M1_VGA_RED,
+    output [ 3:0] M1_VGA_GREEN,
+    output [ 3:0] M1_VGA_BLUE,
+    output        M1_VGA_HSYNC,
+    output        M1_VGA_VSYNC,
+    output        M1_VGA_CLOCK,
+
+    // PS2 signals
+    input         M1_PS2_A_CLK, // PS2 keyboard Clock
+    inout         M1_PS2_A_DATA, // PS2 Keyboard Data
+    inout         M1_PS2_B_CLK, // PS2 Mouse Clock
+    inout         M1_PS2_B_DATA, // PS2 Mouse Data
+
+    // To speaker output
+    output        chassis_spk_,
+    output        speaker_l_,   // Speaker output, left channel
+    output        speaker_r_,   // Speaker output, right channel
 
   // Serial master bus signals 
   output FPGA_CCLK_2,  // spi_sclk
@@ -47,7 +77,7 @@ module kotku (
 
   // Registers and nets
   wire        clk;
-  wire        rst;
+  wire        rst_lck;
   wire [15:0] dat_o;
   wire [15:0] dat_i;
   wire [19:1] adr;
@@ -69,10 +99,92 @@ module kotku (
   wire        rom_cyc_i;
   wire        rom_stb_i;
   wire        rom_ack_o;
-  
-  // Unused outputs
-  wire [17:0] leds;  
 
+  // Unused outputs
+  wire [17:0] leds;
+  wire [1:0] sdram_dqm_;
+  wire [2:0] s19_17;
+
+  // Unused inputs
+  wire uart_rxd_;
+
+  // wires to vga controller
+  wire [15:0] vga_dat_o;
+  wire [15:0] vga_dat_i;
+  wire        vga_tga_i;
+  wire [19:1] vga_adr_i;
+  wire [ 1:0] vga_sel_i;
+  wire        vga_we_i;
+  wire        vga_cyc_i;
+  wire        vga_stb_i;
+  wire        vga_ack_o;
+
+  // cross clock domain synchronized signals
+  wire [15:0] vga_dat_o_s;
+  wire [15:0] vga_dat_i_s;
+  wire        vga_tga_i_s;
+  wire [19:1] vga_adr_i_s;
+  wire [ 1:0] vga_sel_i_s;
+  wire        vga_we_i_s;
+  wire        vga_cyc_i_s;
+  wire        vga_stb_i_s;
+  wire        vga_ack_o_s;
+
+  // wires for Sound module
+  wire [19:1] wb_sb_adr_i;        // Sound Address
+  wire [15:0] wb_sb_dat_i;        // Sound
+  wire [15:0] wb_sb_dat_o;        // Sound
+  wire [ 1:0] wb_sb_sel_i;        // Sound
+  wire        wb_sb_cyc_i;        // Sound
+  wire        wb_sb_stb_i;        // Sound
+  wire        wb_sb_we_i;         // Sound
+  wire        wb_sb_ack_o;        // Sound
+  wire        wb_sb_tga_i;        // Sound
+
+  // wires to keyboard controller
+  wire [15:0] keyb_dat_o;
+  wire [15:0] keyb_dat_i;
+  wire        keyb_tga_i;
+  wire [19:1] keyb_adr_i;
+  wire [ 1:0] keyb_sel_i;
+  wire        keyb_we_i;
+  wire        keyb_cyc_i;
+  wire        keyb_stb_i;
+  wire        keyb_ack_o;
+
+  // wires to timer controller
+  wire [15:0] timer_dat_o;
+  wire [15:0] timer_dat_i;
+  wire        timer_tga_i;
+  wire [19:1] timer_adr_i;
+  wire [ 1:0] timer_sel_i;
+  wire        timer_we_i;
+  wire        timer_cyc_i;
+  wire        timer_stb_i;
+  wire        timer_ack_o;
+
+  // wires to sd controller
+  wire [19:1] sd_adr_i;
+  wire [ 7:0] sd_dat_o;
+  wire [15:0] sd_dat_i;
+  wire        sd_tga_i;
+  wire [ 1:0] sd_sel_i;
+  wire        sd_we_i;
+  wire        sd_cyc_i;
+  wire        sd_stb_i;
+  wire        sd_ack_o;
+
+  // wires to sd bridge
+  wire [19:1] sd_adr_i_s;
+  wire [15:0] sd_dat_o_s;
+  wire [15:0] sd_dat_i_s;
+  wire        sd_tga_i_s;
+  wire [ 1:0] sd_sel_i_s;
+  wire        sd_we_i_s;
+  wire        sd_cyc_i_s;
+  wire        sd_stb_i_s;
+  wire        sd_ack_o_s;
+  
   // wires to gpio controller
   wire [15:0] gpio_dat_o;
   wire [15:0] gpio_dat_i;
@@ -97,15 +209,137 @@ module kotku (
 
   wire [ 7:0] postcode;
 
+  // wires to SDRAM controller
+  wire [19:1] fmlbrg_adr_s;
+  wire [15:0] fmlbrg_dat_w_s;
+  wire [15:0] fmlbrg_dat_r_s;
+  wire [ 1:0] fmlbrg_sel_s;
+  wire        fmlbrg_cyc_s;
+  wire        fmlbrg_stb_s;
+  wire        fmlbrg_tga_s;
+  wire        fmlbrg_we_s;
+  wire        fmlbrg_ack_s;
+
+  wire [19:1] fmlbrg_adr;
+  wire [15:0] fmlbrg_dat_w;
+  wire [15:0] fmlbrg_dat_r;
+  wire [ 1:0] fmlbrg_sel;
+  wire        fmlbrg_cyc;
+  wire        fmlbrg_stb;
+  wire        fmlbrg_tga;
+  wire        fmlbrg_we;
+  wire        fmlbrg_ack;
+
+  wire [19:1] csrbrg_adr_s;
+  wire [15:0] csrbrg_dat_w_s;
+  wire [15:0] csrbrg_dat_r_s;
+  wire [ 1:0] csrbrg_sel_s;
+  wire        csrbrg_cyc_s;
+  wire        csrbrg_stb_s;
+  wire        csrbrg_tga_s;
+  wire        csrbrg_we_s;
+  wire        csrbrg_ack_s;
+
+  wire [19:1] csrbrg_adr;
+  wire [15:0] csrbrg_dat_w;
+  wire [15:0] csrbrg_dat_r;
+  wire [ 1:0] csrbrg_sel;
+  wire        csrbrg_tga;
+  wire        csrbrg_cyc;
+  wire        csrbrg_stb;
+  wire        csrbrg_we;
+  wire        csrbrg_ack;
+
+  wire [ 2:0] csr_a;
+  wire        csr_we;
+  wire [15:0] csr_dw;
+  wire [15:0] csr_dr_hpdmc;
+
+  // wires to hpdmc slave interface 
+  wire [22:0] fml_adr;
+  wire        fml_stb;
+  wire        fml_we;
+  wire        fml_ack;
+  wire [ 1:0] fml_sel;
+  wire [15:0] fml_di;
+  wire [15:0] fml_do;
+
+  // wires to fml bridge master interface 
+  wire [19:0] fml_fmlbrg_adr;
+  wire        fml_fmlbrg_stb;
+  wire        fml_fmlbrg_we;
+  wire        fml_fmlbrg_ack;
+  wire [ 1:0] fml_fmlbrg_sel;
+  wire [15:0] fml_fmlbrg_di;
+  wire [15:0] fml_fmlbrg_do;
+
+  // wires to VGA CPU FML master interface
+  wire [19:0]   vga_cpu_fml_adr;  // 1MB Memory Address range
+  wire          vga_cpu_fml_stb;
+  wire          vga_cpu_fml_we;
+  wire          vga_cpu_fml_ack;
+  wire [1:0]    vga_cpu_fml_sel;
+  wire [15:0]   vga_cpu_fml_do;
+  wire [15:0]   vga_cpu_fml_di;
+
+  // wires to VGA LCD FML master interface
+  wire [19:0]   vga_lcd_fml_adr;  // 1MB Memory Address range
+  wire          vga_lcd_fml_stb;
+  wire          vga_lcd_fml_we;
+  wire          vga_lcd_fml_ack;
+  wire [1:0]    vga_lcd_fml_sel;
+  wire [15:0]   vga_lcd_fml_do;
+  wire [15:0]   vga_lcd_fml_di;
+
   // wires to default stb/ack
   wire        sdram_clk;
   wire        vga_clk;
 
   wire [ 7:0] intv;
-  
+  wire [ 2:0] iid;
+  wire        intr;
+  wire        inta;
+
   wire        nmi_pb;
+  wire        nmi;
+  wire        nmia;
   
   wire [19:0] cpu_pc;
+  reg  [16:0] rst_debounce;
+  
+  wire        timer_clk;
+  wire        timer2_o;
+
+  // Audio only signals
+  wire [ 7:0] aud_dat_o;
+  wire        aud_cyc_i;
+  wire        aud_ack_o;
+  wire        aud_sel_cond;
+
+  // Keyboard-audio shared signals
+  wire [ 7:0] kaud_dat_o;
+  wire        kaud_cyc_i;
+  wire        kaud_ack_o;
+
+`ifndef SIMULATION
+  /*
+   * Debounce it (counter holds reset for 10.49ms),
+   * and generate power-on reset.
+   */
+  initial rst_debounce <= 17'h1FFFF;
+  reg rst;
+  initial rst <= 1'b1;
+  always @(posedge clk) begin
+    if(~rst_lck) /* reset is active low */
+      rst_debounce <= 17'h1FFFF;
+    else if(rst_debounce != 17'd0)
+      rst_debounce <= rst_debounce - 17'd1;
+    rst <= rst_debounce != 17'd0;
+  end
+`else
+  wire rst;
+  assign rst = !rst_lck;
+`endif
   
   // wires to spi master bus controller
   wire [15:0] spi_dat_i;
@@ -164,7 +398,432 @@ module kotku (
     .wb_sel_i (rom_sel_i),
     .wb_ack_o (rom_ack_o)
   );
-  
+
+  wb_abrgr wb_fmlbrg (
+    .sys_rst (rst),
+
+    // Wishbone slave interface
+    .wbs_clk_i (clk),
+    .wbs_adr_i (fmlbrg_adr_s),
+    .wbs_dat_i (fmlbrg_dat_w_s),
+    .wbs_dat_o (fmlbrg_dat_r_s),
+    .wbs_sel_i (fmlbrg_sel_s),
+    .wbs_tga_i (fmlbrg_tga_s),
+    .wbs_stb_i (fmlbrg_stb_s),
+    .wbs_cyc_i (fmlbrg_cyc_s),
+    .wbs_we_i  (fmlbrg_we_s),
+    .wbs_ack_o (fmlbrg_ack_s),
+
+    // Wishbone master interface
+    .wbm_clk_i (sdram_clk),
+    .wbm_adr_o (fmlbrg_adr),
+    .wbm_dat_o (fmlbrg_dat_w),
+    .wbm_dat_i (fmlbrg_dat_r),
+    .wbm_sel_o (fmlbrg_sel),
+    .wbm_tga_o (fmlbrg_tga),
+    .wbm_stb_o (fmlbrg_stb),
+    .wbm_cyc_o (fmlbrg_cyc),
+    .wbm_we_o  (fmlbrg_we),
+    .wbm_ack_i (fmlbrg_ack)
+  );
+
+  fmlbrg #(
+    .fml_depth   (20),  // 8086 can only address 1 MB
+    .cache_depth (10)   // 1 Kbyte cache
+    ) fmlbrg (
+    .sys_clk  (sdram_clk),
+    .sys_rst  (rst),
+
+    // Wishbone slave interface
+    .wb_adr_i (fmlbrg_adr),
+    .wb_cti_i(3'b0),
+    .wb_dat_i (fmlbrg_dat_w),
+    .wb_dat_o (fmlbrg_dat_r),
+    .wb_sel_i (fmlbrg_sel),
+    .wb_cyc_i (fmlbrg_cyc),
+    .wb_stb_i (fmlbrg_stb),
+    .wb_tga_i (fmlbrg_tga),
+    .wb_we_i  (fmlbrg_we),
+    .wb_ack_o (fmlbrg_ack),
+
+    // FML master 1 interface
+    .fml_adr (fml_fmlbrg_adr),
+    .fml_stb (fml_fmlbrg_stb),
+    .fml_we  (fml_fmlbrg_we),
+    .fml_ack (fml_fmlbrg_ack),
+    .fml_sel (fml_fmlbrg_sel),
+    .fml_do  (fml_fmlbrg_do),
+    .fml_di  (fml_fmlbrg_di),
+
+    // Direct Cache Bus
+    .dcb_stb(1'b0),
+    .dcb_adr(20'b0),
+    .dcb_dat(),
+    .dcb_hit()
+
+  );
+
+  wb_abrgr wb_csrbrg (
+    .sys_rst (rst),
+
+    // Wishbone slave interface
+    .wbs_clk_i (clk),
+    .wbs_adr_i (csrbrg_adr_s),
+    .wbs_dat_i (csrbrg_dat_w_s),
+    .wbs_dat_o (csrbrg_dat_r_s),
+    .wbs_sel_i (csrbrg_sel_s),
+    .wbs_tga_i (csrbrg_tga_s),
+    .wbs_stb_i (csrbrg_stb_s),
+    .wbs_cyc_i (csrbrg_cyc_s),
+    .wbs_we_i  (csrbrg_we_s),
+    .wbs_ack_o (csrbrg_ack_s),
+
+    // Wishbone master interface
+    .wbm_clk_i (sdram_clk),
+    .wbm_adr_o (csrbrg_adr),
+    .wbm_dat_o (csrbrg_dat_w),
+    .wbm_dat_i (csrbrg_dat_r),
+    .wbm_sel_o (csrbrg_sel),
+    .wbm_tga_o (csrbrg_tga),
+    .wbm_stb_o (csrbrg_stb),
+    .wbm_cyc_o (csrbrg_cyc),
+    .wbm_we_o  (csrbrg_we),
+    .wbm_ack_i (csrbrg_ack)
+  );
+
+  csrbrg csrbrg (
+    .sys_clk (sdram_clk),
+    .sys_rst (rst),
+
+    // Wishbone slave interface
+    .wb_adr_i (csrbrg_adr[3:1]),
+    .wb_dat_i (csrbrg_dat_w),
+    .wb_dat_o (csrbrg_dat_r),
+    .wb_cyc_i (csrbrg_cyc),
+    .wb_stb_i (csrbrg_stb),
+    .wb_we_i  (csrbrg_we),
+    .wb_ack_o (csrbrg_ack),
+
+    // CSR master interface
+    .csr_a  (csr_a),
+    .csr_we (csr_we),
+    .csr_do (csr_dw),
+    .csr_di (csr_dr_hpdmc)
+  );
+
+  fmlarb #(
+    .fml_depth         (23)
+    ) fmlarb (
+    .sys_clk (sdram_clk),
+  .sys_rst (rst),
+
+  // Master 0 interface - VGA LCD FML (Reserved video memory port has highest priority)
+  .m0_adr ({3'b001, vga_lcd_fml_adr}),  // 1 - 2 MB Addressable memory range
+  .m0_stb (vga_lcd_fml_stb),
+  .m0_we  (vga_lcd_fml_we),
+  .m0_ack (vga_lcd_fml_ack),
+  .m0_sel (vga_lcd_fml_sel),
+  .m0_di  (vga_lcd_fml_do),
+  .m0_do  (vga_lcd_fml_di),
+
+  // Master 1 interface - Wishbone FML bridge
+  .m1_adr ({3'b000, fml_fmlbrg_adr}),  // 0 - 1 MB Addressable memory range
+  .m1_stb (fml_fmlbrg_stb),
+  .m1_we  (fml_fmlbrg_we),
+  .m1_ack (fml_fmlbrg_ack),
+  .m1_sel (fml_fmlbrg_sel),
+  .m1_di  (fml_fmlbrg_do),
+  .m1_do  (fml_fmlbrg_di),
+
+  // Master 2 interface - VGA CPU FML
+  .m2_adr ({3'b001, vga_cpu_fml_adr}),  // 1 - 2 MB Addressable memory range
+  .m2_stb (vga_cpu_fml_stb),
+  .m2_we  (vga_cpu_fml_we),
+  .m2_ack (vga_cpu_fml_ack),
+  .m2_sel (vga_cpu_fml_sel),
+  .m2_di  (vga_cpu_fml_do),
+  .m2_do  (vga_cpu_fml_di),
+
+  // Master 3 interface - not connected
+  .m3_adr ({3'b010, 20'b0}),  // 2 - 3 MB Addressable memory range
+  .m3_stb (1'b0),
+  .m3_we  (1'b0),
+  .m3_ack (),
+  .m3_sel (2'b00),
+  .m3_di  (16'h0000),
+  .m3_do  (),
+
+  // Master 4 interface - not connected
+  .m4_adr ({3'b011, 20'b0}),  // 3 - 4 MB Addressable memory range
+  .m4_stb (1'b0),
+  .m4_we  (1'b0),
+  .m4_ack (),
+  .m4_sel (2'b00),
+  .m4_di  (16'h0000),
+  .m4_do  (),
+
+  // Master 5 interface - not connected
+  .m5_adr ({3'b100, 20'b0}),  // 4 - 5 MB Addressable memory range
+  .m5_stb (1'b0),
+  .m5_we  (1'b0),
+  .m5_ack (),
+  .m5_sel (2'b00),
+  .m5_di  (16'h0000),
+  .m5_do  (),
+
+  // Arbitrer Slave interface - connected to hpdmc
+  .s_adr (fml_adr),
+  .s_stb (fml_stb),
+  .s_we  (fml_we),
+  .s_ack (fml_ack),
+  .s_sel (fml_sel),
+  .s_di  (fml_di),
+  .s_do  (fml_do)
+  );
+
+  hpdmc #(
+    .csr_addr          (1'b0),
+    .sdram_depth       (23),
+    .sdram_columndepth (8)
+    ) hpdmc (
+    .sys_clk (sdram_clk),
+    .sys_rst (rst),
+
+    // CSR slave interface
+    .csr_a  (csr_a),
+    .csr_we (csr_we),
+    .csr_di (csr_dw),
+    .csr_do (csr_dr_hpdmc),
+
+    // FML slave interface
+    .fml_adr (fml_adr),
+    .fml_stb (fml_stb),
+    .fml_we  (fml_we),
+    .fml_ack (fml_ack),
+    .fml_sel (fml_sel),
+    .fml_di  (fml_do),
+    .fml_do  (fml_di),
+
+    // SDRAM pad signals
+    .sdram_cke   (DR_CKE),
+    .sdram_cs_n  (DR_CS_N),
+    .sdram_we_n  (DR_WE_N),
+    .sdram_cas_n (DR_CAS_N),
+    .sdram_ras_n (DR_RAS_N),
+    .sdram_dqm   (sdram_dqm_),
+    .sdram_adr   (DR_A),
+    .sdram_ba    (DR_BA),
+    .sdram_dq    (DR_D)
+  );
+
+  wb_abrgr vga_brg (
+    .sys_rst (rst),
+
+    // Wishbone slave interface
+    .wbs_clk_i (clk),
+    .wbs_adr_i (vga_adr_i_s),
+    .wbs_dat_i (vga_dat_i_s),
+    .wbs_dat_o (vga_dat_o_s),
+    .wbs_sel_i (vga_sel_i_s),
+    .wbs_tga_i (vga_tga_i_s),
+    .wbs_stb_i (vga_stb_i_s),
+    .wbs_cyc_i (vga_cyc_i_s),
+    .wbs_we_i  (vga_we_i_s),
+    .wbs_ack_o (vga_ack_o_s),
+
+    // Wishbone master interface
+    .wbm_clk_i (sdram_clk),
+    .wbm_adr_o (vga_adr_i),
+    .wbm_dat_o (vga_dat_i),
+    .wbm_dat_i (vga_dat_o),
+    .wbm_sel_o (vga_sel_i),
+    .wbm_tga_o (vga_tga_i),
+    .wbm_stb_o (vga_stb_i),
+    .wbm_cyc_o (vga_cyc_i),
+    .wbm_we_o  (vga_we_i),
+    .wbm_ack_i (vga_ack_o)
+  );
+
+  vga_fml #(
+    .fml_depth   (20)  // 1MB Memory Address range
+  ) vga (
+    .wb_rst_i (rst),
+
+    // Wishbone slave interface
+    .wb_clk_i (sdram_clk),   // 100MHz VGA clock
+    .wb_dat_i (vga_dat_i),
+    .wb_dat_o (vga_dat_o),
+    .wb_adr_i (vga_adr_i[16:1]),  // 128K
+    .wb_we_i  (vga_we_i),
+    .wb_tga_i (vga_tga_i),
+    .wb_sel_i (vga_sel_i),
+    .wb_stb_i (vga_stb_i),
+    .wb_cyc_i (vga_cyc_i),
+    .wb_ack_o (vga_ack_o),
+
+    // VGA pad signals
+    .vga_red_o   (M1_VGA_RED),
+    .vga_green_o (M1_VGA_GREEN),
+    .vga_blue_o  (M1_VGA_BLUE),
+    .horiz_sync  (M1_VGA_HSYNC),
+    .vert_sync   (M1_VGA_VSYNC),
+
+    // VGA CPU FML master interface
+    .vga_cpu_fml_adr(vga_cpu_fml_adr),
+    .vga_cpu_fml_stb(vga_cpu_fml_stb),
+    .vga_cpu_fml_we(vga_cpu_fml_we),
+    .vga_cpu_fml_ack(vga_cpu_fml_ack),
+    .vga_cpu_fml_sel(vga_cpu_fml_sel),
+    .vga_cpu_fml_do(vga_cpu_fml_do),
+    .vga_cpu_fml_di(vga_cpu_fml_di),
+
+    // VGA LCD FML master interface
+    .vga_lcd_fml_adr(vga_lcd_fml_adr),
+    .vga_lcd_fml_stb(vga_lcd_fml_stb),
+    .vga_lcd_fml_we(vga_lcd_fml_we),
+    .vga_lcd_fml_ack(vga_lcd_fml_ack),
+    .vga_lcd_fml_sel(vga_lcd_fml_sel),
+    .vga_lcd_fml_do(vga_lcd_fml_do),
+    .vga_lcd_fml_di(vga_lcd_fml_di),
+
+    .vga_clk(vga_clk)
+
+  );
+
+  // Sound Module Instantiation
+  sound sound (
+    .wb_clk_i (clk),                // Main Clock
+    .wb_rst_i (rst),                // Reset Line
+    .wb_dat_i (wb_sb_dat_i),        // Command to send
+    .wb_dat_o (wb_sb_dat_o),        // Received data
+    .wb_cyc_i (wb_sb_cyc_i),        // Cycle
+    .wb_stb_i (wb_sb_stb_i),        // Strobe
+    .wb_adr_i (wb_sb_adr_i[3:1]),   // Address lines
+    .wb_sel_i (wb_sb_sel_i),        // Select lines
+    .wb_we_i  (wb_sb_we_i),         // Write enable
+    .wb_ack_o (wb_sb_ack_o),        // Normal bus termination
+
+    .audio_l (speaker_l_),          // Audio Output Left  Channel
+    .audio_r (speaker_r_)           // Audio Output Right Channel
+  );
+
+  ps2 ps2 (
+    .wb_clk_i (clk),             // Main Clock
+    .wb_rst_i (rst),             // Reset Line
+    .wb_adr_i (keyb_adr_i[2:1]), // Address lines
+    .wb_sel_i (keyb_sel_i),      // Select lines
+    .wb_dat_i (keyb_dat_i),      // Command to send to Ethernet
+    .wb_dat_o (keyb_dat_o),
+    .wb_we_i  (keyb_we_i),       // Write enable
+    .wb_stb_i (keyb_stb_i),
+    .wb_cyc_i (keyb_cyc_i),
+    .wb_ack_o (keyb_ack_o),
+    .wb_tgk_o (intv[1]),         // Keyboard Interrupt request
+    .wb_tgm_o (intv[3]),         // Mouse Interrupt request
+
+    .ps2_kbd_clk_ (M1_PS2_A_CLK),
+    .ps2_kbd_dat_ (M1_PS2_A_DATA),
+    .ps2_mse_clk_ (M1_PS2_B_CLK),
+    .ps2_mse_dat_ (M1_PS2_B_DATA)
+  );
+
+  speaker speaker (
+    .clk (clk),
+    .rst (rst),
+
+    .wb_dat_i (keyb_dat_i[15:8]),
+    .wb_dat_o (aud_dat_o),
+    .wb_we_i  (keyb_we_i),
+    .wb_stb_i (keyb_stb_i),
+    .wb_cyc_i (aud_cyc_i),
+    .wb_ack_o (aud_ack_o),
+
+    .timer2   (timer2_o),
+
+    .speaker_ (chassis_spk_)
+  );
+
+  // Selection logic between keyboard and audio ports (port 65h: audio)
+  assign aud_sel_cond = keyb_adr_i[2:1]==2'b00 && keyb_sel_i[1];
+  assign aud_cyc_i    = kaud_cyc_i && aud_sel_cond;
+  assign keyb_cyc_i   = kaud_cyc_i && !aud_sel_cond;
+  assign kaud_ack_o   = aud_cyc_i & aud_ack_o | keyb_cyc_i & keyb_ack_o;
+  assign kaud_dat_o   = {8{aud_cyc_i}} & aud_dat_o
+                      | {8{keyb_cyc_i}} & keyb_dat_o[15:8];
+
+  timer timer (
+    .wb_clk_i (clk),
+    .wb_rst_i (rst),
+    .wb_adr_i (timer_adr_i[1]),
+    .wb_sel_i (timer_sel_i),
+    .wb_dat_i (timer_dat_i),
+    .wb_dat_o (timer_dat_o),
+    .wb_stb_i (timer_stb_i),
+    .wb_cyc_i (timer_cyc_i),
+    .wb_we_i  (timer_we_i),
+    .wb_ack_o (timer_ack_o),
+    .wb_tgc_o (intv[0]),
+    .tclk_i   (timer_clk),     // 1.193182 MHz = (14.31818/12) MHz
+    .gate2_i  (aud_dat_o[0]),
+    .out2_o   (timer2_o)
+  );
+
+  simple_pic pic0 (
+    .clk  (clk),
+    .rst  (rst),
+    .intv (intv),
+    .inta (inta),
+    .intr (intr),
+    .iid  (iid)
+  );
+
+  wb_abrgr sd_brg (
+    .sys_rst (rst),
+
+    // Wishbone slave interface
+    .wbs_clk_i (clk),
+    .wbs_adr_i (sd_adr_i_s),
+    .wbs_dat_i (sd_dat_i_s),
+    .wbs_dat_o (sd_dat_o_s),
+    .wbs_sel_i (sd_sel_i_s),
+    .wbs_tga_i (sd_tga_i_s),
+    .wbs_stb_i (sd_stb_i_s),
+    .wbs_cyc_i (sd_cyc_i_s),
+    .wbs_we_i  (sd_we_i_s),
+    .wbs_ack_o (sd_ack_o_s),
+
+    // Wishbone master interface
+    .wbm_clk_i (sdram_clk),
+    .wbm_adr_o (sd_adr_i),
+    .wbm_dat_o (sd_dat_i),
+    .wbm_dat_i ({8'h0,sd_dat_o}),
+    .wbm_tga_o (sd_tga_i),
+    .wbm_sel_o (sd_sel_i),
+    .wbm_stb_o (sd_stb_i),
+    .wbm_cyc_o (sd_cyc_i),
+    .wbm_we_o  (sd_we_i),
+    .wbm_ack_i (sd_ack_o)
+  );
+
+  sdspi sdspi (
+    // Serial pad signal
+    .sclk (sd_sclk_),
+    .miso (sd_miso_),
+    .mosi (sd_mosi_),
+    .ss   (sd_ss_),
+
+    // Wishbone slave interface
+    .wb_clk_i (sdram_clk),
+    .wb_rst_i (rst),
+    .wb_dat_i (sd_dat_i[8:0]),
+    .wb_dat_o (sd_dat_o),
+    .wb_we_i  (sd_we_i),
+    .wb_sel_i (sd_sel_i),
+    .wb_stb_i (sd_stb_i),
+    .wb_cyc_i (sd_cyc_i),
+    .wb_ack_o (sd_ack_o)
+  );
+
   post post (
     .wb_clk_i (clk),
     .wb_rst_i (rst),
@@ -264,11 +923,11 @@ module kotku (
     .wb_stb_o (stb),
     .wb_cyc_o (cyc),
     .wb_ack_i (ack),
-    .wb_tgc_i (1'b0),
-    .wb_tgc_o (),
-    .nmi      (1'b0),
-    .nmia     ()
-  );
+    .wb_tgc_i (intr),
+    .wb_tgc_o (inta),
+    .nmi      (nmi),
+    .nmia     (nmia)
+  );;
 
   wb_switch #(
     .s0_addr_1 (20'b0_1111_1111_1110_0000_000), // bios boot mem 0xffe00 - 0xfffff
@@ -328,7 +987,7 @@ module kotku (
 
     // Master interface
     .m_dat_i (dat_o),
-    .m_dat_o (dat_i),
+    .m_dat_o (sw_dat_o),
     .m_adr_i ({tga,adr}),
     .m_sel_i (sel),
     .m_we_i  (we),
@@ -347,14 +1006,14 @@ module kotku (
     .s0_ack_i (rom_ack_o),
 
      // Slave 1 interface - vga
-    .s1_dat_i (16'h0000),
-    .s1_dat_o (),
-    .s1_adr_o (),
-    .s1_sel_o (),
-    .s1_we_o  (),
-    .s1_cyc_o (),
-    .s1_stb_o (),
-    .s1_ack_i (1'b0),
+    .s1_dat_i (vga_dat_o_s),
+    .s1_dat_o (vga_dat_i_s),
+    .s1_adr_o ({vga_tga_i_s,vga_adr_i_s}),
+    .s1_sel_o (vga_sel_i_s),
+    .s1_we_o  (vga_we_i_s),
+    .s1_cyc_o (vga_cyc_i_s),
+    .s1_stb_o (vga_stb_i_s),
+    .s1_ack_i (vga_ack_o_s),
 
     // Slave 2 interface - uart
     .s2_dat_i (16'h0000),
@@ -367,24 +1026,24 @@ module kotku (
     .s2_ack_i (1'b0),
 
     // Slave 3 interface - keyb
-    .s3_dat_i (16'h0000),
-    .s3_dat_o (),
-    .s3_adr_o (),
-    .s3_sel_o (),
-    .s3_we_o  (),
-    .s3_cyc_o (),
-    .s3_stb_o (),
-    .s3_ack_i (1'b0),
+    .s3_dat_i ({kaud_dat_o,keyb_dat_o[7:0]}),
+    .s3_dat_o (keyb_dat_i),
+    .s3_adr_o ({keyb_tga_i,keyb_adr_i}),
+    .s3_sel_o (keyb_sel_i),
+    .s3_we_o  (keyb_we_i),
+    .s3_cyc_o (kaud_cyc_i),
+    .s3_stb_o (keyb_stb_i),
+    .s3_ack_i (kaud_ack_o),
 
     // Slave 4 interface - sd
-    .s4_dat_i (),
-    .s4_dat_o (),
-    .s4_adr_o (),
-    .s4_sel_o (),
-    .s4_we_o  (),
-    .s4_cyc_o (),
-    .s4_stb_o (),
-    .s4_ack_i (1'b0),
+    .s4_dat_i (sd_dat_o_s),
+    .s4_dat_o (sd_dat_i_s),
+    .s4_adr_o ({sd_tga_i_s,sd_adr_i_s}),
+    .s4_sel_o (sd_sel_i_s),
+    .s4_we_o  (sd_we_i_s),
+    .s4_cyc_o (sd_cyc_i_s),
+    .s4_stb_o (sd_stb_i_s),
+    .s4_ack_i (sd_ack_o_s),
 
     // Slave 5 interface - gpio
     .s5_dat_i (gpio_dat_o),
@@ -397,24 +1056,24 @@ module kotku (
     .s5_ack_i (gpio_ack_o),
 
     // Slave 6 interface - csr bridge
-    .s6_dat_i (16'h0000),
-    .s6_dat_o (),
-    .s6_adr_o (),
-    .s6_sel_o (),
-    .s6_we_o  (),
-    .s6_cyc_o (),
-    .s6_stb_o (),
-    .s6_ack_i (1'b0),
+    .s6_dat_i (csrbrg_dat_r_s),
+    .s6_dat_o (csrbrg_dat_w_s),
+    .s6_adr_o ({csrbrg_tga_s,csrbrg_adr_s}),
+    .s6_sel_o (csrbrg_sel_s),
+    .s6_we_o  (csrbrg_we_s),
+    .s6_cyc_o (csrbrg_cyc_s),
+    .s6_stb_o (csrbrg_stb_s),
+    .s6_ack_i (csrbrg_ack_s),
 
     // Slave 7 interface - timer
-    .s7_dat_i (16'h0000),
-    .s7_dat_o (),
-    .s7_adr_o (),
-    .s7_sel_o (),
-    .s7_we_o  (),
-    .s7_cyc_o (),
-    .s7_stb_o (),
-    .s7_ack_i (1'b0),
+    .s7_dat_i (timer_dat_o),
+    .s7_dat_o (timer_dat_i),
+    .s7_adr_o ({timer_tga_i,timer_adr_i}),
+    .s7_sel_o (timer_sel_i),
+    .s7_we_o  (timer_we_i),
+    .s7_cyc_o (timer_cyc_i),
+    .s7_stb_o (timer_stb_i),
+    .s7_ack_i (timer_ack_o),
 
     // Slave 8 interface - spi
     .s8_dat_i (spi_dat_o),
@@ -426,25 +1085,25 @@ module kotku (
     .s8_stb_o (spi_stb_i),
     .s8_ack_i (spi_ack_o),
 
-    // Slave 9 interface - not connected
-    .s9_dat_i (16'h0000),
-    .s9_dat_o (),
-    .s9_adr_o (),   // tga_s, adr_s
-    .s9_sel_o (),
-    .s9_we_o  (),
-    .s9_cyc_o (),
-    .s9_stb_o (),
-    .s9_ack_i (1'b0),
+    // Slave 9 interface - sb16
+    .s9_dat_i (wb_sb_dat_o),
+    .s9_dat_o (wb_sb_dat_i),
+    .s9_adr_o ({wb_sb_tga_i,wb_sb_adr_i}),
+    .s9_sel_o (wb_sb_sel_i),
+    .s9_we_o  (wb_sb_we_i),
+    .s9_cyc_o (wb_sb_cyc_i),
+    .s9_stb_o (wb_sb_stb_i),
+    .s9_ack_i (wb_sb_ack_o),
 
     // Slave A interface - sdram
-    .sA_dat_i (16'h0000),
-    .sA_dat_o (),
-    .sA_adr_o (),
-    .sA_sel_o (),
-    .sA_we_o  (),
-    .sA_cyc_o (),
-    .sA_stb_o (),
-    .sA_ack_i (1'b0),
+    .sA_dat_i (fmlbrg_dat_r_s),
+    .sA_dat_o (fmlbrg_dat_w_s),
+    .sA_adr_o ({fmlbrg_tga_s,fmlbrg_adr_s}),
+    .sA_sel_o (fmlbrg_sel_s),
+    .sA_we_o  (fmlbrg_we_s),
+    .sA_cyc_o (fmlbrg_cyc_s),
+    .sA_stb_o (fmlbrg_stb_s),
+    .sA_ack_i (fmlbrg_ack_s),
 
     // Slave B interface - not connected
         .sB_dat_i (16'h0000),
@@ -499,7 +1158,12 @@ module kotku (
   );
 
   // Continuous assignments
-  assign rst = !lock;
+  assign rst_lck    = !sw_[0] & lock;
+
+  assign nmi = nmi_pb;
+  assign dat_i = nmia ? 16'h0002 :
+                (inta ? { 13'b0000_0000_0000_1, iid } :
+                        sw_dat_o);
 
   assign DR_CLK_O = sdram_oddr2_clk;
 
