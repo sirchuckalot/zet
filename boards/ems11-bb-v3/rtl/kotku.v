@@ -292,6 +292,7 @@ module kotku (
   wire [15:0]   vga_lcd_fml_di;
 
   // wires to default stb/ack
+  wire [15:0] sw_dat_o;
   wire        sdram_clk;
   wire        vga_clk;
 
@@ -340,7 +341,7 @@ module kotku (
   wire rst;
   assign rst = !rst_lck;
 `endif
-  
+
   // wires to spi master bus controller
   wire [15:0] spi_dat_i;
   wire [15:0] spi_dat_o;
@@ -362,7 +363,7 @@ module kotku (
   pll pll (
     .inclk0 (CLK50),
     .c0     (sdram_clk),  // 100 Mhz
-    .c1     (vga_clk),    // 25 Mhz
+    .c1     (),           // 25 Mhz
     .c2     (clk),        // 12.5 Mhz
     .locked (lock)
   );
@@ -859,9 +860,9 @@ module kotku (
     // .leds_ ({ledr_,ledg_[7:4]}),
 	 .leds_ ({leds[17:6], LED2, M1_LED1, leds[3:0]}), // output [9:0] ledr_, output [7:0] ledg_,
 	 // .sw_   (sw_),
-    .sw_   ({5'b0, M1_T2, M1_T1, RESET_N}), // input  [7:0] sw_
+    .sw_   ({5'b0, M1_T2, M1_T1, !RESET_N}), // input  [7:0] sw_
     // .pb_   (key_),
-	 .pb_   (DIAG_N),
+	 .pb_   (!DIAG_N),
     .tick  (intv[0]),
     .nmi_pb (nmi_pb) // NMI from pushbutton
   );
@@ -927,7 +928,7 @@ module kotku (
     .wb_tgc_o (inta),
     .nmi      (nmi),
     .nmia     (nmia)
-  );;
+  );
 
   wb_switch #(
     .s0_addr_1 (20'b0_1111_1111_1110_0000_000), // bios boot mem 0xffe00 - 0xfffff
@@ -1158,7 +1159,7 @@ module kotku (
   );
 
   // Continuous assignments
-  assign rst_lck    = !sw_[0] & lock;
+  assign rst_lck    = RESET_N & lock;
 
   assign nmi = nmi_pb;
   assign dat_i = nmia ? 16'h0002 :
