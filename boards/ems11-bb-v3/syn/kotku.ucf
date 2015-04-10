@@ -65,7 +65,104 @@ NET "M1_SSEG_B<4>" LOC = "AE23";
 NET "M1_SSEG_B<5>" LOC = "Y21";
 NET "M1_SSEG_B<6>" LOC = "AF25";
 
+#
+# VGA display
+#
+
+#NET "M1_VGA_GREEN<7>" LOC = "B25";
+NET "M1_VGA_BLUE<3>" LOC = "L23";
+#NET "M1_VGA_GREEN<6>" LOC = "B26";
+NET "M1_VGA_BLUE<2>" LOC = "M23";
+#NET "M1_VGA_GREEN<5>" LOC = "C25";
+NET "M1_VGA_BLUE<1>" LOC = "N21";
+#NET "M1_VGA_GREEN<4>" LOC = "C26";
+NET "M1_VGA_BLUE<0>" LOC = "N23";
+NET "M1_VGA_GREEN<3>" LOC = "D26";
+#NET "M1_VGA_BLANK_N" LOC = "N22";
+NET "M1_VGA_GREEN<2>" LOC = "E25";
+#NET "M1_VGA_SYNC_N" LOC = "P20";
+NET "M1_VGA_GREEN<1>" LOC = "E26";
+#NET "M1_VGA_RED<7>" LOC = "P24";
+NET "M1_VGA_GREEN<0>" LOC = "F26";
+#NET "M1_VGA_RED<6>" LOC = "R23";
+#NET "M1_VGA_BLUE<4>" LOC = "G25";
+#NET "M1_VGA_RED<5>" LOC = "R24";
+#NET "M1_VGA_BLUE<5>" LOC = "G26";
+#NET "M1_VGA_RED<4>" LOC = "P21";
+#NET "M1_VGA_BLUE<6>" LOC = "H26";
+NET "M1_VGA_RED<3>" LOC = "T23";
+#NET "M1_VGA_BLUE<7>" LOC = "J25";
+NET "M1_VGA_RED<2>" LOC = "U23";
+NET "M1_VGA_RED<1>" LOC = "AA24";
+NET "M1_VGA_CLOCK" LOC = "L25";
+NET "M1_VGA_RED<0>" LOC = "AA23";
+#NET "M1_VGA_PSAVE_N" LOC = "L26";
+NET "M1_VGA_HSYNC" LOC = "M26";
+NET "M1_VGA_VSYNC" LOC = "N25";
+
+#
+# Keyboard(PS2_A) and Mouse(PS_B)
+#
+
+NET "M1_PS2_A_CLK" LOC = "M19";
+NET "M1_PS2_A_DATA" LOC = "M24";
+NET "M1_PS2_B_CLK" LOC = "L24";
+NET "M1_PS2_B_DATA" LOC = "L19";
+
+
 NET M1_* IOSTANDARD = LVTTL |DRIVE = 8 | SLEW = FAST;
+
+#
+# SDRAM mt48lc32m16A2-75 ------------------------------------------
+#
+NET "DR_CAS_N" LOC = "B12";
+NET "DR_CKE" LOC = "C14";
+#NET "DR_CLK_I" LOC = "C15";
+NET "DR_CLK_O" LOC = "A15";
+NET "DR_CS_N" LOC = "A16";
+NET "DR_RAS_N" LOC = "A14";
+NET "DR_WE_N" LOC = "A11";
+
+NET "DR_A<0>" LOC = "A19";
+NET "DR_A<1>" LOC = "B20";
+NET "DR_A<2>" LOC = "A20";
+NET "DR_A<3>" LOC = "C21";
+NET "DR_A<4>" LOC = "A22";
+NET "DR_A<5>" LOC = "A21";
+NET "DR_A<6>" LOC = "C20";
+NET "DR_A<7>" LOC = "C19";
+NET "DR_A<8>" LOC = "B18";
+NET "DR_A<9>" LOC = "D18";
+NET "DR_A<10>" LOC = "C18";
+NET "DR_A<11>" LOC = "C17";
+#NET "DR_A<12>" LOC = "B16";
+
+NET "DR_BA<0>" LOC = "A17";
+NET "DR_BA<1>" LOC = "A18";
+
+NET "DR_D<0>" LOC = "A3";
+NET "DR_D<1>" LOC = "B4";
+NET "DR_D<2>" LOC = "A4";
+NET "DR_D<3>" LOC = "A5";
+NET "DR_D<4>" LOC = "A6";
+NET "DR_D<5>" LOC = "A7";
+NET "DR_D<6>" LOC = "A8";
+NET "DR_D<7>" LOC = "A9";
+NET "DR_D<8>" LOC = "C13";
+NET "DR_D<9>" LOC = "C11";
+NET "DR_D<10>" LOC = "B8";
+NET "DR_D<11>" LOC = "C7";
+NET "DR_D<12>" LOC = "D6";
+NET "DR_D<13>" LOC = "B6";
+NET "DR_D<14>" LOC = "C6";
+NET "DR_D<15>" LOC = "C5";
+#NET "DR_DQMH" LOC = "B14";
+#NET "DR_DQML" LOC = "C9";
+
+
+NET DR_* IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = FAST;
+NET DR_CLK_O BUFG = CLK;
+NET DR_D<*> NODELAY;
 
 #
 # Weird auxilary pins, JTAG, etc. ---------------------------------

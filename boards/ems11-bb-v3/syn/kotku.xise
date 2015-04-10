@@ -174,6 +174,182 @@
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="138"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="33"/>
     </file>
+    <file xil_pn:name="../../../cores/wb_abrg/wb_abrgr.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="140"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="140"/>
+    </file>
+    <file xil_pn:name="../../../cores/fmlbrg/rtl/fmlbrg.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="141"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="141"/>
+    </file>
+    <file xil_pn:name="../../../cores/fmlbrg/rtl/fmlbrg_tagmem.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="142"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="142"/>
+    </file>
+    <file xil_pn:name="../../../cores/fmlbrg/rtl/fmlbrg_datamem.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="143"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="143"/>
+    </file>
+    <file xil_pn:name="../../../cores/csrbrg/rtl/csrbrg.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="144"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="144"/>
+    </file>
+    <file xil_pn:name="../../../cores/fmlarb/rtl/fmlarb.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="145"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="145"/>
+    </file>
+    <file xil_pn:name="../../../cores/hpdmc_sdr16/rtl/hpdmc.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="146"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="146"/>
+    </file>
+    <file xil_pn:name="../../../cores/hpdmc_sdr16/rtl/hpdmc_ctlif.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="147"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="147"/>
+    </file>
+    <file xil_pn:name="../../../cores/hpdmc_sdr16/rtl/hpdmc_mgmt.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="148"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="148"/>
+    </file>
+    <file xil_pn:name="../../../cores/hpdmc_sdr16/rtl/hpdmc_busif.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="149"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="149"/>
+    </file>
+    <file xil_pn:name="../../../cores/hpdmc_sdr16/rtl/hpdmc_datactl.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="150"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="150"/>
+    </file>
+    <file xil_pn:name="../../../cores/hpdmc_sdr16/rtl/hpdmc_banktimer.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="151"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="151"/>
+    </file>
+    <file xil_pn:name="../../../cores/hpdmc_sdr16/rtl/hpdmc_sdrio.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="152"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="152"/>
+    </file>
+    <file xil_pn:name="../../../cores/vga/rtl/fml/vga_fml.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="153"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="153"/>
+    </file>
+    <file xil_pn:name="../../../cores/vga/rtl/vga_config_iface.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="154"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="154"/>
+    </file>
+    <file xil_pn:name="../../../cores/vga/rtl/fml/vga_lcd_fml.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="155"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="155"/>
+    </file>
+    <file xil_pn:name="../../../cores/vga/rtl/fml/vga_crtc_fml.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="156"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="156"/>
+    </file>
+    <file xil_pn:name="../../../cores/vga/rtl/fml/vga_sequencer_fml.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="157"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="157"/>
+    </file>
+    <file xil_pn:name="../../../cores/vga/rtl/fml/vga_text_mode_fml.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="158"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="158"/>
+    </file>
+    <file xil_pn:name="../../../cores/vga/rtl/vga_char_rom.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="159"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="159"/>
+    </file>
+    <file xil_pn:name="../../../cores/vga/rtl/fml/vga_planar_fml.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="160"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="160"/>
+    </file>
+    <file xil_pn:name="../../../cores/vga/rtl/fml/vga_linear_fml.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="161"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="161"/>
+    </file>
+    <file xil_pn:name="../../../cores/vga/rtl/fml/vga_fifo.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="162"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="162"/>
+    </file>
+    <file xil_pn:name="../../../cores/vga/rtl/fml/vga_pal_dac_fml.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="163"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="163"/>
+    </file>
+    <file xil_pn:name="../../../cores/vga/rtl/fml/vga_palette_regs_fml.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="164"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="164"/>
+    </file>
+    <file xil_pn:name="../../../cores/vga/rtl/fml/vga_dac_regs_fml.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="165"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="165"/>
+    </file>
+    <file xil_pn:name="../../../cores/vga/rtl/vga_cpu_mem_iface.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="166"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="166"/>
+    </file>
+    <file xil_pn:name="../../../cores/vga/rtl/vga_read_iface.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="167"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="167"/>
+    </file>
+    <file xil_pn:name="../../../cores/vga/rtl/vga_write_iface.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="168"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="168"/>
+    </file>
+    <file xil_pn:name="../../../cores/vga/rtl/vga_c4_iface.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="169"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="169"/>
+    </file>
+    <file xil_pn:name="../../../cores/sound/rtl/sound.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="170"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="170"/>
+    </file>
+    <file xil_pn:name="../../../cores/sound/rtl/sound_dac8.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="171"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="171"/>
+    </file>
+    <file xil_pn:name="../../../cores/ps2/rtl/ps2.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="172"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="172"/>
+    </file>
+    <file xil_pn:name="../../../cores/ps2/rtl/ps2_mouse_nofifo.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="173"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="173"/>
+    </file>
+    <file xil_pn:name="../../../cores/ps2/rtl/ps2_mouse.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="174"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="174"/>
+    </file>
+    <file xil_pn:name="../../../cores/ps2/rtl/ps2_mouse_cmdout.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="175"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="175"/>
+    </file>
+    <file xil_pn:name="../../../cores/ps2/rtl/ps2_mouse_datain.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="176"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="176"/>
+    </file>
+    <file xil_pn:name="../../../cores/ps2/rtl/ps2_keyb.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="177"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="177"/>
+    </file>
+    <file xil_pn:name="../../../cores/ps2/rtl/ps2_keyb_xtcodes.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="178"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="178"/>
+    </file>
+    <file xil_pn:name="../../../cores/speaker/bare/speaker.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="179"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="179"/>
+    </file>
+    <file xil_pn:name="../../../cores/timer/rtl/timer.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="180"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="180"/>
+    </file>
+    <file xil_pn:name="../../../cores/timer/rtl/timer_counter.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="181"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="181"/>
+    </file>
+    <file xil_pn:name="../../../cores/pic/rtl/simple_pic.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="182"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="182"/>
+    </file>
+    <file xil_pn:name="../../../cores/sdspi/rtl/sdspi.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="183"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="183"/>
+    </file>
     <file xil_pn:name="../rtl/pll/pll.xise" xil_pn:type="FILE_COREGENISE">
       <association xil_pn:name="Implementation" xil_pn:seqID="0"/>
     </file>
