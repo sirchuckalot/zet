@@ -884,12 +884,12 @@ module kotku (
     .hex6 (M1_SSEG_A_INV),
     .hex7 (M1_SSEG_B_INV)
   );  
-  
+
   // Perform bitwise inversion
   assign M1_SSEG_A = ~(M1_SSEG_A_INV);
   assign M1_SSEG_B = ~(M1_SSEG_B_INV);
-  
-  spi spi (     
+
+spi spi (
     .wb_clk_i(clk), 
     .wb_rst_i(rst),
     .wb_dat_i(spi_dat_i),
@@ -1176,7 +1176,7 @@ module kotku (
   assign FPGA_MISO1  = spi_miso; // spi_miso
   assign FPGA_MOSI0  = spi_mosi; // spi_mosi
 
-  // Spi flash select 
+  // Spi S25FL064P flash memory select 
   assign FPGA_CSO = spi_ss[0];
 
 endmodule

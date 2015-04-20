@@ -161,7 +161,9 @@ bios_name_string:       db      "zetbios 1.1"   ;; version string, not used by c
 ;;---------------------------------------------------------------------------
                         org     (0df5bh - startofrom)
 
-post:                   xor     ax, ax          ; clear ax register
+post:                   POSTCODE 004h           ; PostCode = 04
+
+                        xor     ax, ax          ; clear ax register
                         mov     es, ax          ; zero out BIOS data area (40:00..40:ff)
                         mov     cx, 0080h       ; 128 words
                         mov     di, 0400h       ; Point index register to bda area
@@ -1083,8 +1085,11 @@ dummy_iret_handler:     iret            ;; IRET Instruction for Dummy Interrupt 
 ;;--------------------------------------------------------------------------
 SDRAM_POST:             xor     ax, ax             ; Clear AX register
                         cli                        ; Disable interupt for startup
-                        
-;;                        POSTCODE 000h              ; PostCode = 00
+
+;; when coming out of a system reset state, the default post code will display 00. The first
+;; code we will display is 01. We do this to make sure the processor has started executing 
+;; instructions upon coming out of system wide reset state.
+                        POSTCODE 001h              ; PostCode = 01
 
                         mov     dx, 0f200h         ; CSR_HPDMC_SYSTEM = HPDMC_SYSTEM_BYPASS|HPDMC_SYSTEM_RESET|HPDMC_SYSTEM_CKE;
                         mov     ax, 7              ; Bring CKE high
@@ -1109,256 +1114,64 @@ a_delay:                loop    a_delay            ; Loop until 50 goes to zero
                         xor     ax, ax             ; clear ax register
                         mov     ds, ax             ; set data segment to 0
                         mov     ss, ax             ; set stack segment to 0
-								
-								;; Once the sd bios copy feature has been fully debugged we can remove this jump line
-								jmp     far ptr shadowcopy ; Jumping because we are not ready for sd bios copy feature
+
 
 ;;--------------------------------------------------------------------------
-;; - Second we need to initialize sd controller for use: 
-;;--------------------------------------------------------------------------
-init_sd_controller:     POSTCODE 001h              ; PostCode = 01     
-                        mov     al, 0ffh           ; Initialize the SD card controller
-                        mov     dx, 0100h          ; Location of SD controller 
-                        mov     cx, 10             ; Number of times to repeat
-  
-init_sd_loop80:         out     dx, al             ; 80 cycles of initialization
-                        loop    init_sd_loop80     ; Loop 80 times
-                        mov     ax, 040h           ; CS = 0, CMD0: reset the SD card
-                        out     dx, ax             ; Reset the card 
-                        xor     al, al             ; Clear al
-                        out     dx, al             ; 32-bit zero value
-                        out     dx, al
-                        out     dx, al
-                        out     dx, al
-                        mov     al, 095h           ; Fixed value
-                        out     dx, al             ; load it
-                        mov     al, 0ffh         
-                        out     dx, al             ; wait
-                        in      al, dx             ; status
-                        mov     cl, al
-                        mov     ax, 0ffffh
-                        out     dx, ax             ; CS = 1
-                        cmp     cl, 1
-                        jne     init_sd_controller ; Retry if error detected
-
-                        POSTCODE 002h              ; PostCode = 02
-
-init_sd_cmd1:           mov     ax, 041h           ; CS = 0, CMD1: activate the init sequence
-                        out     dx, ax
-                        xor     al, al
-                        out     dx, al             ; 32-bit zero value
-                        out     dx, al
-                        out     dx, al
-                        out     dx, al
-                        mov     al, 0ffh
-                        out     dx, al             ; CRC (not used)
-                        out     dx, al             ; wait
-                        in      al, dx             ; status
-                        mov     cl, al
-                        mov     ax, 0ffffh
-                        out     dx, ax             ; CS = 1
-                        test    cl, 0ffh
-                        jnz     init_sd_cmd1
-                        
-                        POSTCODE 003h              ; PostCode = 03
-                        
-                        mov     ax, 050h           ; CS = 0, CMD16: set block length
-                        out     dx, ax
-                        xor     al, al
-                        out     dx, al             ; 32-bit value
-                        out     dx, al
-                        mov     al, 2              ; 512 bytes
-                        out     dx, al
-                        xor     al, al
-                        out     dx, al
-                        mov     al, 0ffh
-                        out     dx, al             ; CRC (not used)
-                        out     dx, al             ; wait
-                        in      al, dx             ; status
-                        mov     cl, al
-                        mov     ax, 0ffffh
-                        out     dx, ax             ; CS = 1
-                        test    cl, 0ffh
-                        jnz     init_sd_controller ; Retry init sd controller
-
-;;--------------------------------------------------------------------------
-;; - Now we can load rom bios into sdram from flash port or sd card: 
-;;--------------------------------------------------------------------------
-
-;; These are required parameters for loading VGA BIOS 
-VGABIOSSEGMENT          equ     0xC000                  ; VGA BIOS Segment
-VGABIOSLENGTH           equ     0x4000                  ; Length of VGA Bios in Words
-
-SDVGASECTORCOUNT        equ     0x003F                  ; Total sectors for 32KB / 512 byte rom
-SDCARDVGABIOSHI         equ     0x0000                  ; High end of sector address
-SDCARDVGABIOSLO         equ     0x0000                  ; starts right after Master Boot Record
-
-;; These are required parameters for loading ROM BIOS
-ROMBIOSSEGMENT          equ     0xF000                  ; ROM BIOS Segment
-ROMBIOSLENGTH           equ     0x7F80                  ; Copy up to this ROM in Words
-
-SDROMSECTORCOUNT        equ     0x007F                  ; Total sectors for 64KB / 512 byte rom
-SDCARDROMBIOSHI         equ     0x0000                  ; hi end of sector address
-SDCARDROMBIOSLO         equ     0x0040                  ; Sector right after vga bios
-
-
-;; Detect where to load bios rom image from
-;; by default we are only testing loading rom image from sd card
-
-;;--------------------------------------------------------------------------
-;; - We choose to load Shadow BIOS from sd card starting at sector 1: 
-;;--------------------------------------------------------------------------
-
-;;--------------------------------------------------------------------------
-                        POSTCODE 004h              ; PostCode = 04
-sdbioscopy:             mov     ax, VGABIOSSEGMENT      ;; Load with the segment of the vga bios rom area
-                        mov     es, ax                  ;; BIOS area segment
-                        xor     di, di                  ;; Bios starts at offset address 0
-                        mov     cx, SDCARDVGABIOSHI     ;; High sector address on sd card
-                        mov     bx, SDCARDVGABIOSLO     ;; Low sector address on sd card
-                        mov     ax, SDVGASECTORCOUNT    ;; VGA Bios is <32K long
-                        
-                        call sdbiosloop                 ;; Read all vga bios sectors
-                                                
-;;--------------------------------------------------------------------------
-                        POSTCODE 005h              ; PostCode = 05
-                        mov     ax, ROMBIOSSEGMENT      ;; Load with the segment of the vga bios rom area
-                        mov     es, ax                  ;; BIOS area segment
-                        xor     di, di                  ;; Bios starts at offset address 0
-                        mov     cx, SDCARDROMBIOSHI     ;; High sector address on sd card
-                        mov     bx, SDCARDROMBIOSLO     ;; Low sector address on sd card
-                        mov     ax, SDROMSECTORCOUNT    ;; ROM Bios is <64K long
-                        
-                        call sdbiosloop                 ;; Read all rom bios sectors
-
-                        jmp     far ptr post            ;; Continue with regular POST
-
-;;--------------------------------------------------------------------------
-sdbiosloop:             push    ax                      ;; Preserve all registers used in sd bios loop
-                        push    bx
-                        push    cx
-                        push    dx
-                        push    di
-                        push    es
-                        call    sdrdblk                 ;; Read one sector
-                        pop     es                      ;; Restore all registers used in main loop
-                        pop     di
-                        pop     dx
-                        pop     cx
-                        pop     bx
-                        pop     ax
-                        
-                        push    ax
-                        POSTCODE 006h              ; PostCode = 06
-                        pop     ax
-                        
-                        cmp     al, 0                   ;; Are we there yet?
-                        je      sdbiosloop_done         ;; Jump only if we have read all sectors
-                        
-                        push    ax
-                        POSTCODE 007h              ; PostCode = 07
-                        pop     ax
-                        
-                        dec     al                      ;; Subtract sector count until we reach zero
-                        add     bx, 0x0001              ;; Next sector address to read(Yes, we are ignoring hi sector address)
-                        add     di, 0x0200              ;; Next 512 bytes to read
-                        
-                        jmp sdbiosloop                  ;; let's do it again until all sectors have been read
-                        
-sdbiosloop_done:        ret                             ;; We have finished reading all sectors
-
-;;--------------------------------------------------------------------------
-sdrdblk:                cmp   di, 0xfe00                ;; adjust if there will be an overrun
-                        jbe   sdrdblk_no_adjust
-
-sdrdblk_adjust:         sub   di, 0x0200                ;; sub 512 bytes from offset
-                        mov   ax, es
-                        add   ax, 0x0020                ;; add 512 to segment
-                        mov   es, ax
-
-sdrdblk_no_adjust:      mov   dx, 0x0100                ;; SD card IO Port 
-                        mov   ax, 0x51                  ;; CS = 0, command CMD17
-                        out   dx, ax
-                        mov   al, ch                    ;; addr[31:24]
-                        out   dx, al
-                        mov   al, cl                    ;; addr[23:16]
-                        out   dx, al
-                        mov   al, bh                    ;; addr[15:8]
-                        out   dx, al
-                        mov   al, bl                    ;; addr[7:0]
-                        out   dx, al
-                        mov   al, 0x0ff                 ;; CRC (not used)
-                        out   dx, al
-                        out   dx, al                    ;; wait
-
-sdrdblk_read_res_cmd17: in    al, dx                    ;; card response
-                        cmp   al, 0
-                        jne   sdrdblk_read_res_cmd17
-
-sdrdblk_read_tok_cmd17: in    al, dx                    ;; read data token: 0xfe
-                        cmp   al, 0x0fe
-                        jne   sdrdblk_read_tok_cmd17
-                        mov   cx, 0x100
-
-sdrdblk_read_bytes:     in    al, dx                    ;; low byte
-                        mov   bl, al
-                        in    al, dx                    ;; high byte
-                        mov   bh, al
-                        mov   word ptr es:[di], bx      ;; eseg
-                        add   di, 2
-                        loop  sdrdblk_read_bytes
-
-                        mov   ax, 0xffff                ;; we are done, retrieve checksum
-                        out   dx, al                    ;; Checksum, 1st byte
-                        out   dx, al                    ;; Checksum, 2nd byte
-                        out   dx, al                    ;; wait
-                        out   dx, al                    ;; wait
-                        out   dx, ax                    ;; CS = 1 (disable SD)
-
-sdrdblk_done:           ret                             ;; Return back to caller
-;;--------------------------------------------------------------------------
-
-;;--------------------------------------------------------------------------
-;; Copy Shadow BIOS from Flash into SDRAM after SDRAM has been initialized
+;; Copy Shadow BIOS from SPI Flash into SDRAM after SDRAM has been initialized
 ;;---------------------------------------------------------------------------
-FLASH_PORT              equ     0x0238                  ;; Flash RAM port
+SPIFLASH_PORT           equ     0x0238                  ;; SPI Flash RAM port
+
+VGABIOSSEGMENT          equ     0xC000                  ;; VGA BIOS Segment
+VGABIOSLENGTH           equ     0x8000                  ;; Length of VGA Bios
+ROMBIOSSEGMENT          equ     0xF000                  ;; ROM BIOS Segment
+ROMBIOSLENGTH           equ     0xFF00                  ;; Copy up to this ROM
 
 ;;--------------------------------------------------------------------------
-shadowcopy:             mov     ax, VGABIOSSEGMENT      ;; Load with the segment of the vga bios rom area
-                        mov     es, ax                  ;; BIOS area segment
-                        xor     bp, bp                  ;; Bios starts at offset address 0
-                        mov     cx, VGABIOSLENGTH       ;; VGA Bios is <32K long
-                        mov     dx, FLASH_PORT+2        ;; Set DX reg to FLASH IO port
-                        mov     ax, 0x0000              ;; Load MSB address
-                        out     dx, ax                  ;; Save MSB address word
-                        mov     bx, 0x0000              ;; Bios starts at offset address 0
-                        call    biosloop                ;; Call bios IO loop
 
+                        POSTCODE 002h                   ; PostCode = 02
+
+shadowcopy:             mov     dx, SPIFLASH_PORT       ;; Set DX reg to SPI FLASH IO port
+                        mov     ax, VGABIOSSEGMENT      ;; Load with the segment of the vga bios rom area
+                        mov     es, ax                  ;; BIOS area segment
+                        xor     bx, bx                  ;; Bios starts at offset address 0
+                        mov     cx, VGABIOSLENGTH       ;; VGA Bios is <32K long
+                        mov     ax, 0xFE03              ;; Starting Read Commad and /CS
+                        out     dx, ax                  ;; brings /CS low and loads MSB address byte
+                        mov     ax, 0x0020h             ;; MSB address byte is 0x20
+                        out     dx, al                  ;; Load MSB address byte
+                        xor     al, al                  ;; the rest of address is 0x00
+                        out     dx, al                  ;; Load 2nd address byte
+                        out     dx, al                  ;; Load LSB address byte
+vgabios1:               in      al, dx                  ;; Get input byte into al register
+                        mov     byte ptr es:[bx], al    ;; Save that byte to next place in RAM
+                        inc     bx                      ;; Increment to next address location
+                        loop    vgabios1                ;; Loop until vga bios is loaded up
+                        mov     ax, 0xFFFF              ;; NOP plus make /CS high
+                        out     dx, ax                  ;; brings /CS low and loads MSB address byte
 ;;--------------------------------------------------------------------------
                         mov     ax, ROMBIOSSEGMENT      ;; Load with the segment of the extra bios rom area
                         mov     es, ax                  ;; BIOS area segment
-                        xor     bp, bp                  ;; Bios starts at offset address 0
-                        mov     cx, ROMBIOSLENGTH       ;; Bios is 64K long - Showdow rom len
-                        mov     dx, FLASH_PORT+2        ;; Set DX reg to FLASH IO port
-                        mov     ax, 0x0000              ;; Load start address
-                        out     dx, ax                  ;; Save MSB address word
-                        mov     bx, 0x8000              ;; Bios starts at offset address 0x8000
-                        call    biosloop                ;; Call bios IO loop
+                        xor     bx, bx                  ;; Bios starts at offset address 0
+                        mov     cx, ROMBIOSLENGTH       ;; Bios is 64K long - Showdow rom
+                        mov     ax, 0xFE03              ;; Starting Read Commad and /CS
+                        out     dx, ax                  ;; brings /CS low and loads MSB address byte
+                        mov     ax, 0x0021h             ;; MSB address byte is 0x21
+                        out     dx, al                  ;; Load MSB address byte
+                        xor     al, al                  ;; the rest of address is 0x00
+                        out     dx, al                  ;; and loads 2nd address byte
+                        out     dx, al                  ;; and loads 3rd address byte
+extrabios1:             in      al, dx                  ;; Get input byte into al register
+                        mov     byte ptr es:[bx], al    ;; Save that byte to next place in RAM
+                        inc     bx                      ;; Increment to next
+                        loop    extrabios1              ;; Loop until vga bios is loaded up
+                        mov     ax, 0xFFFF              ;; NOP plus make /CS high
+                        out     dx, ax                  ;; brings /CS low and loads MSB address byte
+;;--------------------------------------------------------------------------
+
+                        POSTCODE 003h                   ; PostCode = 03
 
                         jmp     far ptr post            ;; Continue with regular POST
 
-;;--------------------------------------------------------------------------
-biosloop:               mov     ax, bx                  ;; Put bx into ax
-                        mov     dx, FLASH_PORT          ;; Set DX reg to FLASH IO port
-                        out     dx, ax                  ;; Save LSB address word
-                        mov     dx, FLASH_PORT          ;; Set DX reg to FLASH IO port
-                        in      ax, dx                  ;; Get input word into ax register
-                        mov     word ptr es:[bp], ax    ;; Save that word to next place in RAM
-                        inc     bp                      ;; Increment to next address location
-                        inc     bp                      ;; Increment to next address location
-                        inc     bx                      ;; Increment to next flash address location
-                        loop    biosloop                ;; Loop until bios is loaded up
-                        ret                             ;; Return
 ;;--------------------------------------------------------------------------
 
 ;;---------------------------------------------------------------------------
