@@ -1173,7 +1173,7 @@ spi spi (
   
   // External fpga spi pins 
   assign FPGA_CCLK_2 = spi_sclk; // spi_sclk
-  assign FPGA_MISO1  = spi_miso; // spi_miso
+  assign spi_miso = FPGA_MISO1; // spi_miso
   assign FPGA_MOSI0  = spi_mosi; // spi_mosi
 
   // Spi S25FL064P flash memory select 

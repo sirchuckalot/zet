@@ -91,7 +91,7 @@ module spi (
 
   // ss
   always @(negedge wb_clk_i)
-    ss <= wb_rst_i ? 8'b1
+    ss <= wb_rst_i ? 8'hff
           : ((op & wb_we_i & wb_sel_i[1]) ? wb_dat_i[15:8] : ss);
 
 // clk_div
