@@ -71,7 +71,7 @@ module pll_tb ();
   // how many cycles to run
   localparam  COUNT_PHASE = 1024;
   // we'll be using the period in many locations
-  localparam time PER1    = 20.0*ONE_NS;
+  localparam time PER1    = 20.000*ONE_NS;
   localparam time PER1_1  = PER1/2;
   localparam time PER1_2  = PER1 - PER1/2;
 
@@ -79,11 +79,11 @@ module pll_tb ();
   reg         CLK_IN1     = 1;
 
   // The high bits of the sampling counters
-  wire [3:1]  COUNT;
+  wire [4:1]  COUNT;
   // Status and control signals
   wire        LOCKED;
   reg         COUNTER_RESET = 0;
-wire [3:1] CLK_OUT;
+wire [4:1] CLK_OUT;
 //Freq Check using the M & D values setting and actual Frequency generated
 
 

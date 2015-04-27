@@ -1,4 +1,5 @@
 # Output products list for <pll>
+_xmsgs\pn_parser.xmsgs
 pll.asy
 pll.gise
 pll.sym

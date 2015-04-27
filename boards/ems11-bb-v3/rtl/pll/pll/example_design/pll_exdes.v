@@ -64,9 +64,9 @@ module pll_exdes
   input         CLK_IN1,
   // Reset that only drives logic in example design
   input         COUNTER_RESET,
-  output [3:1]  CLK_OUT,
+  output [4:1]  CLK_OUT,
   // High bits of counters driven by clocks
-  output [3:1]  COUNT,
+  output [4:1]  COUNT,
   // Status and control signals
   output        LOCKED
  );
@@ -76,7 +76,7 @@ module pll_exdes
   // Counter width
   localparam    C_W       = 16;
   // Number of counters
-  localparam    NUM_C     = 3;
+  localparam    NUM_C     = 4;
   genvar        count_gen;
   // When the clock goes out of lock, reset the counters
   wire          reset_int = !LOCKED || COUNTER_RESET;
@@ -102,6 +102,7 @@ module pll_exdes
     .c0           (clk_int[1]),
     .c1           (clk_int[2]),
     .c2           (clk_int[3]),
+    .c3           (clk_int[4]),
     // Status and control signals
     .locked             (LOCKED));
 
@@ -129,6 +130,7 @@ endgenerate
   assign clk[1] = clk_int[1];
   assign clk[2] = clk_int[2];
   assign clk[3] = clk_int[3];
+  assign clk[4] = clk_int[4];
 
 
   // Reset synchronizer
