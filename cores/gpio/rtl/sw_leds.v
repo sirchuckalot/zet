@@ -31,8 +31,8 @@ module sw_leds (
     output        wb_ack_o,
 
     // GPIO inputs/outputs
-    output reg [13:0] leds_,
-    input      [ 7:0] sw_,
+    output reg [15:0] leds_,
+    input      [15:0] sw_,
     input             pb_,
     input             tick,
     output reg        nmi_pb
@@ -48,13 +48,13 @@ module sw_leds (
   // Continuous assignments
   assign op       = wb_cyc_i & wb_stb_i;
   assign wb_ack_o = op;
-  assign wb_dat_o = wb_adr_i ? { 2'b00, leds_ }
-                             : { 8'h00, sw_ };
+  assign wb_dat_o = wb_adr_i ? leds_
+                             : sw_;
 
   // Behaviour
   always @(posedge wb_clk_i)
-    leds_ <= wb_rst_i ? 14'h0
-      : ((op & wb_we_i & wb_adr_i) ? wb_dat_i[13:0] : leds_);
+    leds_ <= wb_rst_i ? 16'h0
+      : ((op & wb_we_i & wb_adr_i) ? wb_dat_i[15:0] : leds_);
 
   always @(posedge wb_clk_i)
   begin
