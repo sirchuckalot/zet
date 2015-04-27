@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=E:\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\syn\kotku.ncd
-OUTFILE=E:\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\syn\kotku.bit
-FAMILY=Spartan6
-PART=xc6slx45-2fgg676
-WORKINGDIR=E:\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\syn
-LICENSE=WebPack
-USER_INFO=210790785_0_0_075
