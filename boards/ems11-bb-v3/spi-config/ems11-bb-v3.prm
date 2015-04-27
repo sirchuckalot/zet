@@ -1,0 +1,18 @@
+PROMGEN: Xilinx Prom Generator P.20131013
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+promgen -w -p mcs -c FF -o E:\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\spi-config\//ems11-bb-v3 -s 8192 -u 0 \\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\syn\ems11_bb_v3.bit -data_file up 200000 \\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\src\bios\bios.rom -spi 
+
+PROM \\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\spi-config\ems11-bb-v3.prm map: Mon Apr 27 13:56:03 2015
+
+Calculating PROM checksum with fill value ff
+
+Format        Mcs86 (32-bit)
+Size          8192K
+PROM start    0000:0000
+PROM end      007f:ffff
+PROM checksum 6938c253
+
+        Addr1        Addr2                     Date File(s)
+    0000:0000    0016:a9b3     Apr 27 13:36:40 2015 //vboxsrv/documents/GitHub/sirchuckalot/zet/boards/ems11-bb-v3/syn/ems11_bb_v3.bit
+    0020:0000    0021:ffff     Apr 27 13:24:31 2015 //vboxsrv/documents/GitHub/sirchuckalot/zet/boards/ems11-bb-v3/src/bios/bios.rom

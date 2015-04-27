@@ -1,0 +1,12 @@
+# PROMGEN: Xilinx Prom Generator P.20131013
+# Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+SOFTWARE_VERSION P.20131013
+DATE            04/27/2015 - 13:56
+SOURCE          \\vboxsrv\documents\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\spi-config\ems11-bb-v3.mcs
+DEVICE          8192K
+DATA_WIDTH      1
+FILL_DATA       0xFF
+SIGNATURE       0x6938C253
+START_ADDRESS   0x00000000 END_ADDRESS 0x0016A9B3 DIRECTION_UP   "//vboxsrv/documents/GitHub/sirchuckalot/zet/boards/ems11-bb-v3/syn/ems11_bb_v3.bit" 6slx45fgg676
+START_ADDRESS   0x00200000 END_ADDRESS 0x0021FFFF DIRECTION_UP   "//vboxsrv/documents/GitHub/sirchuckalot/zet/boards/ems11-bb-v3/src/bios/bios.rom" DATAFILE

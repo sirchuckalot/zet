@@ -1,0 +1,8 @@
+Storage Target: SPI Flash Single FPGA
+64M
+FF
+ems11-bb-v3
+E:\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\spi-config/
+
+MCS
+Yes

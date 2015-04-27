@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=E:\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\spi-config\impact.xsl
+OUTFILE=E:\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\spi-config\impact.xsl
+FAMILY=Single
+PART=Single
+WORKINGDIR=E:\GitHub\sirchuckalot\zet\boards\ems11-bb-v3\spi-config
+LICENSE=iMPACT
+USER_INFO=iMPACT
